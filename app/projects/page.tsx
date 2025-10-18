@@ -5,93 +5,112 @@ import Image from "next/image"
 import Link from "next/link"
 import { ExternalLink, Github, Code2, ArrowRight, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 const projects = [
   {
-    id: 7,
+    id: 1,
     title: "Anime Website",
     description:
       "A comprehensive anime streaming platform with user authentication, watchlists, and detailed anime information.",
     image: "https://i.postimg.cc/Df4Hckqq/image.jpg",
     tags: ["Real Project"],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "API"],
-    liveUrl: "#",
+    liveUrl: "https://animespheree.netlify.app/",
     githubUrl: "#",
     category: "real",
     hasArticle: true,
     articleUrl: "/projects/anime-website",
   },
   {
-    id: 1,
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
-    image: "/modern-ecommerce-dashboard.png",
-    tags: ["Real Project"],
-    techStack: ["React", "Node.js", "MongoDB", "Stripe"],
-    liveUrl: "#",
-    githubUrl: "#",
-    category: "real",
-  },
-  {
     id: 2,
-    title: "Task Management App",
+    title: "BG Remover",
     description:
-      "Collaborative task management tool with real-time updates, team collaboration, and progress tracking.",
-    image: "/task-management-app.png",
-    tags: ["Real Project"],
-    techStack: ["Next.js", "TypeScript", "Supabase"],
-    liveUrl: "#",
+      "AI-powered background removal tool with drag & drop interface, real-time processing, and mobile support.",
+    image: "https://i.postimg.cc/13sry6w3/Screenshot-2025-10-12-092706.png",
+    tags: ["Practice Project"],
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Remove.bg API", "Capacitor"],
+    liveUrl: "https://bg-remover-hd.netlify.app/",
     githubUrl: "#",
-    category: "real",
+    category: "practice",
+    hasArticle: true,
+    articleUrl: "/projects/bg-remover",
   },
   {
     id: 3,
-    title: "Weather Dashboard",
-    description: "Interactive weather dashboard with real-time data, forecasts, and beautiful visualizations.",
-    image: "/weather-dashboard-interface.png",
-    tags: ["Practice"],
-    techStack: ["React", "API Integration", "Chart.js"],
-    liveUrl: "#",
+    title: "Bistro",
+    description:
+      "Modern restaurant consulting agency website with advanced animations, multi-page navigation, and profit optimization strategies.",
+    image: "https://i.postimg.cc/7PTLZWn9/Screenshot-2025-10-12-094950.png",
+    tags: ["Practice Project"],
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "React Router"],
+    liveUrl: "https://bistro-portfolio.netlify.app/",
     githubUrl: "#",
     category: "practice",
+    hasArticle: true,
+    articleUrl: "/projects/bistro",
   },
   {
     id: 4,
-    title: "Portfolio CMS",
-    description: "Content management system for portfolio websites with drag-and-drop builder and SEO optimization.",
-    image: "/cms-dashboard-interface.jpg",
-    tags: ["Real Project"],
-    techStack: ["Next.js", "Tailwind", "PostgreSQL"],
-    liveUrl: "#",
-    githubUrl: "#",
-    category: "real",
-  },
-  {
-    id: 5,
-    title: "Chat Application",
-    description: "Real-time chat application with group messaging, file sharing, and emoji reactions.",
-    image: "/chat-application-interface.png",
-    tags: ["Practice"],
-    techStack: ["React", "Socket.io", "Express"],
+    title: "File Organizer Pro",
+    description:
+      "Smart file management system with automatic organization, custom animations, and ZIP generation with progress tracking.",
+    image: "https://i.postimg.cc/zXQZHzDJ/Screenshot-2025-10-12-100455.png",
+    tags: ["Practice Project"],
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "JSZip", "React Router"],
     liveUrl: "#",
     githubUrl: "#",
     category: "practice",
+    hasArticle: true,
+    articleUrl: "/projects/file-organizer",
+  },
+  {
+    id: 5,
+    title: "IndieMVP",
+    description:
+      "Comprehensive platform for discovering real problems and building winning MVPs with pain point analysis, idea evaluation, and business tools.",
+    image: "https://i.postimg.cc/QC1Djv55/Screenshot-2025-10-12-102242.png",
+    tags: ["Practice Project"],
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "React Router", "Recharts"],
+    liveUrl: "https://indiemvp.netlify.app/",
+    githubUrl: "#",
+    category: "practice",
+    hasArticle: true,
+    articleUrl: "/projects/indiemvp",
   },
   {
     id: 6,
-    title: "Fitness Tracker",
-    description: "Personal fitness tracking app with workout plans, progress charts, and nutrition logging.",
-    image: "/fitness-tracker-app.png",
-    tags: ["Real Project"],
-    techStack: ["React Native", "Firebase", "Redux"],
-    liveUrl: "#",
+    title: "Billosity",
+    description:
+      "Premium invoice management SaaS platform with AI document extraction, business growth tracking, and comprehensive dashboard analytics.",
+    image: "https://i.postimg.cc/W1SbZx36/Screenshot-2025-10-12-113610.png",
+    tags: ["Practice Project"],
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "Framer Motion", "React Hook Form", "Recharts", "Tesseract.js"],
+    liveUrl: "https://billosity.netlify.app/",
     githubUrl: "#",
-    category: "real",
+    category: "practice",
+    hasArticle: true,
+    articleUrl: "/projects/billosity",
+  },
+  {
+    id: 7,
+    title: "Noteorp",
+    description:
+      "All-in-one productivity platform unifying notes, tasks, habits, focus tools, email, AI assistance, and collaboration in one intelligent workspace.",
+    image: "https://i.postimg.cc/VLhRLZ88/Screenshot-2025-10-18-003219.png",
+    tags: ["Practice Project"],
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "TipTap", "Framer Motion", "Zustand", "Dexie", "Yjs", "Groq AI", "Gemini AI", "Tesseract.js"],
+    liveUrl: "https://noteorp.netlify.app/",
+    githubUrl: "#",
+    category: "practice",
+    hasArticle: true,
+    articleUrl: "/projects/noteorp",
   },
 ]
 
 export default function AllProjectsPage() {
   const [filter, setFilter] = useState<"all" | "real" | "practice">("all")
+  const sectionRef = useScrollAnimation()
 
   const filteredProjects = projects.filter((project) => (filter === "all" ? true : project.category === filter))
 
@@ -102,7 +121,7 @@ export default function AllProjectsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div ref={sectionRef} className="min-h-screen bg-background">
       {/* Header */}
       <section className="py-20 px-4 relative overflow-hidden border-b border-border/50">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background pointer-events-none" />
@@ -110,29 +129,28 @@ export default function AllProjectsPage() {
 
         <div className="max-w-7xl mx-auto relative z-10">
           <Link href="/">
-            <Button variant="ghost" size="sm" className="mb-8 group">
+            <Button variant="ghost" size="sm" className="mb-8 group scroll-animate">
               <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
               Back to Home
             </Button>
           </Link>
 
-          <div className="space-y-6">
+          <div className="space-y-6 scroll-animate">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm">
               <Code2 className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Portfolio</span>
             </div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-balance">
-              All <span className="text-primary">Projects</span>
+              My <span className="text-primary">Project</span>
             </h1>
 
             <p className="text-xl text-muted-foreground max-w-3xl text-pretty">
-              Explore my complete portfolio of web development projects, from client work to personal experiments and
-              practice builds.
+              A curated collection of my real and practice projects showcasing my skills in web development and problem-solving.
             </p>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-6 pt-4">
+            <div className="flex flex-wrap gap-6 pt-4 scroll-animate">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                   <span className="text-2xl font-bold text-primary">{stats.total}</span>
@@ -166,7 +184,7 @@ export default function AllProjectsPage() {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Filter Buttons */}
-          <div className="flex justify-center gap-3 mb-12">
+          <div className="flex justify-center gap-3 mb-12 scroll-animate">
             <Button
               variant={filter === "all" ? "default" : "outline"}
               onClick={() => setFilter("all")}
@@ -191,7 +209,7 @@ export default function AllProjectsPage() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-animate">
             {filteredProjects.map((project, index) => (
               <div
                 key={project.id}
@@ -230,6 +248,12 @@ export default function AllProjectsPage() {
                   <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                     <a
                       href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(project.liveUrl, '_blank', 'noopener,noreferrer');
+                      }}
                       className="p-2 rounded-full bg-background/90 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground transition-colors"
                       aria-label="View live project"
                     >

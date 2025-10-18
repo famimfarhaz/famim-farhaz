@@ -12,12 +12,15 @@ import { TechStack } from "@/components/tech-stack"
 import { Founder } from "@/components/founder"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { LoadingOverlay } from "@/components/loading-overlay"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      <main>
+      <LoadingOverlay />
+      <div className="animate-fade-in">
+        <Header />
+        <main>
         <Hero />
         <AboutMe />
         <FreeDemo />
@@ -30,8 +33,9 @@ export default function Home() {
         <Testimonials />
         <Founder />
         <Contact />
-      </main>
-      <Footer />
+        </main>
+        <Footer />
+      </div>
     </div>
   )
 }

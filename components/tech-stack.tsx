@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import Image from "next/image"
 
 const technologies = [
@@ -8,54 +8,54 @@ const technologies = [
     name: "TypeScript",
     description: "Type-safe development",
     color: "from-blue-500 to-blue-600",
-    logo: "/typescript-logo.jpg",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
   },
   {
     name: "JavaScript",
     description: "Dynamic functionality",
     color: "from-yellow-400 to-yellow-500",
-    logo: "/javascript-logo.jpg",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
   },
   {
     name: "React 18",
     description: "Modern UI framework",
     color: "from-cyan-400 to-cyan-500",
-    logo: "/react-logo.jpg",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
   },
   {
     name: "Tailwind CSS",
     description: "Utility-first styling",
     color: "from-teal-400 to-cyan-500",
-    logo: "/tailwind-logo.jpg",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
   },
   {
-    name: "Vite",
-    description: "Lightning-fast builds",
-    color: "from-purple-500 to-yellow-400",
-    logo: "/vite-logo.jpg",
+    name: "Next.js",
+    description: "React framework for production",
+    color: "from-gray-800 to-gray-900",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    name: "Python",
+    description: "Versatile backend language",
+    color: "from-blue-400 to-yellow-400",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+  },
+  {
+    name: "PHP",
+    description: "Server-side scripting",
+    color: "from-purple-600 to-indigo-600",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
+  },
+  {
+    name: "PostgreSQL",
+    description: "Advanced open source database",
+    color: "from-blue-600 to-blue-800",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
   },
 ]
 
 export function TechStack() {
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-in")
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    const elements = sectionRef.current?.querySelectorAll(".fade-in")
-    elements?.forEach((el) => observer.observe(el))
-
-    return () => observer.disconnect()
-  }, [])
+  const sectionRef = useScrollAnimation()
 
   return (
     <section ref={sectionRef} className="py-24 px-4 relative overflow-hidden">
@@ -65,10 +65,10 @@ export function TechStack() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 fade-in">
+        <div className="text-center mb-16 scroll-animate">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 mb-6">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm font-medium text-primary">Our Technology Stack</span>
+            <span className="text-sm font-medium text-primary">My Technology Stack</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Built with <span className="text-primary">Modern Tools</span>
@@ -81,7 +81,7 @@ export function TechStack() {
         {/* Tech Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {technologies.map((tech, index) => (
-            <div key={tech.name} className="fade-in group relative" style={{ animationDelay: `${index * 100}ms` }}>
+            <div key={tech.name} className="scroll-animate group relative">
               <div className="relative h-full p-8 rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
                 {/* Gradient Overlay */}
                 <div
@@ -121,9 +121,9 @@ export function TechStack() {
         </div>
 
         {/* Stats Bar */}
-        <div className="fade-in grid grid-cols-2 md:grid-cols-4 gap-6 p-8 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm">
+        <div className="scroll-animate grid grid-cols-2 md:grid-cols-4 gap-6 p-8 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm">
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-1">5+</div>
+            <div className="text-3xl font-bold text-primary mb-1">8+</div>
             <div className="text-sm text-muted-foreground">Core Technologies</div>
           </div>
           <div className="text-center">

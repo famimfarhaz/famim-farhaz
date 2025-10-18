@@ -3,69 +3,64 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ExternalLink, Github, ArrowLeft, Calendar, User, Award, MessageSquare, Code } from "lucide-react"
+import { ExternalLink, Github, ArrowLeft, Calendar, User, Tag, ChefHat, Users, Code } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ImageModal } from "@/components/image-modal"
 
 const projectData = {
-  title: "AnimeSphere Platform",
-  description: "A comprehensive anime streaming platform with advanced user management, social features, and AI-powered content moderation.",
-  longDescription: `AnimeSphere is a full-stack anime streaming platform built with React, TypeScript, and Supabase. This project represents a complete social anime platform with advanced features including user profiles, comment systems, badge systems, follower/following functionality, and AI-powered content moderation using Google's Gemini AI.
+  title: "Bistro",
+  description: "Modern restaurant consulting agency website with advanced animations, multi-page navigation, and profit optimization strategies.",
+  longDescription: `Bistro is a sophisticated restaurant consulting agency website built with React, TypeScript, and Framer Motion. The project showcases modern web development practices with stunning animations, responsive design, and comprehensive multi-page navigation.
 
-The platform showcases enterprise-level development practices with comprehensive user management, real-time interactions, custom URL systems, animated badge collections, and sophisticated content moderation systems. Built with modern web technologies and following best practices for scalability and user experience.`,
-  image: "https://i.postimg.cc/P5CHscXT/Website-Home.png",
-  techStack: ["React", "TypeScript", "Supabase", "Tailwind CSS", "Framer Motion", "Google Gemini AI", "Vite", "PostgreSQL"],
-  category: "Real Project",
+The website is designed to help restaurant owners "Transform Your Restaurant Into A Profit Powerhouse" through strategic consulting services. It features detailed service offerings, client testimonials, pricing plans, and comprehensive contact forms. Built with performance and user experience in mind, it demonstrates advanced animation techniques and modern UI/UX design principles.`,
+  image: "https://i.postimg.cc/7PTLZWn9/Screenshot-2025-10-12-094950.png",
+  techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "React Router", "Lucide React", "PostCSS"],
+  category: "Practice Project",
   timeline: "2024",
-  role: "Full Stack Developer",
-  liveUrl: "https://animespheree.netlify.app/",
+  role: "Frontend Developer",
+  liveUrl: "https://bistro-portfolio.netlify.app/",
   githubUrl: "#",
   features: [
-    "Advanced User Profile System",
-    "Social Features (Follow/Unfollow)",
-    "Real-time Comment System",
-    "AI-Powered Content Moderation",
-    "Custom Badge System with Animations",
-    "Custom URL for Developers",
-    "Profile Editing with Media Upload",
-    "Bookmark & Like System",
-    "Activity Tracking",
-    "Responsive Design",
+    "Advanced Framer Motion Animations",
+    "Multi-Page React Router Navigation",
+    "Responsive Mobile-First Design",
+    "Modern Gradient UI/UX Design",
+    "Interactive Service Cards",
+    "Client Testimonial System",
+    "Contact Form Integration",
+    "Floating Particle Effects",
+    "Professional Typography",
+    "SEO-Optimized Structure",
   ],
   challenges: [
-    "Implementing real-time social features with Supabase",
-    "Building a scalable badge system with custom animations",
-    "Integrating AI moderation with Google Gemini API",
-    "Creating complex user profile systems with caching",
-    "Managing state for social interactions and notifications",
-    "Optimizing performance for real-time updates",
+    "Implementing complex Framer Motion animations with proper timing",
+    "Creating smooth page transitions with React Router",
+    "Building responsive layouts that work across all devices",
+    "Managing component state across multiple pages",
+    "Optimizing animation performance for mobile devices",
+    "Integrating Tailwind CSS with custom gradient designs",
   ],
   gallery: [
     {
-      image: "https://i.postimg.cc/P5CHscXT/Website-Home.png",
-      title: "Homepage",
-      description: "Modern anime streaming homepage with featured content"
+      image: "https://i.postimg.cc/7PTLZWn9/Screenshot-2025-10-12-094950.png",
+      title: "Homepage Hero",
+      description: "Stunning hero section with gradient background and animated typography"
     },
     {
-      image: "https://i.postimg.cc/J44mK0SQ/Profile.png",
-      title: "User Profile System",
-      description: "Comprehensive user profiles with stats, badges, and social features"
+      image: "https://i.postimg.cc/zDRfGcFx/Screenshot-2025-10-12-095009.png",
+      title: "Pricing Section",
+      description: "Interactive pricing cards with hover effects and call-to-action buttons"
     },
     {
-      image: "https://i.postimg.cc/nccZTrN4/Comment-Section.png",
-      title: "Comment System",
-      description: "Real-time commenting with AI moderation and reactions"
-    },
-    {
-      image: "https://i.postimg.cc/X773xqts/Animated-Badges.png",
-      title: "Animated Badge System",
-      description: "Custom animated badges with role-based permissions"
+      image: "https://i.postimg.cc/QdjNSxGg/Screenshot-2025-10-12-095029.png",
+      title: "Blog Page",
+      description: "Engaging blog posts with insights and tips for restaurant owners"
     }
   ]
 }
 
-export default function AnimeWebsitePage() {
+export default function BistroPage() {
   const [activeTab, setActiveTab] = useState<"overview" | "gallery" | "technical">("overview")
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -172,7 +167,7 @@ export default function AnimeWebsitePage() {
               <div className="lg:col-span-2 space-y-8">
                 {/* About */}
                 <div>
-                  <h2 className="text-2xl font-bold mb-4">About AnimeSphere Platform</h2>
+                  <h2 className="text-2xl font-bold mb-4">About Bistro</h2>
                   <div className="prose prose-neutral dark:prose-invert max-w-none">
                     {projectData.longDescription.split('\n\n').map((paragraph, index) => (
                       <p key={index} className="text-muted-foreground leading-relaxed">
@@ -182,102 +177,80 @@ export default function AnimeWebsitePage() {
                   </div>
                 </div>
 
-                {/* Profile System */}
+                {/* Animation & Design Features */}
                 <div>
                   <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                    <User className="w-5 h-5" />
-                    Advanced Profile System
+                    <Tag className="w-5 h-5" />
+                    Advanced Animation System
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔗 Custom URL System</h4>
-                      <p className="text-sm text-muted-foreground">Users can create custom URLs like '/user/developer-name' for easy profile sharing and professional branding.</p>
+                      <h4 className="font-medium mb-2">🎭 Framer Motion Integration</h4>
+                      <p className="text-sm text-muted-foreground">Complex animations with staggered children, smooth page transitions, and optimized performance using Framer Motion's advanced features.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📊 Comprehensive Statistics</h4>
-                      <p className="text-sm text-muted-foreground">Track user activity including comments count, likes received, bookmarks, days active, and engagement metrics.</p>
+                      <h4 className="font-medium mb-2">✨ Interactive UI Elements</h4>
+                      <p className="text-sm text-muted-foreground">Hover effects, floating particles, gradient backgrounds, and smooth scrolling animations that enhance user engagement.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">👥 Social Features</h4>
-                      <p className="text-sm text-muted-foreground">Complete follow/unfollow system with follower counts, following lists, and social interaction tracking.</p>
+                      <h4 className="font-medium mb-2">📱 Responsive Animations</h4>
+                      <p className="text-sm text-muted-foreground">Mobile-optimized animations that maintain performance across all devices with reduced motion support.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">✏️ Profile Editing</h4>
-                      <p className="text-sm text-muted-foreground">Rich profile editor with avatar upload, cover image, bio editing, social links, and preference management.</p>
+                      <h4 className="font-medium mb-2">🎨 Custom Design System</h4>
+                      <p className="text-sm text-muted-foreground">Consistent gradient themes, typography system, and reusable component architecture.</p>
                     </div>
                   </div>
                 </div>
 
-                {/* Badge System */}
+                {/* Restaurant Consulting Features */}
                 <div>
                   <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                    <Award className="w-5 h-5" />
-                    Custom Badge System
+                    <ChefHat className="w-5 h-5" />
+                    Restaurant Business Content
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎭 Animated Badges</h4>
-                      <p className="text-sm text-muted-foreground">Custom CSS animations for special badges including glow effects, pulse animations, and gradient backgrounds.</p>
+                      <h4 className="font-medium mb-2">📊 Profit Optimization Services</h4>
+                      <p className="text-sm text-muted-foreground">Comprehensive consulting services including menu engineering, operations optimization, and profit analysis strategies.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🏆 Badge Hierarchy</h4>
-                      <p className="text-sm text-muted-foreground">Role-based badge system: Founder, Co-Founder, Staff, Developer, Voice Actor, Editor, Moderator, Supporter, and more.</p>
+                      <h4 className="font-medium mb-2">🎯 Client Success Stories</h4>
+                      <p className="text-sm text-muted-foreground">Real testimonials with measurable results, showcasing 487+ restaurants transformed with average 42% profit increases.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">⭐ Badge Distribution</h4>
-                      <p className="text-sm text-muted-foreground">Automated badge assignment based on user activity, manual admin assignment, and achievement-based unlocking.</p>
+                      <h4 className="font-medium mb-2">📈 Statistical Presentations</h4>
+                      <p className="text-sm text-muted-foreground">Data-driven content presentation with impressive statistics and proven track record displays.</p>
+                    </div>
+                    <div className="p-4 rounded-lg bg-card/50 border border-border/50">
+                      <h4 className="font-medium mb-2">💼 Professional Service Pages</h4>
+                      <p className="text-sm text-muted-foreground">Detailed service descriptions, pricing plans, about pages, and comprehensive contact forms.</p>
                     </div>
                   </div>
                 </div>
 
-                {/* Comment & Moderation System */}
+                {/* Navigation & User Experience */}
                 <div>
                   <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                    <MessageSquare className="w-5 h-5" />
-                    Advanced Comment System
+                    <Users className="w-5 h-5" />
+                    Navigation & User Experience
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🤖 AI-Powered Moderation</h4>
-                      <p className="text-sm text-muted-foreground">Integrated Google Gemini AI for automatic content moderation, detecting inappropriate content, spam, and toxic behavior.</p>
+                      <h4 className="font-medium mb-2">🧭 React Router Integration</h4>
+                      <p className="text-sm text-muted-foreground">Multi-page application with smooth navigation, scroll restoration, and proper routing architecture.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">💬 Real-time Comments</h4>
-                      <p className="text-sm text-muted-foreground">Live comment system with instant updates, reply threading, and reaction system (likes/dislikes).</p>
+                      <h4 className="font-medium mb-2">🔄 Scroll Management</h4>
+                      <p className="text-sm text-muted-foreground">Custom ScrollToTop component and smooth scrolling effects for enhanced navigation experience.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🛡️ Restriction System</h4>
-                      <p className="text-sm text-muted-foreground">Comprehensive user restriction system with temporary bans, comment limitations, and escalating penalties.</p>
+                      <h4 className="font-medium mb-2">📋 Form Integration</h4>
+                      <p className="text-sm text-muted-foreground">Professional contact forms with validation and user-friendly interface design.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">⚖️ Moderation Dashboard</h4>
-                      <p className="text-sm text-muted-foreground">Admin tools for content review, user management, and automated action logs with manual override capabilities.</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Backend & Architecture */}
-                <div>
-                  <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                    <Code className="w-5 h-5" />
-                    Backend Architecture
-                  </h3>
-                  <div className="space-y-4">
-                    <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🗄️ Supabase Integration</h4>
-                      <p className="text-sm text-muted-foreground">PostgreSQL database with real-time subscriptions, Row Level Security (RLS), and automatic API generation.</p>
-                    </div>
-                    <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔐 Authentication System</h4>
-                      <p className="text-sm text-muted-foreground">Secure user authentication with email verification, password reset, and social login integration.</p>
-                    </div>
-                    <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📊 Database Design</h4>
-                      <p className="text-sm text-muted-foreground">Optimized schema with user profiles, video metadata, comments, reactions, bookmarks, and activity tracking tables.</p>
-                    </div>
-                    <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">⚡ Performance Optimization</h4>
-                      <p className="text-sm text-muted-foreground">Caching strategies, database indexing, lazy loading, and efficient state management for optimal user experience.</p>
+                      <h4 className="font-medium mb-2">🎪 Layout System</h4>
+                      <p className="text-sm text-muted-foreground">Consistent layout components with navigation, footer, and floating particle effects.</p>
                     </div>
                   </div>
                 </div>
@@ -328,56 +301,52 @@ export default function AnimeWebsitePage() {
                       <span>{projectData.category}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-muted-foreground">Database</span>
-                      <span>PostgreSQL (Supabase)</span>
+                      <span className="text-muted-foreground">Animation Library</span>
+                      <span>Framer Motion</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-muted-foreground">AI Integration</span>
-                      <span>Google Gemini API</span>
+                      <span className="text-muted-foreground">Build Tool</span>
+                      <span>Vite</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Routing</span>
+                      <span>React Router</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Database Schema */}
+                {/* Features List */}
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50 space-y-4">
-                  <h3 className="font-semibold">Database Schema</h3>
-                  <div className="space-y-2 text-xs font-mono">
-                    <div className="text-primary">📋 Core Tables:</div>
-                    <div className="pl-2 space-y-1 text-muted-foreground">
-                      <div>• videos - Anime content</div>
-                      <div>• user_profiles - Extended user info</div>
-                      <div>• video_comments - Comment system</div>
-                      <div>• comment_reactions - Like/dislike</div>
-                      <div>• video_reactions - Video likes</div>
-                      <div>• user_bookmarks - Saved content</div>
-                      <div>• video_views - Analytics</div>
-                    </div>
+                  <h3 className="font-semibold">Key Features</h3>
+                  <div className="space-y-2 text-sm">
+                    {projectData.features.slice(0, 6).map((feature, index) => (
+                      <div key={index} className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        <span className="text-muted-foreground">{feature}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                {/* Badge System Details */}
+                {/* Business Focus */}
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50 space-y-4">
-                  <h3 className="font-semibold">Badge Types</h3>
+                  <h3 className="font-semibold">Business Focus</h3>
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-purple-500"></div>
-                      <span>Founder & Co-Founder</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-                      <span>Staff & Developer</span>
+                      <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+                      <span>Restaurant Consulting</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                      <span>Voice Actor & Editor</span>
+                      <span>Profit Optimization</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-orange-500"></div>
-                      <span>Moderator & Supporter</span>
+                      <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                      <span>Business Strategy</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-cyan-500"></div>
-                      <span>Verified & Special</span>
+                      <div className="w-3 h-3 rounded-full bg-purple-500"></div>
+                      <span>Marketing Solutions</span>
                     </div>
                   </div>
                 </div>
@@ -390,97 +359,105 @@ export default function AnimeWebsitePage() {
               <div>
                 <h2 className="text-2xl font-bold mb-4">Technical Documentation</h2>
                 <p className="text-muted-foreground">
-                  Deep dive into the technical implementation and architecture of AnimeSphere.
+                  Deep dive into the technical implementation and architecture of the Bistro restaurant consulting website.
                 </p>
               </div>
 
-              {/* API & Database */}
+              {/* Architecture & Tech Stack */}
               <div className="grid lg:grid-cols-2 gap-6">
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">Database Schema</h3>
-                  <div className="space-y-3 text-sm font-mono">
+                  <h3 className="text-lg font-semibold mb-4">Frontend Architecture</h3>
+                  <div className="space-y-3 text-sm">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="text-primary font-bold">users</div>
-                      <div className="text-muted-foreground pl-2">id, email, created_at</div>
+                      <div className="text-primary font-bold">React 18</div>
+                      <div className="text-muted-foreground pl-2">Modern React with hooks and functional components</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="text-primary font-bold">user_profiles</div>
-                      <div className="text-muted-foreground pl-2">id, full_name, avatar_url, bio, badges</div>
+                      <div className="text-primary font-bold">TypeScript</div>
+                      <div className="text-muted-foreground pl-2">Type-safe development with strict configurations</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="text-primary font-bold">video_comments</div>
-                      <div className="text-muted-foreground pl-2">id, user_id, content, reactions</div>
+                      <div className="text-primary font-bold">Vite</div>
+                      <div className="text-muted-foreground pl-2">Fast build tool with HMR and optimized bundling</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="text-primary font-bold">user_followers</div>
-                      <div className="text-muted-foreground pl-2">follower_id, following_id, created_at</div>
+                      <div className="text-primary font-bold">React Router</div>
+                      <div className="text-muted-foreground pl-2">Multi-page navigation with smooth transitions</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">Badge System Architecture</h3>
+                  <h3 className="text-lg font-semibold mb-4">Component Structure</h3>
                   <div className="space-y-3 text-sm">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">Badge Registry</div>
-                      <div className="text-muted-foreground">Central system defining all badge types with visual properties</div>
+                      <div className="font-medium text-blue-400">Layout</div>
+                      <div className="text-muted-foreground">Main layout with navigation and footer</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">Animation System</div>
-                      <div className="text-muted-foreground">CSS-based animations for special badges (glow, pulse, gradient)</div>
+                      <div className="font-medium text-green-400">Pages</div>
+                      <div className="text-muted-foreground">Home, About, Pricing, Contact, Blog</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">Assignment Logic</div>
-                      <div className="text-muted-foreground">Automated and manual badge distribution system</div>
+                      <div className="font-medium text-purple-400">Components</div>
+                      <div className="text-muted-foreground">Reusable cards, buttons, forms</div>
+                    </div>
+                    <div className="p-3 rounded-lg bg-background/50">
+                      <div className="font-medium text-orange-400">Animations</div>
+                      <div className="text-muted-foreground">Framer Motion effects and transitions</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* AI Moderation Details */}
+              {/* Animation Implementation */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                <h3 className="text-lg font-semibold mb-4">🤖 AI Moderation Implementation</h3>
+                <h3 className="text-lg font-semibold mb-4">🎭 Animation Implementation</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-medium mb-2">Google Gemini Integration</h4>
+                      <h4 className="font-medium mb-2">Framer Motion Setup</h4>
                       <div className="p-3 rounded-lg bg-background/50 text-sm font-mono text-muted-foreground">
-                        initializeGeminiModeration(apiKey)<br/>
-                        → Content analysis<br/>
-                        → Toxicity detection<br/>
-                        → Automated action
+                        const containerVariants = {`{`}<br/>
+                        &nbsp;&nbsp;hidden: {`{`} opacity: 0 {`}`},<br/>
+                        &nbsp;&nbsp;visible: {`{`} staggerChildren: 0.15 {`}`}<br/>
+                        {`}`}
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-medium mb-2">Moderation Pipeline</h4>
+                      <h4 className="font-medium mb-2">Animation Features</h4>
                       <div className="space-y-2 text-sm">
                         <div className="flex items-center gap-2">
                           <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                          <span>Real-time comment scanning</span>
+                          <span>Staggered children animations</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
-                          <span>AI content classification</span>
+                          <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                          <span>Viewport-triggered animations</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-red-500"></div>
-                          <span>Automated restrictions</span>
+                          <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                          <span>Page transition effects</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 rounded-full bg-orange-500"></div>
+                          <span>Floating particle system</span>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-medium mb-2">Restriction System</h4>
+                      <h4 className="font-medium mb-2">Performance Optimization</h4>
                       <div className="space-y-2 text-sm">
-                        <div className="p-2 rounded bg-red-900/20 border border-red-500/20">
-                          <strong>Level 1:</strong> Comment warning
+                        <div className="p-2 rounded bg-green-900/20 border border-green-500/20">
+                          <strong>GPU Acceleration:</strong> Transform3d properties
                         </div>
-                        <div className="p-2 rounded bg-orange-900/20 border border-orange-500/20">
-                          <strong>Level 2:</strong> Temporary comment ban
+                        <div className="p-2 rounded bg-blue-900/20 border border-blue-500/20">
+                          <strong>Reduced Motion:</strong> Accessibility support
                         </div>
-                        <div className="p-2 rounded bg-red-900/30 border border-red-500/30">
-                          <strong>Level 3:</strong> Account suspension
+                        <div className="p-2 rounded bg-purple-900/20 border border-purple-500/20">
+                          <strong>Lazy Loading:</strong> Viewport-based triggers
                         </div>
                       </div>
                     </div>
@@ -488,70 +465,69 @@ export default function AnimeWebsitePage() {
                 </div>
               </div>
 
-              {/* Performance & Optimization */}
+              {/* Responsive Design & Performance */}
               <div className="grid lg:grid-cols-2 gap-6">
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">⚡ Performance Optimizations</h3>
+                  <h3 className="text-lg font-semibold mb-4">📱 Responsive Design</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">Profile Caching</div>
-                      <div className="text-sm text-muted-foreground">Smart caching system for user profiles with automatic invalidation</div>
+                      <div className="font-medium text-green-400">Tailwind CSS</div>
+                      <div className="text-sm text-muted-foreground">Mobile-first responsive utility classes</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">Lazy Loading</div>
-                      <div className="text-sm text-muted-foreground">Dynamic component loading for better initial page performance</div>
+                      <div className="font-medium text-blue-400">Grid Layouts</div>
+                      <div className="text-sm text-muted-foreground">Flexible grid systems for all screen sizes</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">Real-time Updates</div>
-                      <div className="text-sm text-muted-foreground">Supabase subscriptions for instant social interactions</div>
+                      <div className="font-medium text-purple-400">Typography</div>
+                      <div className="text-sm text-muted-foreground">Responsive font sizes and spacing</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">🛡️ Security Features</h3>
+                  <h3 className="text-lg font-semibold mb-4">⚡ Performance Features</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-red-400">Row Level Security</div>
-                      <div className="text-sm text-muted-foreground">Database-level security policies for data protection</div>
+                      <div className="font-medium text-red-400">Vite Optimization</div>
+                      <div className="text-sm text-muted-foreground">Fast builds and hot module replacement</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-orange-400">Input Sanitization</div>
-                      <div className="text-sm text-muted-foreground">XSS protection and content filtering</div>
+                      <div className="font-medium text-orange-400">Code Splitting</div>
+                      <div className="text-sm text-muted-foreground">Route-based code splitting with React Router</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-cyan-400">Authentication</div>
-                      <div className="text-sm text-muted-foreground">Secure JWT-based authentication with Supabase</div>
+                      <div className="font-medium text-cyan-400">Asset Optimization</div>
+                      <div className="text-sm text-muted-foreground">Optimized images and SVG icons</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Code Architecture */}
+              {/* Project Structure */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
                 <h3 className="text-lg font-semibold mb-4">📁 Project Structure</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Frontend Structure:</div>
+                    <div className="text-primary font-bold mb-2">Directory Structure:</div>
                     <div className="space-y-1 text-muted-foreground">
                       <div>📂 src/</div>
-                      <div className="pl-4">📂 components/ - Reusable UI components</div>
+                      <div className="pl-4">📂 components/ - Reusable components</div>
                       <div className="pl-4">📂 pages/ - Route components</div>
-                      <div className="pl-4">📂 lib/ - Utility functions</div>
-                      <div className="pl-4">📂 contexts/ - React contexts</div>
-                      <div className="pl-4">📂 hooks/ - Custom React hooks</div>
-                      <div className="pl-4">📂 types/ - TypeScript definitions</div>
+                      <div className="pl-4">📄 App.tsx - Main app component</div>
+                      <div className="pl-4">📄 main.tsx - Entry point</div>
+                      <div className="pl-4">📄 App.css - Global styles</div>
                     </div>
                   </div>
                   <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Key Libraries:</div>
+                    <div className="text-primary font-bold mb-2">Key Components:</div>
                     <div className="space-y-1 text-muted-foreground">
-                      <div>⚛️ React 18 - UI framework</div>
-                      <div>🎭 Framer Motion - Animations</div>
-                      <div>🗄️ Supabase - Backend as a Service</div>
-                      <div>🎨 Tailwind CSS - Styling</div>
-                      <div>📝 TypeScript - Type safety</div>
-                      <div>🤖 Google Gemini - AI moderation</div>
+                      <div>🧭 Navigation - Menu system</div>
+                      <div>🎨 FloatingParticles - Background effects</div>
+                      <div>📋 Card - Reusable card component</div>
+                      <div>🔘 Button - Custom button variants</div>
+                      <div>🎫 CouponCard - Special offer component</div>
+                      <div>📄 Footer - Site footer</div>
                     </div>
                   </div>
                 </div>
@@ -564,7 +540,7 @@ export default function AnimeWebsitePage() {
               <div>
                 <h2 className="text-2xl font-bold mb-4">Project Gallery</h2>
                 <p className="text-muted-foreground">
-                  Screenshots and visual highlights from the AnimeSphere platform.
+                  Screenshots and visual highlights from the Bistro restaurant consulting website.
                 </p>
               </div>
 

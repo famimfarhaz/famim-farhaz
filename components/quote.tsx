@@ -60,8 +60,8 @@ export function Quote() {
                 }`}
               >
                 <p className="text-3xl md:text-4xl lg:text-5xl font-serif text-balance leading-relaxed text-foreground/90 italic">
-                  I Build for the <span className="text-primary font-semibold not-italic">future</span>, I build for{" "}
-                  <span className="text-primary font-semibold not-italic">excellence</span>
+                  I don’t just build <span className="text-primary font-semibold not-italic">Websites</span>, I build digital{" "}
+                  <span className="text-primary font-semibold not-italic">legacies.</span>
                 </p>
               </blockquote>
 

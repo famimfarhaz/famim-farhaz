@@ -1,5 +1,8 @@
+"use client"
+
 import { Card } from "@/components/ui/card"
 import Image from "next/image"
+import { useEffect, useRef } from "react"
 
 const approaches = [
   {
@@ -25,10 +28,39 @@ const approaches = [
 ]
 
 export function Approach() {
+  const sectionRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const target = entry.target as HTMLElement
+            target.style.opacity = '1'
+            target.style.transform = 'translateY(0px)'
+          }
+        })
+      },
+      { threshold: 0.15 },
+    )
+
+    const elements = sectionRef.current?.querySelectorAll(".scroll-animate")
+    elements?.forEach((el, index) => {
+      const element = el as HTMLElement
+      element.style.opacity = '0'
+      element.style.transform = 'translateY(40px)'
+      element.style.transition = `all 0.8s cubic-bezier(0.4, 0, 0.2, 1)`
+      element.style.transitionDelay = `${index * 150}ms`
+      observer.observe(el)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section id="about" className="py-20 lg:py-32">
+    <section ref={sectionRef} id="about" className="py-20 lg:py-32">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl mb-16 scroll-animate">
           <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-balance">My Process</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             A streamlined workflow that ensures quality, efficiency, and client satisfaction.
@@ -39,7 +71,7 @@ export function Approach() {
           {approaches.map((approach, index) => (
             <Card
               key={index}
-              className="overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-accent/50 transition-all duration-500 group hover:shadow-xl hover:shadow-accent/5 hover:-translate-y-2"
+              className="overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-accent/50 transition-all duration-500 group hover:shadow-xl hover:shadow-accent/5 hover:-translate-y-2 scroll-animate"
             >
               <div className="relative h-56 bg-secondary overflow-hidden">
                 <Image

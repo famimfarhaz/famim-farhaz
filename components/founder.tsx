@@ -11,15 +11,24 @@ export function Founder() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("animate-in")
+            const target = entry.target as HTMLElement
+            target.style.opacity = '1'
+            target.style.transform = 'translateY(0px)'
           }
         })
       },
-      { threshold: 0.1 },
+      { threshold: 0.15 },
     )
 
-    const elements = sectionRef.current?.querySelectorAll(".fade-in")
-    elements?.forEach((el) => observer.observe(el))
+    const elements = sectionRef.current?.querySelectorAll(".scroll-animate")
+    elements?.forEach((el, index) => {
+      const element = el as HTMLElement
+      element.style.opacity = '0'
+      element.style.transform = 'translateY(40px)'
+      element.style.transition = `all 0.8s cubic-bezier(0.4, 0, 0.2, 1)`
+      element.style.transitionDelay = `${index * 150}ms`
+      observer.observe(el)
+    })
 
     return () => observer.disconnect()
   }, [])
@@ -30,19 +39,19 @@ export function Founder() {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center mb-8 fade-in">
+        <div className="text-center mb-8 scroll-animate">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 mb-3">
             <Award className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">Leadership</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-3">Meet the Developer</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground">
             Passionate web developer dedicated to creating exceptional digital experiences
           </p>
         </div>
 
         {/* ID Card */}
-        <div className="max-w-4xl mx-auto fade-in" style={{ animationDelay: "0.2s" }}>
+        <div className="max-w-4xl mx-auto scroll-animate">
           <div className="relative">
             {/* Card container with ID card styling */}
             <div className="relative bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl rounded-2xl border-2 border-primary/20 overflow-hidden shadow-2xl">
@@ -116,8 +125,8 @@ export function Founder() {
                       <div className="flex items-start gap-3">
                         <Calendar className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                         <div>
-                          <div className="font-semibold mb-1">Since 2021</div>
-                          <div className="text-sm text-muted-foreground">3+ years of professional development</div>
+                          <div className="font-semibold mb-1">Since 2023</div>
+                          <div className="text-sm text-muted-foreground">2+ years of development experience</div>
                         </div>
                       </div>
 

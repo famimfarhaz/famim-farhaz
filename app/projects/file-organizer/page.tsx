@@ -3,69 +3,59 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ExternalLink, Github, ArrowLeft, Calendar, User, Award, MessageSquare, Code } from "lucide-react"
+import { ExternalLink, Github, ArrowLeft, Calendar, User, FolderTree, Zap, Tag, History, Code } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ImageModal } from "@/components/image-modal"
 
 const projectData = {
-  title: "AnimeSphere Platform",
-  description: "A comprehensive anime streaming platform with advanced user management, social features, and AI-powered content moderation.",
-  longDescription: `AnimeSphere is a full-stack anime streaming platform built with React, TypeScript, and Supabase. This project represents a complete social anime platform with advanced features including user profiles, comment systems, badge systems, follower/following functionality, and AI-powered content moderation using Google's Gemini AI.
+  title: "File Organizer Pro",
+  description: "Smart file management system with automatic organization, custom animations, and ZIP generation with progress tracking.",
+  longDescription: `File Organizer Pro is an advanced file management application built with React, TypeScript, and modern web technologies. The application provides intelligent file organization with automatic folder creation based on file types or naming patterns, complete with ZIP generation and download functionality.
 
-The platform showcases enterprise-level development practices with comprehensive user management, real-time interactions, custom URL systems, animated badge collections, and sophisticated content moderation systems. Built with modern web technologies and following best practices for scalability and user experience.`,
-  image: "https://i.postimg.cc/P5CHscXT/Website-Home.png",
-  techStack: ["React", "TypeScript", "Supabase", "Tailwind CSS", "Framer Motion", "Google Gemini AI", "Vite", "PostgreSQL"],
-  category: "Real Project",
+The project features a sophisticated user interface with custom animations, drag & drop functionality, file previews with thumbnails, and a comprehensive history tracking system. Built with performance and user experience in mind, it includes custom cursor effects, parallax animations, and a terminal-inspired design system that makes file organization both efficient and visually appealing.`,
+  image: "https://i.postimg.cc/zXQZHzDJ/Screenshot-2025-10-12-100455.png",
+  techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "JSZip", "React Router", "Lucide React", "Custom Hooks"],
+  category: "Practice Project",
   timeline: "2024",
-  role: "Full Stack Developer",
-  liveUrl: "https://animespheree.netlify.app/",
+  role: "Frontend Developer",
+  liveUrl: "#",
   githubUrl: "#",
   features: [
-    "Advanced User Profile System",
-    "Social Features (Follow/Unfollow)",
-    "Real-time Comment System",
-    "AI-Powered Content Moderation",
-    "Custom Badge System with Animations",
-    "Custom URL for Developers",
-    "Profile Editing with Media Upload",
-    "Bookmark & Like System",
-    "Activity Tracking",
-    "Responsive Design",
+    "Smart File Organization by Type/Pattern",
+    "Drag & Drop File Upload Interface",
+    "ZIP Generation with Progress Tracking",
+    "File Preview with Thumbnail Generation",
+    "Custom Animations & Effects",
+    "History Tracking System",
+    "Multi-Page Navigation",
+    "Custom Cursor & Parallax Effects",
+    "Terminal-Inspired UI Design",
+    "Real-time File Processing",
   ],
   challenges: [
-    "Implementing real-time social features with Supabase",
-    "Building a scalable badge system with custom animations",
-    "Integrating AI moderation with Google Gemini API",
-    "Creating complex user profile systems with caching",
-    "Managing state for social interactions and notifications",
-    "Optimizing performance for real-time updates",
+    "Implementing intelligent file grouping algorithms",
+    "Creating smooth drag & drop with visual feedback",
+    "Building ZIP generation with real-time progress tracking",
+    "Developing thumbnail generation for multiple file types",
+    "Managing complex state across multiple components",
+    "Optimizing performance for large file uploads",
   ],
   gallery: [
     {
-      image: "https://i.postimg.cc/P5CHscXT/Website-Home.png",
-      title: "Homepage",
-      description: "Modern anime streaming homepage with featured content"
+      image: "https://i.postimg.cc/zXQZHzDJ/Screenshot-2025-10-12-100455.png",
+      title: "Main Interface",
+      description: "Drag & drop interface with animated background and file organization features"
     },
     {
-      image: "https://i.postimg.cc/J44mK0SQ/Profile.png",
-      title: "User Profile System",
-      description: "Comprehensive user profiles with stats, badges, and social features"
-    },
-    {
-      image: "https://i.postimg.cc/nccZTrN4/Comment-Section.png",
-      title: "Comment System",
-      description: "Real-time commenting with AI moderation and reactions"
-    },
-    {
-      image: "https://i.postimg.cc/X773xqts/Animated-Badges.png",
-      title: "Animated Badge System",
-      description: "Custom animated badges with role-based permissions"
+      image: "https://i.postimg.cc/pXSb5WVR/Screenshot-2025-10-12-100729.png",
+      title: "File Processing",
+      description: "Progress tracking and file preview system with terminal-inspired design"
     }
   ]
 }
 
-export default function AnimeWebsitePage() {
+export default function FileOrganizerPage() {
   const [activeTab, setActiveTab] = useState<"overview" | "gallery" | "technical">("overview")
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -172,7 +162,7 @@ export default function AnimeWebsitePage() {
               <div className="lg:col-span-2 space-y-8">
                 {/* About */}
                 <div>
-                  <h2 className="text-2xl font-bold mb-4">About AnimeSphere Platform</h2>
+                  <h2 className="text-2xl font-bold mb-4">About File Organizer Pro</h2>
                   <div className="prose prose-neutral dark:prose-invert max-w-none">
                     {projectData.longDescription.split('\n\n').map((paragraph, index) => (
                       <p key={index} className="text-muted-foreground leading-relaxed">
@@ -182,102 +172,102 @@ export default function AnimeWebsitePage() {
                   </div>
                 </div>
 
-                {/* Profile System */}
+                {/* Smart Organization Features */}
                 <div>
                   <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                    <User className="w-5 h-5" />
-                    Advanced Profile System
+                    <FolderTree className="w-5 h-5" />
+                    Smart File Organization
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔗 Custom URL System</h4>
-                      <p className="text-sm text-muted-foreground">Users can create custom URLs like '/user/developer-name' for easy profile sharing and professional branding.</p>
+                      <h4 className="font-medium mb-2">🎯 Intelligent Grouping Algorithm</h4>
+                      <p className="text-sm text-muted-foreground">Advanced file analysis that automatically groups files by naming patterns or file types, optimizing folder structure for maximum organization efficiency.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📊 Comprehensive Statistics</h4>
-                      <p className="text-sm text-muted-foreground">Track user activity including comments count, likes received, bookmarks, days active, and engagement metrics.</p>
+                      <h4 className="font-medium mb-2">📁 Automatic Folder Creation</h4>
+                      <p className="text-sm text-muted-foreground">Dynamic folder generation based on detected file categories including Images, Videos, Documents, Code files, and more with customizable naming.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">👥 Social Features</h4>
-                      <p className="text-sm text-muted-foreground">Complete follow/unfollow system with follower counts, following lists, and social interaction tracking.</p>
+                      <h4 className="font-medium mb-2">🔍 Pattern Recognition</h4>
+                      <p className="text-sm text-muted-foreground">Smart detection of file naming patterns (e.g., "Photo 1", "Photo 2") to group related files together automatically.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">✏️ Profile Editing</h4>
-                      <p className="text-sm text-muted-foreground">Rich profile editor with avatar upload, cover image, bio editing, social links, and preference management.</p>
+                      <h4 className="font-medium mb-2">📦 ZIP Generation</h4>
+                      <p className="text-sm text-muted-foreground">Seamless ZIP archive creation with organized folder structure and real-time progress tracking.</p>
                     </div>
                   </div>
                 </div>
 
-                {/* Badge System */}
+                {/* User Interface Features */}
                 <div>
                   <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                    <Award className="w-5 h-5" />
-                    Custom Badge System
+                    <Zap className="w-5 h-5" />
+                    Advanced User Interface
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎭 Animated Badges</h4>
-                      <p className="text-sm text-muted-foreground">Custom CSS animations for special badges including glow effects, pulse animations, and gradient backgrounds.</p>
+                      <h4 className="font-medium mb-2">🎭 Custom Cursor Effects</h4>
+                      <p className="text-sm text-muted-foreground">Interactive custom cursor with smooth animations and context-aware behavior that enhances user engagement.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🏆 Badge Hierarchy</h4>
-                      <p className="text-sm text-muted-foreground">Role-based badge system: Founder, Co-Founder, Staff, Developer, Voice Actor, Editor, Moderator, Supporter, and more.</p>
+                      <h4 className="font-medium mb-2">🖱️ Drag & Drop Interface</h4>
+                      <p className="text-sm text-muted-foreground">Intuitive file upload system with visual feedback, hover effects, and multi-file selection support.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">⭐ Badge Distribution</h4>
-                      <p className="text-sm text-muted-foreground">Automated badge assignment based on user activity, manual admin assignment, and achievement-based unlocking.</p>
+                      <h4 className="font-medium mb-2">🖼️ File Preview System</h4>
+                      <p className="text-sm text-muted-foreground">Real-time thumbnail generation for images and preview cards for all file types with size and type information.</p>
+                    </div>
+                    <div className="p-4 rounded-lg bg-card/50 border border-border/50">
+                      <h4 className="font-medium mb-2">⚡ Progress Tracking</h4>
+                      <p className="text-sm text-muted-foreground">Real-time progress bars with percentage indicators and smooth animations during file processing.</p>
                     </div>
                   </div>
                 </div>
 
-                {/* Comment & Moderation System */}
+                {/* Animation & Design System */}
                 <div>
                   <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                    <MessageSquare className="w-5 h-5" />
-                    Advanced Comment System
+                    <Tag className="w-5 h-5" />
+                    Animation & Design System
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🤖 AI-Powered Moderation</h4>
-                      <p className="text-sm text-muted-foreground">Integrated Google Gemini AI for automatic content moderation, detecting inappropriate content, spam, and toxic behavior.</p>
+                      <h4 className="font-medium mb-2">🌊 Animated Background</h4>
+                      <p className="text-sm text-muted-foreground">Dynamic gradient background with particle effects and smooth color transitions for immersive user experience.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">💬 Real-time Comments</h4>
-                      <p className="text-sm text-muted-foreground">Live comment system with instant updates, reply threading, and reaction system (likes/dislikes).</p>
+                      <h4 className="font-medium mb-2">📜 Scroll Reveal Effects</h4>
+                      <p className="text-sm text-muted-foreground">Smooth scroll-triggered animations with staggered reveals and directional slide effects.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🛡️ Restriction System</h4>
-                      <p className="text-sm text-muted-foreground">Comprehensive user restriction system with temporary bans, comment limitations, and escalating penalties.</p>
+                      <h4 className="font-medium mb-2">🎪 Parallax Containers</h4>
+                      <p className="text-sm text-muted-foreground">Subtle parallax scrolling effects that add depth and visual interest to the interface.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">⚖️ Moderation Dashboard</h4>
-                      <p className="text-sm text-muted-foreground">Admin tools for content review, user management, and automated action logs with manual override capabilities.</p>
+                      <h4 className="font-medium mb-2">💫 Ripple Buttons</h4>
+                      <p className="text-sm text-muted-foreground">Interactive button components with ripple effects and micro-animations for enhanced feedback.</p>
                     </div>
                   </div>
                 </div>
 
-                {/* Backend & Architecture */}
+                {/* History & Tracking */}
                 <div>
                   <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                    <Code className="w-5 h-5" />
-                    Backend Architecture
+                    <History className="w-5 h-5" />
+                    History & Analytics
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🗄️ Supabase Integration</h4>
-                      <p className="text-sm text-muted-foreground">PostgreSQL database with real-time subscriptions, Row Level Security (RLS), and automatic API generation.</p>
+                      <h4 className="font-medium mb-2">📊 Download Statistics</h4>
+                      <p className="text-sm text-muted-foreground">Comprehensive tracking of processed files with statistics including total files, folders created, and file sizes.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔐 Authentication System</h4>
-                      <p className="text-sm text-muted-foreground">Secure user authentication with email verification, password reset, and social login integration.</p>
+                      <h4 className="font-medium mb-2">🕒 Session History</h4>
+                      <p className="text-sm text-muted-foreground">Persistent local storage of organization history with timestamps and detailed breakdowns of each session.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📊 Database Design</h4>
-                      <p className="text-sm text-muted-foreground">Optimized schema with user profiles, video metadata, comments, reactions, bookmarks, and activity tracking tables.</p>
-                    </div>
-                    <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">⚡ Performance Optimization</h4>
-                      <p className="text-sm text-muted-foreground">Caching strategies, database indexing, lazy loading, and efficient state management for optimal user experience.</p>
+                      <h4 className="font-medium mb-2">📈 Usage Analytics</h4>
+                      <p className="text-sm text-muted-foreground">File type analysis and organizational pattern tracking to optimize future processing workflows.</p>
                     </div>
                   </div>
                 </div>
@@ -328,56 +318,60 @@ export default function AnimeWebsitePage() {
                       <span>{projectData.category}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-muted-foreground">Database</span>
-                      <span>PostgreSQL (Supabase)</span>
+                      <span className="text-muted-foreground">ZIP Library</span>
+                      <span>JSZip</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-muted-foreground">AI Integration</span>
-                      <span>Google Gemini API</span>
+                      <span className="text-muted-foreground">Build Tool</span>
+                      <span>Vite</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Routing</span>
+                      <span>React Router</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Database Schema */}
+                {/* Key Features */}
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50 space-y-4">
-                  <h3 className="font-semibold">Database Schema</h3>
-                  <div className="space-y-2 text-xs font-mono">
-                    <div className="text-primary">📋 Core Tables:</div>
-                    <div className="pl-2 space-y-1 text-muted-foreground">
-                      <div>• videos - Anime content</div>
-                      <div>• user_profiles - Extended user info</div>
-                      <div>• video_comments - Comment system</div>
-                      <div>• comment_reactions - Like/dislike</div>
-                      <div>• video_reactions - Video likes</div>
-                      <div>• user_bookmarks - Saved content</div>
-                      <div>• video_views - Analytics</div>
-                    </div>
+                  <h3 className="font-semibold">Key Features</h3>
+                  <div className="space-y-2 text-sm">
+                    {projectData.features.slice(0, 6).map((feature, index) => (
+                      <div key={index} className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        <span className="text-muted-foreground">{feature}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                {/* Badge System Details */}
+                {/* File Type Support */}
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50 space-y-4">
-                  <h3 className="font-semibold">Badge Types</h3>
+                  <h3 className="font-semibold">File Type Support</h3>
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-purple-500"></div>
-                      <span>Founder & Co-Founder</span>
+                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                      <span>Images (JPG, PNG, GIF, SVG)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                      <span>Videos (MP4, AVI, MOV)</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-                      <span>Staff & Developer</span>
+                      <span>Documents (PDF, DOC, PPT)</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                      <span>Voice Actor & Editor</span>
+                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                      <span>Archives (ZIP, RAR, 7Z)</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-orange-500"></div>
-                      <span>Moderator & Supporter</span>
+                      <div className="w-3 h-3 rounded-full bg-purple-500"></div>
+                      <span>Audio (MP3, WAV, FLAC)</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-cyan-500"></div>
-                      <span>Verified & Special</span>
+                      <span>Code (JS, TS, HTML, CSS)</span>
                     </div>
                   </div>
                 </div>
@@ -390,97 +384,108 @@ export default function AnimeWebsitePage() {
               <div>
                 <h2 className="text-2xl font-bold mb-4">Technical Documentation</h2>
                 <p className="text-muted-foreground">
-                  Deep dive into the technical implementation and architecture of AnimeSphere.
+                  Deep dive into the technical implementation and architecture of File Organizer Pro.
                 </p>
               </div>
 
-              {/* API & Database */}
+              {/* Architecture & File Processing */}
               <div className="grid lg:grid-cols-2 gap-6">
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">Database Schema</h3>
-                  <div className="space-y-3 text-sm font-mono">
+                  <h3 className="text-lg font-semibold mb-4">File Processing Engine</h3>
+                  <div className="space-y-3 text-sm">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="text-primary font-bold">users</div>
-                      <div className="text-muted-foreground pl-2">id, email, created_at</div>
+                      <div className="text-primary font-bold">Smart Grouping Algorithm</div>
+                      <div className="text-muted-foreground pl-2">Pattern recognition and file type analysis for intelligent organization</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="text-primary font-bold">user_profiles</div>
-                      <div className="text-muted-foreground pl-2">id, full_name, avatar_url, bio, badges</div>
+                      <div className="text-primary font-bold">JSZip Integration</div>
+                      <div className="text-muted-foreground pl-2">Client-side ZIP generation with progress tracking</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="text-primary font-bold">video_comments</div>
-                      <div className="text-muted-foreground pl-2">id, user_id, content, reactions</div>
+                      <div className="text-primary font-bold">File Type Detection</div>
+                      <div className="text-muted-foreground pl-2">Extension-based categorization with color coding</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="text-primary font-bold">user_followers</div>
-                      <div className="text-muted-foreground pl-2">follower_id, following_id, created_at</div>
+                      <div className="text-primary font-bold">Thumbnail Generation</div>
+                      <div className="text-muted-foreground pl-2">Canvas-based image thumbnail creation</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">Badge System Architecture</h3>
+                  <h3 className="text-lg font-semibold mb-4">UI/UX Architecture</h3>
                   <div className="space-y-3 text-sm">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">Badge Registry</div>
-                      <div className="text-muted-foreground">Central system defining all badge types with visual properties</div>
+                      <div className="font-medium text-blue-400">Custom Cursor System</div>
+                      <div className="text-muted-foreground">Context-aware cursor with smooth tracking</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">Animation System</div>
-                      <div className="text-muted-foreground">CSS-based animations for special badges (glow, pulse, gradient)</div>
+                      <div className="font-medium text-green-400">Drag & Drop Engine</div>
+                      <div className="text-muted-foreground">Advanced file handling with visual feedback</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">Assignment Logic</div>
-                      <div className="text-muted-foreground">Automated and manual badge distribution system</div>
+                      <div className="font-medium text-purple-400">Animation Framework</div>
+                      <div className="text-muted-foreground">Scroll reveal and parallax effect system</div>
+                    </div>
+                    <div className="p-3 rounded-lg bg-background/50">
+                      <div className="font-medium text-orange-400">History Management</div>
+                      <div className="text-muted-foreground">Local storage-based session tracking</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* AI Moderation Details */}
+              {/* File Organization Algorithm */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                <h3 className="text-lg font-semibold mb-4">🤖 AI Moderation Implementation</h3>
+                <h3 className="text-lg font-semibold mb-4">📁 File Organization Algorithm</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-medium mb-2">Google Gemini Integration</h4>
+                      <h4 className="font-medium mb-2">Pattern Recognition Logic</h4>
                       <div className="p-3 rounded-lg bg-background/50 text-sm font-mono text-muted-foreground">
-                        initializeGeminiModeration(apiKey)<br/>
-                        → Content analysis<br/>
-                        → Toxicity detection<br/>
-                        → Automated action
+                        shouldGroupByName(files) {`{`}<br/>
+                        &nbsp;&nbsp;const baseNames = files.map(parseFileName)<br/>
+                        &nbsp;&nbsp;return uniqueNames.size &lt; files.length<br/>
+                        {`}`}
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-medium mb-2">Moderation Pipeline</h4>
+                      <h4 className="font-medium mb-2">Organization Strategy</h4>
                       <div className="space-y-2 text-sm">
                         <div className="flex items-center gap-2">
                           <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                          <span>Real-time comment scanning</span>
+                          <span>Analyze file naming patterns</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
-                          <span>AI content classification</span>
+                          <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                          <span>Group by name or file type</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-red-500"></div>
-                          <span>Automated restrictions</span>
+                          <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                          <span>Create organized folder structure</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 rounded-full bg-orange-500"></div>
+                          <span>Generate ZIP with progress</span>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-medium mb-2">Restriction System</h4>
+                      <h4 className="font-medium mb-2">File Categories</h4>
                       <div className="space-y-2 text-sm">
+                        <div className="p-2 rounded bg-green-900/20 border border-green-500/20">
+                          <strong>Images:</strong> JPG, PNG, GIF, SVG, WebP
+                        </div>
                         <div className="p-2 rounded bg-red-900/20 border border-red-500/20">
-                          <strong>Level 1:</strong> Comment warning
+                          <strong>Videos:</strong> MP4, AVI, MOV, WebM
                         </div>
-                        <div className="p-2 rounded bg-orange-900/20 border border-orange-500/20">
-                          <strong>Level 2:</strong> Temporary comment ban
+                        <div className="p-2 rounded bg-blue-900/20 border border-blue-500/20">
+                          <strong>Documents:</strong> PDF, DOC, PPT, XLS
                         </div>
-                        <div className="p-2 rounded bg-red-900/30 border border-red-500/30">
-                          <strong>Level 3:</strong> Account suspension
+                        <div className="p-2 rounded bg-yellow-900/20 border border-yellow-500/20">
+                          <strong>Archives:</strong> ZIP, RAR, 7Z, TAR
                         </div>
                       </div>
                     </div>
@@ -488,70 +493,72 @@ export default function AnimeWebsitePage() {
                 </div>
               </div>
 
-              {/* Performance & Optimization */}
+              {/* Animation & Performance */}
               <div className="grid lg:grid-cols-2 gap-6">
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">⚡ Performance Optimizations</h3>
+                  <h3 className="text-lg font-semibold mb-4">🎭 Animation System</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">Profile Caching</div>
-                      <div className="text-sm text-muted-foreground">Smart caching system for user profiles with automatic invalidation</div>
+                      <div className="font-medium text-green-400">Scroll Reveal</div>
+                      <div className="text-sm text-muted-foreground">Intersection Observer-based reveals with timing control</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">Lazy Loading</div>
-                      <div className="text-sm text-muted-foreground">Dynamic component loading for better initial page performance</div>
+                      <div className="font-medium text-blue-400">Custom Cursor</div>
+                      <div className="text-sm text-muted-foreground">Mouse tracking with smooth follow animations</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">Real-time Updates</div>
-                      <div className="text-sm text-muted-foreground">Supabase subscriptions for instant social interactions</div>
+                      <div className="font-medium text-purple-400">Ripple Effects</div>
+                      <div className="text-sm text-muted-foreground">Click-triggered ripple animations for interactive feedback</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">🛡️ Security Features</h3>
+                  <h3 className="text-lg font-semibold mb-4">⚡ Performance Features</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-red-400">Row Level Security</div>
-                      <div className="text-sm text-muted-foreground">Database-level security policies for data protection</div>
+                      <div className="font-medium text-red-400">File Processing</div>
+                      <div className="text-sm text-muted-foreground">Efficient file handling with streaming and chunking</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-orange-400">Input Sanitization</div>
-                      <div className="text-sm text-muted-foreground">XSS protection and content filtering</div>
+                      <div className="font-medium text-orange-400">Memory Management</div>
+                      <div className="text-sm text-muted-foreground">Optimized image thumbnail generation with canvas</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-cyan-400">Authentication</div>
-                      <div className="text-sm text-muted-foreground">Secure JWT-based authentication with Supabase</div>
+                      <div className="font-medium text-cyan-400">State Management</div>
+                      <div className="text-sm text-muted-foreground">React hooks for efficient re-rendering</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Code Architecture */}
+              {/* Component Architecture */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                <h3 className="text-lg font-semibold mb-4">📁 Project Structure</h3>
+                <h3 className="text-lg font-semibold mb-4">📁 Component Architecture</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Frontend Structure:</div>
+                    <div className="text-primary font-bold mb-2">Core Components:</div>
                     <div className="space-y-1 text-muted-foreground">
-                      <div>📂 src/</div>
-                      <div className="pl-4">📂 components/ - Reusable UI components</div>
-                      <div className="pl-4">📂 pages/ - Route components</div>
-                      <div className="pl-4">📂 lib/ - Utility functions</div>
-                      <div className="pl-4">📂 contexts/ - React contexts</div>
-                      <div className="pl-4">📂 hooks/ - Custom React hooks</div>
-                      <div className="pl-4">📂 types/ - TypeScript definitions</div>
+                      <div>📂 components/</div>
+                      <div className="pl-4">🎭 AnimatedBackground</div>
+                      <div className="pl-4">🖱️ CustomCursor</div>
+                      <div className="pl-4">📤 DragDropZone</div>
+                      <div className="pl-4">🖼️ FilePreview</div>
+                      <div className="pl-4">📊 HistoryModal</div>
+                      <div className="pl-4">🌊 ScrollReveal</div>
+                      <div className="pl-4">💫 RippleButton</div>
                     </div>
                   </div>
                   <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Key Libraries:</div>
+                    <div className="text-primary font-bold mb-2">Utility Functions:</div>
                     <div className="space-y-1 text-muted-foreground">
-                      <div>⚛️ React 18 - UI framework</div>
-                      <div>🎭 Framer Motion - Animations</div>
-                      <div>🗄️ Supabase - Backend as a Service</div>
-                      <div>🎨 Tailwind CSS - Styling</div>
-                      <div>📝 TypeScript - Type safety</div>
-                      <div>🤖 Google Gemini - AI moderation</div>
+                      <div>📂 utils/</div>
+                      <div className="pl-4">🔍 fileUtils - Type detection</div>
+                      <div className="pl-4">📊 historyUtils - Session tracking</div>
+                      <div className="pl-4">🖼️ Thumbnail generation</div>
+                      <div className="pl-4">📁 Pattern recognition</div>
+                      <div className="pl-4">📦 ZIP processing</div>
+                      <div className="pl-4">💾 Local storage</div>
                     </div>
                   </div>
                 </div>
@@ -564,7 +571,7 @@ export default function AnimeWebsitePage() {
               <div>
                 <h2 className="text-2xl font-bold mb-4">Project Gallery</h2>
                 <p className="text-muted-foreground">
-                  Screenshots and visual highlights from the AnimeSphere platform.
+                  Screenshots and visual highlights from the File Organizer Pro application.
                 </p>
               </div>
 
