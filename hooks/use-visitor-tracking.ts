@@ -31,10 +31,19 @@ export function useVisitorTracking() {
         })
 
         if (!response.ok) {
-          console.error('Failed to track visitor:', response.statusText)
+          // Silently handle tracking failures - don't log errors
+          return
+        }
+        
+        const data = await response.json()
+        // Silently handle if tracking is disabled
+        if (data.tracked === false) {
+          // Tracking disabled, no action needed
+          return
         }
       } catch (error) {
-        console.error('Visitor tracking error:', error)
+        // Silently fail - don't show errors to users for tracking
+        console.log('Visitor tracking unavailable:', error instanceof Error ? error.message : 'Unknown error')
       }
     }
 

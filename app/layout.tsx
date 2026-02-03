@@ -3,6 +3,8 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Analytics } from '@vercel/analytics/next'
 import { VisitorTracker } from '@/components/visitor-tracker'
+import { ExpandableChatDemo } from '@/components/expandable-chat-demo'
+import ClickSparkProvider from '@/components/click-spark-provider'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -16,6 +18,8 @@ export const metadata: Metadata = {
   },
 }
 
+import { Toaster } from "sonner"
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,9 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-        <VisitorTracker />
-        {children}
-        <Analytics />
+        <ClickSparkProvider>
+          <VisitorTracker />
+          {children}
+          <ExpandableChatDemo />
+          <Analytics />
+          <Toaster />
+        </ClickSparkProvider>
       </body>
     </html>
   )

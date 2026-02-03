@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation"
 import { useCallback, useEffect, useState, useRef } from "react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { useStaggeredEntranceAnimation } from "@/hooks/use-entrance-animation"
+import { RoleFlip } from "@/components/ui/flip-words"
 
 export function Hero() {
   const sectionRef = useScrollAnimation()
@@ -162,7 +163,11 @@ export function Hero() {
                 )}
               </span>
               <br />
-              <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-muted-foreground">and a Web Developer</span>
+              <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-muted-foreground">and a </span>
+              <span className="align-middle text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+                {/* Animated role text with selection handles */}
+                <RoleFlip />
+              </span>
             </h1>
 
             <p

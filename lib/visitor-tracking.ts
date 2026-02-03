@@ -1,4 +1,4 @@
-import { supabase } from './supabase'
+import { supabase, isSupabaseConfigured } from './supabase'
 
 export interface VisitorData {
   ip_address: string
@@ -137,6 +137,12 @@ export function parseVisitorData(request?: Request): VisitorData {
 // Track visitor
 export async function trackVisitor(visitorData?: VisitorData): Promise<{ success: boolean, data?: any, message: string }> {
   try {
+    // Check if Supabase is configured
+    if (!isSupabaseConfigured) {
+      console.warn('Supabase is not configured. Skipping visitor tracking.')
+      return { success: false, message: 'Database not configured' }
+    }
+    
     const data = visitorData || parseVisitorData()
     
     // Check if visitor already exists

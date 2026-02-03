@@ -85,7 +85,7 @@ export function MyProjects() {
   const sectionRef = useRef<HTMLElement>(null)
   const router = useRouter()
   const [filter, setFilter] = useState<"all" | "real" | "practice">("all")
-  
+
   const handleViewAllClick = useCallback(() => {
     router.push('/projects')
   }, [router])
@@ -122,26 +122,9 @@ export function MyProjects() {
   return (
     <section ref={sectionRef} className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background pointer-events-none" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4 scroll-animate">
-          <div className="inline-flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-1 sm:py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm">
-            <Code2 className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
-            <span className="text-xs sm:text-sm font-medium text-primary">My Projects</span>
-          </div>
-
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-balance">
-            Featured <span className="text-primary">Project</span>
-          </h2>
-
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            AnimeSphere - A full-featured anime streaming platform with advanced social features and AI moderation.
-          </p>
-        </div>
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 md:mb-12 scroll-animate">
@@ -173,28 +156,27 @@ export function MyProjects() {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="group relative bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 scroll-animate"
+              className="group relative bg-card/30 backdrop-blur-xl rounded-[2rem] border border-border/50 overflow-hidden hover:border-primary/50 transition-all duration-700 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-3 scroll-animate"
             >
               {/* Project Image */}
-              <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden bg-muted">
+              <div className="relative h-56 overflow-hidden bg-muted">
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-500" />
 
                 {/* Category Tag */}
-                <div className="absolute top-2 sm:top-3 md:top-4 left-2 sm:left-3 md:left-4">
+                <div className="absolute top-6 left-6">
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className={`inline-block px-2 sm:px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm ${
-                        tag === "Real Project"
-                          ? "bg-green-500/20 text-green-400 border border-green-500/30"
-                          : "bg-blue-500/20 text-blue-400 border border-blue-500/30"
-                      }`}
+                      className={`inline-block px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest backdrop-blur-md ${tag === "Real Project"
+                        ? "bg-green-500/20 text-green-400 border border-green-500/30"
+                        : "bg-blue-500/20 text-blue-400 border border-blue-500/30"
+                        }`}
                     >
                       {tag}
                     </span>
@@ -202,37 +184,43 @@ export function MyProjects() {
                 </div>
 
                 {/* Hover Links */}
-                <div className="absolute top-2 sm:top-3 md:top-4 right-2 sm:right-3 md:right-4 flex gap-1 sm:gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute top-6 right-6 flex gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
                   <a
                     href={project.liveUrl}
-                    className="p-1.5 sm:p-2 rounded-full bg-background/90 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-2xl bg-background/80 backdrop-blur-xl hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-xl"
                     aria-label="View live project"
                   >
-                    <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
+                    <ExternalLink className="w-4 h-4" />
                   </a>
                   <a
                     href={project.githubUrl}
-                    className="p-1.5 sm:p-2 rounded-full bg-background/90 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+                    className="p-3 rounded-2xl bg-background/80 backdrop-blur-xl hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-xl"
                     aria-label="View source code"
                   >
-                    <Github className="w-3 h-3 sm:w-4 sm:h-4" />
+                    <Github className="w-4 h-4" />
                   </a>
                 </div>
               </div>
 
               {/* Project Info */}
-              <div className="p-4 sm:p-5 md:p-6 space-y-3 sm:space-y-4">
+              <div className="p-8 space-y-6">
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2">{project.description}</p>
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors tracking-tight">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-2 leading-relaxed font-medium">
+                    {project.description}
+                  </p>
                 </div>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-1 sm:gap-2">
+                <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-2 sm:px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20"
+                      className="px-3 py-1 text-[10px] font-bold rounded-full bg-primary/5 text-primary border border-primary/10 uppercase tracking-tighter"
                     >
                       {tech}
                     </span>
@@ -242,26 +230,26 @@ export function MyProjects() {
                 {/* View More button for projects with articles */}
                 {project.hasArticle && (
                   <Link href={project.articleUrl}>
-                    <Button variant="outline" size="sm" className="w-full group/btn bg-transparent text-xs sm:text-sm py-1 sm:py-2">
-                      View More
-                      <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    <Button variant="outline" size="lg" className="w-full rounded-2xl group/btn bg-transparent border-border/50 font-bold hover:bg-primary hover:text-primary-foreground transition-all duration-500">
+                      View Case Study
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                 )}
               </div>
 
               {/* Bottom Accent Line */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
             </div>
           ))}
         </div>
 
         {/* View All Projects CTA */}
         <div className="text-center mt-8 sm:mt-10 md:mt-12 scroll-animate">
-          <Button 
+          <Button
             onClick={handleViewAllClick}
-            size="lg" 
-            variant="outline" 
+            size="lg"
+            variant="outline"
             className="rounded-full group bg-transparent cursor-pointer text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3"
           >
             View All Projects

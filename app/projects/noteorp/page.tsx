@@ -7,6 +7,8 @@ import { ExternalLink, Github, ArrowLeft, Calendar, User, Edit, CheckSquare, Tim
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ImageModal } from "@/components/image-modal"
+import { AnimatedFileTree } from "@/components/animated-file-tree"
+import { ProjectRating } from "@/components/project-rating"
 
 const projectData = {
   title: "Noteorp",
@@ -278,19 +280,19 @@ export default function NoteorpPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎨 Gallery View Mode</h4>
+                      <h4 className="font-medium mb-2">Gallery View Mode</h4>
                       <p className="text-sm text-muted-foreground">Sophisticated visual layout with aspect-ratio optimized cards (4:3 ratio) for maximum visual appeal and instant project recognition.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🖼️ AI-Generated Image Gallery</h4>
+                      <h4 className="font-medium mb-2">AI-Generated Image Gallery</h4>
                       <p className="text-sm text-muted-foreground">Dedicated gallery for AI-created images with full metadata preservation, generation prompts, model information, and smart aspect ratio detection.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📁 Advanced File Management</h4>
+                      <h4 className="font-medium mb-2">Advanced File Management</h4>
                       <p className="text-sm text-muted-foreground">Multiple view modes (Grid, List, Gallery), smart filtering by file types, bulk operations, and drag & drop uploads with automatic type detection.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎯 Dynamic Visual Organization</h4>
+                      <h4 className="font-medium mb-2">Dynamic Visual Organization</h4>
                       <p className="text-sm text-muted-foreground">Customizable color themes, professional icons, cover images for instant visual identification, and organized ZIP export functionality.</p>
                     </div>
                   </div>
@@ -304,19 +306,19 @@ export default function NoteorpPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📝 Rich Text Editor</h4>
+                      <h4 className="font-medium mb-2">Rich Text Editor</h4>
                       <p className="text-sm text-muted-foreground">TipTap-powered editor with markdown shortcuts, code blocks, task lists, and image support for seamless writing experience.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🗂️ Smart Organization</h4>
+                      <h4 className="font-medium mb-2">Smart Organization</h4>
                       <p className="text-sm text-muted-foreground">Nested folders, dynamic tags, and full-text search with advanced filtering and organization capabilities.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎤 Voice-to-Text</h4>
+                      <h4 className="font-medium mb-2">Voice-to-Text</h4>
                       <p className="text-sm text-muted-foreground">Real-time voice transcription using Groq AI and Gemini integration for hands-free note taking.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📄 Document Support</h4>
+                      <h4 className="font-medium mb-2">Document Support</h4>
                       <p className="text-sm text-muted-foreground">Import/export Word, PDF, Excel, CSV files with OCR processing for text extraction from images.</p>
                     </div>
                   </div>
@@ -330,19 +332,19 @@ export default function NoteorpPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📋 Kanban Boards</h4>
+                      <h4 className="font-medium mb-2">Kanban Boards</h4>
                       <p className="text-sm text-muted-foreground">Drag-and-drop project management with visual workflow tracking and customizable columns.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🧠 Smart Task Creation</h4>
+                      <h4 className="font-medium mb-2">Smart Task Creation</h4>
                       <p className="text-sm text-muted-foreground">Natural language interpretation for tasks like "Meet John tomorrow at 2pm" with automatic scheduling.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎯 Priority Detection</h4>
+                      <h4 className="font-medium mb-2">Priority Detection</h4>
                       <p className="text-sm text-muted-foreground">AI-based importance marking with automated priority scoring and deadline suggestions.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔄 Recurring Tasks</h4>
+                      <h4 className="font-medium mb-2">Recurring Tasks</h4>
                       <p className="text-sm text-muted-foreground">Automatable and adaptive scheduling with intelligent recurring task management.</p>
                     </div>
                   </div>
@@ -356,19 +358,19 @@ export default function NoteorpPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">⏰ Pomodoro Timer</h4>
+                      <h4 className="font-medium mb-2">Pomodoro Timer</h4>
                       <p className="text-sm text-muted-foreground">Background-safe timers that work in inactive tabs with session history and deep work tracking.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🚫 Distraction Blocking</h4>
+                      <h4 className="font-medium mb-2">Distraction Blocking</h4>
                       <p className="text-sm text-muted-foreground">Intelligent website and application blocking during focus sessions with smart break reminders.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎵 Ambient Sounds</h4>
+                      <h4 className="font-medium mb-2">Ambient Sounds</h4>
                       <p className="text-sm text-muted-foreground">Integrated focus music and nature sounds with YouTube integration and playlist control.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📊 Focus Analytics</h4>
+                      <h4 className="font-medium mb-2">Focus Analytics</h4>
                       <p className="text-sm text-muted-foreground">Detailed analytics on focus sessions with productivity insights and improvement suggestions.</p>
                     </div>
                   </div>
@@ -382,19 +384,19 @@ export default function NoteorpPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎮 XP & Leveling</h4>
+                      <h4 className="font-medium mb-2">XP & Leveling</h4>
                       <p className="text-sm text-muted-foreground">Experience points with level progression from Beginner to Legend with celebration animations.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔥 Streak Rewards</h4>
+                      <h4 className="font-medium mb-2">Streak Rewards</h4>
                       <p className="text-sm text-muted-foreground">Fire logos and multiplier rewards up to 5x for 365-day streaks with milestone celebrations.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🏆 Achievement Badges</h4>
+                      <h4 className="font-medium mb-2">Achievement Badges</h4>
                       <p className="text-sm text-muted-foreground">15+ badges with common, rare, epic, and legendary ranks for various accomplishments.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📈 Progress Visualization</h4>
+                      <h4 className="font-medium mb-2">Progress Visualization</h4>
                       <p className="text-sm text-muted-foreground">Weekly heatmaps and detailed statistics with habit category tracking and insights.</p>
                     </div>
                   </div>
@@ -408,19 +410,19 @@ export default function NoteorpPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🤖 Groq & Gemini Integration</h4>
+                      <h4 className="font-medium mb-2">Groq & Gemini Integration</h4>
                       <p className="text-sm text-muted-foreground">Top-tier language models (llama-3.1-70b, mixtral-8x7b) for content analysis and intelligent assistance.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📝 Writing Assistant</h4>
+                      <h4 className="font-medium mb-2">Writing Assistant</h4>
                       <p className="text-sm text-muted-foreground">Context-sensitive suggestions, content summarization, and keyword extraction with PII detection.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔍 Knowledge Graphs</h4>
+                      <h4 className="font-medium mb-2">Knowledge Graphs</h4>
                       <p className="text-sm text-muted-foreground">AI-detected connections between tasks and notes with interactive mind mapping visualization.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📊 Task Intelligence</h4>
+                      <h4 className="font-medium mb-2">Task Intelligence</h4>
                       <p className="text-sm text-muted-foreground">Automated priority scoring, deadline suggestions, and intelligent task categorization.</p>
                     </div>
                   </div>
@@ -504,23 +506,23 @@ export default function NoteorpPage() {
                   <h3 className="font-semibold">Integrated Tools</h3>
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center gap-2">
-                      <Music className="w-4 h-4 text-blue-500" />
+                      <Music className="w-4 h-4" />
                       <span>YouTube Music Player</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Map className="w-4 h-4 text-green-500" />
+                      <Map className="w-4 h-4" />
                       <span>Interactive Mind Maps</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Mail className="w-4 h-4 text-purple-500" />
+                      <Mail className="w-4 h-4" />
                       <span>Gmail Integration</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Calculator className="w-4 h-4 text-orange-500" />
+                      <Calculator className="w-4 h-4" />
                       <span>Built-in Calculator</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Settings className="w-4 h-4 text-red-500" />
+                      <Settings className="w-4 h-4" />
                       <span>Command Palette</span>
                     </div>
                   </div>
@@ -531,19 +533,19 @@ export default function NoteorpPage() {
                   <h3 className="font-semibold">Architecture</h3>
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center gap-2">
-                      <Smartphone className="w-4 h-4 text-blue-500" />
+                      <Smartphone className="w-4 h-4" />
                       <span>PWA with Offline Support</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Shield className="w-4 h-4 text-green-500" />
+                      <Shield className="w-4 h-4" />
                       <span>End-to-End Encryption</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Zap className="w-4 h-4 text-yellow-500" />
+                      <Zap className="w-4 h-4" />
                       <span>Real-time Collaboration</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Brain className="w-4 h-4 text-purple-500" />
+                      <Brain className="w-4 h-4" />
                       <span>Privacy-First Design</span>
                     </div>
                   </div>
@@ -772,6 +774,52 @@ export default function NoteorpPage() {
                   </div>
                 </div>
               </div>
+
+              {/* Project Structure */}
+              <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
+                <h3 className="text-lg font-semibold mb-4">Project Structure</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <div className="text-primary font-bold mb-3 text-sm">Core Features:</div>
+                    <AnimatedFileTree
+                      data={[
+                        {
+                          name: "features",
+                          type: "folder",
+                          children: [
+                            { name: "notes/", type: "folder", icon: "- Rich text editing" },
+                            { name: "tasks/", type: "folder", icon: "- Task management" },
+                            { name: "habits/", type: "folder", icon: "- Gamified tracking" },
+                            { name: "timer/", type: "folder", icon: "- Focus sessions" },
+                            { name: "gallery/", type: "folder", icon: "- Image management" },
+                            { name: "ai/", type: "folder", icon: "- AI assistance" },
+                            { name: "collaboration/", type: "folder", icon: "- Real-time editing" }
+                          ]
+                        }
+                      ]}
+                    />
+                  </div>
+                  <div>
+                    <div className="text-primary font-bold mb-3 text-sm">System Architecture:</div>
+                    <AnimatedFileTree
+                      data={[
+                        {
+                          name: "core",
+                          type: "folder",
+                          children: [
+                            { name: "database/", type: "folder", icon: "- IndexedDB + Dexie" },
+                            { name: "state/", type: "folder", icon: "- Zustand store" },
+                            { name: "api/", type: "folder", icon: "- AI integrations" },
+                            { name: "sync/", type: "folder", icon: "- Yjs + WebRTC" },
+                            { name: "pwa/", type: "folder", icon: "- Service worker" },
+                            { name: "security/", type: "folder", icon: "- Encryption" }
+                          ]
+                        }
+                      ]}
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           )}
 
@@ -836,6 +884,28 @@ export default function NoteorpPage() {
         </div>
       </section>
 
+      {/* Rating Section */}
+      <section className="py-16 px-4 border-t border-border/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <div className="text-center space-y-2">
+              <h2 className="text-2xl font-bold">Rate This Project</h2>
+              <p className="text-muted-foreground">
+                How would you rate this project? Your feedback helps improve future projects.
+              </p>
+            </div>
+
+            <ProjectRating projectId="noteorp" />
+
+            <div className="flex justify-between text-xs font-medium text-muted-foreground">
+              <span>Poor ??</span>
+              <span>Excellent ??</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* Image Modal */}
       <ImageModal
         isOpen={isModalOpen}
@@ -847,3 +917,4 @@ export default function NoteorpPage() {
     </div>
   )
 }
+

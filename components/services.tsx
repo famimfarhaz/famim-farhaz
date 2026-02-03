@@ -12,13 +12,13 @@ const services = [
   },
   {
     icon: Code2,
-    title: "Frontend Development",
-    description: "Responsive user interfaces with HTML, CSS, JavaScript, React, and modern frameworks.",
+    title: "SaaS Development",
+    description: "Building scalable Software as a Service (SaaS) applications tailored to your business needs.",
   },
   {
     icon: Database,
-    title: "Backend Development",
-    description: "Server-side development with Node.js, Express, and database integration (MongoDB, MySQL).",
+    title: "AI Chatbot's",
+    description: "Designing and implementing AI-powered chatbots to enhance customer engagement and support.",
   },
   {
     icon: Smartphone,
@@ -32,8 +32,8 @@ const services = [
   },
   {
     icon: Paintbrush,
-    title: "UI/UX Implementation",
-    description: "Converting designs into pixel-perfect, interactive websites with attention to user experience.",
+    title: "AI-AGENT's",
+    description: "Creating intelligent AI agents to automate tasks and improve operational efficiency.",
   },
 ]
 

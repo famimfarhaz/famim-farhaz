@@ -7,6 +7,8 @@ import { ExternalLink, Github, ArrowLeft, Calendar, User, Award, MessageSquare, 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ImageModal } from "@/components/image-modal"
+import { AnimatedFileTree } from "@/components/animated-file-tree"
+import { ProjectRating } from "@/components/project-rating"
 
 const projectData = {
   title: "AnimeSphere Platform",
@@ -190,19 +192,19 @@ export default function AnimeWebsitePage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔗 Custom URL System</h4>
+                      <h4 className="font-medium mb-2">Custom URL System</h4>
                       <p className="text-sm text-muted-foreground">Users can create custom URLs like '/user/developer-name' for easy profile sharing and professional branding.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📊 Comprehensive Statistics</h4>
+                      <h4 className="font-medium mb-2">Comprehensive Statistics</h4>
                       <p className="text-sm text-muted-foreground">Track user activity including comments count, likes received, bookmarks, days active, and engagement metrics.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">👥 Social Features</h4>
+                      <h4 className="font-medium mb-2">Social Features</h4>
                       <p className="text-sm text-muted-foreground">Complete follow/unfollow system with follower counts, following lists, and social interaction tracking.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">✏️ Profile Editing</h4>
+                      <h4 className="font-medium mb-2">Profile Editing</h4>
                       <p className="text-sm text-muted-foreground">Rich profile editor with avatar upload, cover image, bio editing, social links, and preference management.</p>
                     </div>
                   </div>
@@ -216,15 +218,15 @@ export default function AnimeWebsitePage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎭 Animated Badges</h4>
+                      <h4 className="font-medium mb-2">Animated Badges</h4>
                       <p className="text-sm text-muted-foreground">Custom CSS animations for special badges including glow effects, pulse animations, and gradient backgrounds.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🏆 Badge Hierarchy</h4>
+                      <h4 className="font-medium mb-2">Badge Hierarchy</h4>
                       <p className="text-sm text-muted-foreground">Role-based badge system: Founder, Co-Founder, Staff, Developer, Voice Actor, Editor, Moderator, Supporter, and more.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">⭐ Badge Distribution</h4>
+                      <h4 className="font-medium mb-2">Badge Distribution</h4>
                       <p className="text-sm text-muted-foreground">Automated badge assignment based on user activity, manual admin assignment, and achievement-based unlocking.</p>
                     </div>
                   </div>
@@ -238,19 +240,19 @@ export default function AnimeWebsitePage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🤖 AI-Powered Moderation</h4>
+                      <h4 className="font-medium mb-2">AI-Powered Moderation</h4>
                       <p className="text-sm text-muted-foreground">Integrated Google Gemini AI for automatic content moderation, detecting inappropriate content, spam, and toxic behavior.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">💬 Real-time Comments</h4>
+                      <h4 className="font-medium mb-2">Real-time Comments</h4>
                       <p className="text-sm text-muted-foreground">Live comment system with instant updates, reply threading, and reaction system (likes/dislikes).</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🛡️ Restriction System</h4>
+                      <h4 className="font-medium mb-2">Restriction System</h4>
                       <p className="text-sm text-muted-foreground">Comprehensive user restriction system with temporary bans, comment limitations, and escalating penalties.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">⚖️ Moderation Dashboard</h4>
+                      <h4 className="font-medium mb-2">Moderation Dashboard</h4>
                       <p className="text-sm text-muted-foreground">Admin tools for content review, user management, and automated action logs with manual override capabilities.</p>
                     </div>
                   </div>
@@ -264,19 +266,19 @@ export default function AnimeWebsitePage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🗄️ Supabase Integration</h4>
+                      <h4 className="font-medium mb-2">Supabase Integration</h4>
                       <p className="text-sm text-muted-foreground">PostgreSQL database with real-time subscriptions, Row Level Security (RLS), and automatic API generation.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔐 Authentication System</h4>
+                      <h4 className="font-medium mb-2">Authentication System</h4>
                       <p className="text-sm text-muted-foreground">Secure user authentication with email verification, password reset, and social login integration.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📊 Database Design</h4>
+                      <h4 className="font-medium mb-2">Database Design</h4>
                       <p className="text-sm text-muted-foreground">Optimized schema with user profiles, video metadata, comments, reactions, bookmarks, and activity tracking tables.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">⚡ Performance Optimization</h4>
+                      <h4 className="font-medium mb-2">Performance Optimization</h4>
                       <p className="text-sm text-muted-foreground">Caching strategies, database indexing, lazy loading, and efficient state management for optimal user experience.</p>
                     </div>
                   </div>
@@ -342,7 +344,7 @@ export default function AnimeWebsitePage() {
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50 space-y-4">
                   <h3 className="font-semibold">Database Schema</h3>
                   <div className="space-y-2 text-xs font-mono">
-                    <div className="text-primary">📋 Core Tables:</div>
+                    <div className="text-primary">Core Tables:</div>
                     <div className="pl-2 space-y-1 text-muted-foreground">
                       <div>• videos - Anime content</div>
                       <div>• user_profiles - Extended user info</div>
@@ -360,23 +362,23 @@ export default function AnimeWebsitePage() {
                   <h3 className="font-semibold">Badge Types</h3>
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-purple-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Founder & Co-Founder</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Staff & Developer</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Voice Actor & Editor</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Moderator & Supporter</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-cyan-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Verified & Special</span>
                     </div>
                   </div>
@@ -422,15 +424,15 @@ export default function AnimeWebsitePage() {
                   <h3 className="text-lg font-semibold mb-4">Badge System Architecture</h3>
                   <div className="space-y-3 text-sm">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">Badge Registry</div>
+                      <div className="font-medium text-foreground">Badge Registry</div>
                       <div className="text-muted-foreground">Central system defining all badge types with visual properties</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">Animation System</div>
+                      <div className="font-medium text-foreground">Animation System</div>
                       <div className="text-muted-foreground">CSS-based animations for special badges (glow, pulse, gradient)</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">Assignment Logic</div>
+                      <div className="font-medium text-foreground">Assignment Logic</div>
                       <div className="text-muted-foreground">Automated and manual badge distribution system</div>
                     </div>
                   </div>
@@ -439,7 +441,7 @@ export default function AnimeWebsitePage() {
 
               {/* AI Moderation Details */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                <h3 className="text-lg font-semibold mb-4">🤖 AI Moderation Implementation</h3>
+                <h3 className="text-lg font-semibold mb-4">AI Moderation Implementation</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div>
@@ -453,17 +455,17 @@ export default function AnimeWebsitePage() {
                     </div>
                     <div>
                       <h4 className="font-medium mb-2">Moderation Pipeline</h4>
-                      <div className="space-y-2 text-sm">
+                      <div className="space-y-2 text-sm text-muted-foreground">
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Real-time comment scanning</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>AI content classification</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-red-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Automated restrictions</span>
                         </div>
                       </div>
@@ -473,14 +475,17 @@ export default function AnimeWebsitePage() {
                     <div>
                       <h4 className="font-medium mb-2">Restriction System</h4>
                       <div className="space-y-2 text-sm">
-                        <div className="p-2 rounded bg-red-900/20 border border-red-500/20">
-                          <strong>Level 1:</strong> Comment warning
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">Level 1</div>
+                          <div className="text-muted-foreground">Comment warning</div>
                         </div>
-                        <div className="p-2 rounded bg-orange-900/20 border border-orange-500/20">
-                          <strong>Level 2:</strong> Temporary comment ban
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">Level 2</div>
+                          <div className="text-muted-foreground">Temporary comment ban</div>
                         </div>
-                        <div className="p-2 rounded bg-red-900/30 border border-red-500/30">
-                          <strong>Level 3:</strong> Account suspension
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">Level 3</div>
+                          <div className="text-muted-foreground">Account suspension</div>
                         </div>
                       </div>
                     </div>
@@ -491,36 +496,36 @@ export default function AnimeWebsitePage() {
               {/* Performance & Optimization */}
               <div className="grid lg:grid-cols-2 gap-6">
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">⚡ Performance Optimizations</h3>
+                  <h3 className="text-lg font-semibold mb-4">Performance Optimizations</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">Profile Caching</div>
+                      <div className="font-medium text-foreground">Profile Caching</div>
                       <div className="text-sm text-muted-foreground">Smart caching system for user profiles with automatic invalidation</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">Lazy Loading</div>
+                      <div className="font-medium text-foreground">Lazy Loading</div>
                       <div className="text-sm text-muted-foreground">Dynamic component loading for better initial page performance</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">Real-time Updates</div>
+                      <div className="font-medium text-foreground">Real-time Updates</div>
                       <div className="text-sm text-muted-foreground">Supabase subscriptions for instant social interactions</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">🛡️ Security Features</h3>
+                  <h3 className="text-lg font-semibold mb-4">Security Features</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-red-400">Row Level Security</div>
+                      <div className="font-medium text-foreground">Row Level Security</div>
                       <div className="text-sm text-muted-foreground">Database-level security policies for data protection</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-orange-400">Input Sanitization</div>
+                      <div className="font-medium text-foreground">Input Sanitization</div>
                       <div className="text-sm text-muted-foreground">XSS protection and content filtering</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-cyan-400">Authentication</div>
+                      <div className="font-medium text-foreground">Authentication</div>
                       <div className="text-sm text-muted-foreground">Secure JWT-based authentication with Supabase</div>
                     </div>
                   </div>
@@ -529,30 +534,108 @@ export default function AnimeWebsitePage() {
 
               {/* Code Architecture */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                <h3 className="text-lg font-semibold mb-4">📁 Project Structure</h3>
+                <h3 className="text-lg font-semibold mb-4">Project Structure</h3>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Frontend Structure:</div>
-                    <div className="space-y-1 text-muted-foreground">
-                      <div>📂 src/</div>
-                      <div className="pl-4">📂 components/ - Reusable UI components</div>
-                      <div className="pl-4">📂 pages/ - Route components</div>
-                      <div className="pl-4">📂 lib/ - Utility functions</div>
-                      <div className="pl-4">📂 contexts/ - React contexts</div>
-                      <div className="pl-4">📂 hooks/ - Custom React hooks</div>
-                      <div className="pl-4">📂 types/ - TypeScript definitions</div>
-                    </div>
+                  <div>
+                    <div className="text-primary font-bold mb-3 text-sm">Frontend Structure:</div>
+                    <AnimatedFileTree
+                      data={[
+                        {
+                          name: "src",
+                          type: "folder",
+                          children: [
+                            {
+                              name: "components",
+                              type: "folder",
+                              children: [
+                                { name: "Header.tsx", type: "file" },
+                                { name: "VideoCard.tsx", type: "file" },
+                                { name: "CommentSection.tsx", type: "file" },
+                                { name: "ProfileCard.tsx", type: "file" },
+                                { name: "BadgeDisplay.tsx", type: "file" }
+                              ]
+                            },
+                            {
+                              name: "pages",
+                              type: "folder",
+                              children: [
+                                { name: "Home.tsx", type: "file" },
+                                { name: "Profile.tsx", type: "file" },
+                                { name: "Video.tsx", type: "file" },
+                                { name: "Settings.tsx", type: "file" }
+                              ]
+                            },
+                            {
+                              name: "lib",
+                              type: "folder",
+                              children: [
+                                { name: "supabase.ts", type: "file", icon: "- DB client" },
+                                { name: "gemini.ts", type: "file", icon: "- AI integration" }
+                              ]
+                            },
+                            {
+                              name: "contexts",
+                              type: "folder",
+                              children: [
+                                { name: "AuthContext.tsx", type: "file" },
+                                { name: "CommentContext.tsx", type: "file" }
+                              ]
+                            },
+                            {
+                              name: "hooks",
+                              type: "folder",
+                              children: [
+                                { name: "useProfile.ts", type: "file" },
+                                { name: "useFollower.ts", type: "file" }
+                              ]
+                            },
+                            {
+                              name: "types",
+                              type: "folder",
+                              children: [
+                                { name: "user.ts", type: "file" },
+                                { name: "comment.ts", type: "file" },
+                                { name: "badge.ts", type: "file" }
+                              ]
+                            }
+                          ]
+                        }
+                      ]}
+                    />
                   </div>
-                  <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Key Libraries:</div>
-                    <div className="space-y-1 text-muted-foreground">
-                      <div>⚛️ React 18 - UI framework</div>
-                      <div>🎭 Framer Motion - Animations</div>
-                      <div>🗄️ Supabase - Backend as a Service</div>
-                      <div>🎨 Tailwind CSS - Styling</div>
-                      <div>📝 TypeScript - Type safety</div>
-                      <div>🤖 Google Gemini - AI moderation</div>
-                    </div>
+                  <div>
+                    <div className="text-primary font-bold mb-3 text-sm">Key Features:</div>
+                    <AnimatedFileTree
+                      data={[
+                        {
+                          name: "User System",
+                          type: "folder",
+                          children: [
+                            { name: "Profile Management", type: "file", icon: "- Custom URLs" },
+                            { name: "Social Features", type: "file", icon: "- Follow system" },
+                            { name: "Badge System", type: "file", icon: "- Animated badges" }
+                          ]
+                        },
+                        {
+                          name: "Content System",
+                          type: "folder",
+                          children: [
+                            { name: "Comment System", type: "file", icon: "- Real-time" },
+                            { name: "AI Moderation", type: "file", icon: "- Gemini AI" },
+                            { name: "Reactions", type: "file", icon: "- Like/Dislike" }
+                          ]
+                        },
+                        {
+                          name: "Database",
+                          type: "folder",
+                          children: [
+                            { name: "Supabase", type: "file", icon: "- PostgreSQL" },
+                            { name: "Real-time", type: "file", icon: "- Subscriptions" },
+                            { name: "RLS", type: "file", icon: "- Security" }
+                          ]
+                        }
+                      ]}
+                    />
                   </div>
                 </div>
               </div>
@@ -604,6 +687,28 @@ export default function AnimeWebsitePage() {
           )}
         </div>
       </section>
+
+      {/* Rating Section */}
+      <section className="py-16 px-4 border-t border-border/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <div className="text-center space-y-2">
+              <h2 className="text-2xl font-bold">Rate This Project</h2>
+              <p className="text-muted-foreground">
+                How would you rate this project? Your feedback helps improve future projects.
+              </p>
+            </div>
+
+            <ProjectRating projectId="anime-website" />
+
+            <div className="flex justify-between text-xs font-medium text-muted-foreground">
+              <span>Poor ??</span>
+              <span>Excellent ??</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Image Modal */}
       <ImageModal

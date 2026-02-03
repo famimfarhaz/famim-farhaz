@@ -7,6 +7,8 @@ import { ExternalLink, Github, ArrowLeft, Calendar, User, FolderTree, Zap, Tag, 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ImageModal } from "@/components/image-modal"
+import { AnimatedFileTree } from "@/components/animated-file-tree"
+import { ProjectRating } from "@/components/project-rating"
 
 const projectData = {
   title: "File Organizer Pro",
@@ -180,19 +182,19 @@ export default function FileOrganizerPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎯 Intelligent Grouping Algorithm</h4>
+                      <h4 className="font-medium mb-2">Intelligent Grouping Algorithm</h4>
                       <p className="text-sm text-muted-foreground">Advanced file analysis that automatically groups files by naming patterns or file types, optimizing folder structure for maximum organization efficiency.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📁 Automatic Folder Creation</h4>
+                      <h4 className="font-medium mb-2">Automatic Folder Creation</h4>
                       <p className="text-sm text-muted-foreground">Dynamic folder generation based on detected file categories including Images, Videos, Documents, Code files, and more with customizable naming.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔍 Pattern Recognition</h4>
+                      <h4 className="font-medium mb-2">Pattern Recognition</h4>
                       <p className="text-sm text-muted-foreground">Smart detection of file naming patterns (e.g., "Photo 1", "Photo 2") to group related files together automatically.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📦 ZIP Generation</h4>
+                      <h4 className="font-medium mb-2">ZIP Generation</h4>
                       <p className="text-sm text-muted-foreground">Seamless ZIP archive creation with organized folder structure and real-time progress tracking.</p>
                     </div>
                   </div>
@@ -206,19 +208,19 @@ export default function FileOrganizerPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎭 Custom Cursor Effects</h4>
+                      <h4 className="font-medium mb-2">Custom Cursor Effects</h4>
                       <p className="text-sm text-muted-foreground">Interactive custom cursor with smooth animations and context-aware behavior that enhances user engagement.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🖱️ Drag & Drop Interface</h4>
+                      <h4 className="font-medium mb-2">Drag & Drop Interface</h4>
                       <p className="text-sm text-muted-foreground">Intuitive file upload system with visual feedback, hover effects, and multi-file selection support.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🖼️ File Preview System</h4>
+                      <h4 className="font-medium mb-2">File Preview System</h4>
                       <p className="text-sm text-muted-foreground">Real-time thumbnail generation for images and preview cards for all file types with size and type information.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">⚡ Progress Tracking</h4>
+                      <h4 className="font-medium mb-2">Progress Tracking</h4>
                       <p className="text-sm text-muted-foreground">Real-time progress bars with percentage indicators and smooth animations during file processing.</p>
                     </div>
                   </div>
@@ -232,19 +234,19 @@ export default function FileOrganizerPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🌊 Animated Background</h4>
+                      <h4 className="font-medium mb-2">Animated Background</h4>
                       <p className="text-sm text-muted-foreground">Dynamic gradient background with particle effects and smooth color transitions for immersive user experience.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📜 Scroll Reveal Effects</h4>
+                      <h4 className="font-medium mb-2">Scroll Reveal Effects</h4>
                       <p className="text-sm text-muted-foreground">Smooth scroll-triggered animations with staggered reveals and directional slide effects.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎪 Parallax Containers</h4>
+                      <h4 className="font-medium mb-2">Parallax Containers</h4>
                       <p className="text-sm text-muted-foreground">Subtle parallax scrolling effects that add depth and visual interest to the interface.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">💫 Ripple Buttons</h4>
+                      <h4 className="font-medium mb-2">Ripple Buttons</h4>
                       <p className="text-sm text-muted-foreground">Interactive button components with ripple effects and micro-animations for enhanced feedback.</p>
                     </div>
                   </div>
@@ -258,15 +260,15 @@ export default function FileOrganizerPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📊 Download Statistics</h4>
+                      <h4 className="font-medium mb-2">Download Statistics</h4>
                       <p className="text-sm text-muted-foreground">Comprehensive tracking of processed files with statistics including total files, folders created, and file sizes.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🕒 Session History</h4>
+                      <h4 className="font-medium mb-2">Session History</h4>
                       <p className="text-sm text-muted-foreground">Persistent local storage of organization history with timestamps and detailed breakdowns of each session.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📈 Usage Analytics</h4>
+                      <h4 className="font-medium mb-2">Usage Analytics</h4>
                       <p className="text-sm text-muted-foreground">File type analysis and organizational pattern tracking to optimize future processing workflows.</p>
                     </div>
                   </div>
@@ -350,27 +352,27 @@ export default function FileOrganizerPage() {
                   <h3 className="font-semibold">File Type Support</h3>
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Images (JPG, PNG, GIF, SVG)</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Videos (MP4, AVI, MOV)</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Documents (PDF, DOC, PPT)</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Archives (ZIP, RAR, 7Z)</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-purple-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Audio (MP3, WAV, FLAC)</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-cyan-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Code (JS, TS, HTML, CSS)</span>
                     </div>
                   </div>
@@ -416,19 +418,19 @@ export default function FileOrganizerPage() {
                   <h3 className="text-lg font-semibold mb-4">UI/UX Architecture</h3>
                   <div className="space-y-3 text-sm">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">Custom Cursor System</div>
+                      <div className="font-medium text-foreground">Custom Cursor System</div>
                       <div className="text-muted-foreground">Context-aware cursor with smooth tracking</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">Drag & Drop Engine</div>
+                      <div className="font-medium text-foreground">Drag & Drop Engine</div>
                       <div className="text-muted-foreground">Advanced file handling with visual feedback</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">Animation Framework</div>
+                      <div className="font-medium text-foreground">Animation Framework</div>
                       <div className="text-muted-foreground">Scroll reveal and parallax effect system</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-orange-400">History Management</div>
+                      <div className="font-medium text-foreground">History Management</div>
                       <div className="text-muted-foreground">Local storage-based session tracking</div>
                     </div>
                   </div>
@@ -437,7 +439,7 @@ export default function FileOrganizerPage() {
 
               {/* File Organization Algorithm */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                <h3 className="text-lg font-semibold mb-4">📁 File Organization Algorithm</h3>
+                <h3 className="text-lg font-semibold mb-4">File Organization Algorithm</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div>
@@ -451,21 +453,21 @@ export default function FileOrganizerPage() {
                     </div>
                     <div>
                       <h4 className="font-medium mb-2">Organization Strategy</h4>
-                      <div className="space-y-2 text-sm">
+                      <div className="space-y-2 text-sm text-muted-foreground">
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Analyze file naming patterns</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Group by name or file type</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Create organized folder structure</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-orange-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Generate ZIP with progress</span>
                         </div>
                       </div>
@@ -475,17 +477,21 @@ export default function FileOrganizerPage() {
                     <div>
                       <h4 className="font-medium mb-2">File Categories</h4>
                       <div className="space-y-2 text-sm">
-                        <div className="p-2 rounded bg-green-900/20 border border-green-500/20">
-                          <strong>Images:</strong> JPG, PNG, GIF, SVG, WebP
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">Images</div>
+                          <div className="text-muted-foreground">JPG, PNG, GIF, SVG, WebP</div>
                         </div>
-                        <div className="p-2 rounded bg-red-900/20 border border-red-500/20">
-                          <strong>Videos:</strong> MP4, AVI, MOV, WebM
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">Videos</div>
+                          <div className="text-muted-foreground">MP4, AVI, MOV, WebM</div>
                         </div>
-                        <div className="p-2 rounded bg-blue-900/20 border border-blue-500/20">
-                          <strong>Documents:</strong> PDF, DOC, PPT, XLS
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">Documents</div>
+                          <div className="text-muted-foreground">PDF, DOC, PPT, XLS</div>
                         </div>
-                        <div className="p-2 rounded bg-yellow-900/20 border border-yellow-500/20">
-                          <strong>Archives:</strong> ZIP, RAR, 7Z, TAR
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">Archives</div>
+                          <div className="text-muted-foreground">ZIP, RAR, 7Z, TAR</div>
                         </div>
                       </div>
                     </div>
@@ -496,70 +502,119 @@ export default function FileOrganizerPage() {
               {/* Animation & Performance */}
               <div className="grid lg:grid-cols-2 gap-6">
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">🎭 Animation System</h3>
+                  <h3 className="text-lg font-semibold mb-4">Animation System</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">Scroll Reveal</div>
+                      <div className="font-medium text-foreground">Scroll Reveal</div>
                       <div className="text-sm text-muted-foreground">Intersection Observer-based reveals with timing control</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">Custom Cursor</div>
+                      <div className="font-medium text-foreground">Custom Cursor</div>
                       <div className="text-sm text-muted-foreground">Mouse tracking with smooth follow animations</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">Ripple Effects</div>
+                      <div className="font-medium text-foreground">Ripple Effects</div>
                       <div className="text-sm text-muted-foreground">Click-triggered ripple animations for interactive feedback</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">⚡ Performance Features</h3>
+                  <h3 className="text-lg font-semibold mb-4">Performance Features</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-red-400">File Processing</div>
+                      <div className="font-medium text-foreground">File Processing</div>
                       <div className="text-sm text-muted-foreground">Efficient file handling with streaming and chunking</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-orange-400">Memory Management</div>
+                      <div className="font-medium text-foreground">Memory Management</div>
                       <div className="text-sm text-muted-foreground">Optimized image thumbnail generation with canvas</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-cyan-400">State Management</div>
+                      <div className="font-medium text-foreground">State Management</div>
                       <div className="text-sm text-muted-foreground">React hooks for efficient re-rendering</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Component Architecture */}
+              {/* Project Structure */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                <h3 className="text-lg font-semibold mb-4">📁 Component Architecture</h3>
+                <h3 className="text-lg font-semibold mb-4">Project Structure</h3>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Core Components:</div>
-                    <div className="space-y-1 text-muted-foreground">
-                      <div>📂 components/</div>
-                      <div className="pl-4">🎭 AnimatedBackground</div>
-                      <div className="pl-4">🖱️ CustomCursor</div>
-                      <div className="pl-4">📤 DragDropZone</div>
-                      <div className="pl-4">🖼️ FilePreview</div>
-                      <div className="pl-4">📊 HistoryModal</div>
-                      <div className="pl-4">🌊 ScrollReveal</div>
-                      <div className="pl-4">💫 RippleButton</div>
-                    </div>
+                  <div>
+                    <div className="text-primary font-bold mb-3 text-sm">Frontend Structure:</div>
+                    <AnimatedFileTree
+                      data={[
+                        {
+                          name: "src",
+                          type: "folder",
+                          children: [
+                            {
+                              name: "components",
+                              type: "folder",
+                              children: [
+                                { name: "AnimatedBackground.tsx", type: "file" },
+                                { name: "CustomCursor.tsx", type: "file" },
+                                { name: "DragDropZone.tsx", type: "file", icon: "- Upload" },
+                                { name: "FilePreview.tsx", type: "file", icon: "- Display" },
+                                { name: "HistoryModal.tsx", type: "file", icon: "- Track" },
+                                { name: "ScrollReveal.tsx", type: "file" },
+                                { name: "RippleButton.tsx", type: "file" }
+                              ]
+                            },
+                            {
+                              name: "utils",
+                              type: "folder",
+                              children: [
+                                { name: "fileUtils.ts", type: "file", icon: "- Type detection" },
+                                { name: "historyUtils.ts", type: "file", icon: "- Tracking" },
+                                { name: "thumbnailGenerator.ts", type: "file" },
+                                { name: "patternRecognition.ts", type: "file" },
+                                { name: "zipProcessor.ts", type: "file", icon: "- JSZip" }
+                              ]
+                            },
+                            { name: "App.tsx", type: "file", icon: "- Main component" },
+                            { name: "main.tsx", type: "file", icon: "- Entry point" }
+                          ]
+                        }
+                      ]}
+                    />
                   </div>
-                  <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Utility Functions:</div>
-                    <div className="space-y-1 text-muted-foreground">
-                      <div>📂 utils/</div>
-                      <div className="pl-4">🔍 fileUtils - Type detection</div>
-                      <div className="pl-4">📊 historyUtils - Session tracking</div>
-                      <div className="pl-4">🖼️ Thumbnail generation</div>
-                      <div className="pl-4">📁 Pattern recognition</div>
-                      <div className="pl-4">📦 ZIP processing</div>
-                      <div className="pl-4">💾 Local storage</div>
-                    </div>
+                  <div>
+                    <div className="text-primary font-bold mb-3 text-sm">Key Features:</div>
+                    <AnimatedFileTree
+                      data={[
+                        {
+                          name: "File Organization",
+                          type: "folder",
+                          children: [
+                            { name: "Smart Grouping", type: "file", icon: "- Pattern based" },
+                            { name: "Type Detection", type: "file", icon: "- Extensions" },
+                            { name: "ZIP Generation", type: "file", icon: "- JSZip" }
+                          ]
+                        },
+                        {
+                          name: "UI/UX System",
+                          type: "folder",
+                          children: [
+                            { name: "Drag & Drop", type: "file", icon: "- File upload" },
+                            { name: "Custom Cursor", type: "file", icon: "- Smooth tracking" },
+                            { name: "Animations", type: "file", icon: "- Scroll reveal" },
+                            { name: "History", type: "file", icon: "- Track processed" }
+                          ]
+                        },
+                        {
+                          name: "Processing",
+                          type: "folder",
+                          children: [
+                            { name: "Thumbnails", type: "file", icon: "- Canvas API" },
+                            { name: "Pattern Match", type: "file", icon: "- Smart grouping" },
+                            { name: "Progress", type: "file", icon: "- Real-time" }
+                          ]
+                        }
+                      ]}
+                    />
                   </div>
                 </div>
               </div>
@@ -612,6 +667,28 @@ export default function FileOrganizerPage() {
         </div>
       </section>
 
+      {/* Rating Section */}
+      <section className="py-16 px-4 border-t border-border/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <div className="text-center space-y-2">
+              <h2 className="text-2xl font-bold">Rate This Project</h2>
+              <p className="text-muted-foreground">
+                How would you rate this project? Your feedback helps improve future projects.
+              </p>
+            </div>
+
+            <ProjectRating projectId="file-organizer" />
+
+            <div className="flex justify-between text-xs font-medium text-muted-foreground">
+              <span>Poor ??</span>
+              <span>Excellent ??</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* Image Modal */}
       <ImageModal
         isOpen={isModalOpen}
@@ -623,3 +700,4 @@ export default function FileOrganizerPage() {
     </div>
   )
 }
+

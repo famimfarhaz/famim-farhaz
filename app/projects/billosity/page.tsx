@@ -7,6 +7,8 @@ import { ExternalLink, Github, ArrowLeft, Calendar, User, Tag, Code, Receipt, Ba
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ImageModal } from "@/components/image-modal"
+import { AnimatedFileTree } from "@/components/animated-file-tree"
+import { ProjectRating } from "@/components/project-rating"
 
 const projectData = {
   title: "Billosity",
@@ -245,19 +247,19 @@ export default function BillosityPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📄 Smart Invoice Creation</h4>
+                      <h4 className="font-medium mb-2">Smart Invoice Creation</h4>
                       <p className="text-sm text-muted-foreground">Intuitive invoice builder with customizable templates, automated calculations, and professional PDF generation.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">👥 Client Management System</h4>
+                      <h4 className="font-medium mb-2">Client Management System</h4>
                       <p className="text-sm text-muted-foreground">Comprehensive client database with contact information, billing history, and relationship tracking.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📦 Product & Service Catalog</h4>
+                      <h4 className="font-medium mb-2">Product & Service Catalog</h4>
                       <p className="text-sm text-muted-foreground">Organized catalog of products and services with pricing, descriptions, and quick invoice integration.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎫 Coupon & Discount System</h4>
+                      <h4 className="font-medium mb-2">Coupon & Discount System</h4>
                       <p className="text-sm text-muted-foreground">Flexible coupon system with percentage and fixed amount discounts, expiration dates, and usage tracking.</p>
                     </div>
                   </div>
@@ -271,19 +273,19 @@ export default function BillosityPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🤖 OCR Document Extraction</h4>
+                      <h4 className="font-medium mb-2">OCR Document Extraction</h4>
                       <p className="text-sm text-muted-foreground">AI-powered document scanning using Tesseract.js for automated data extraction from receipts and invoices.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📊 Business Health Scoring</h4>
+                      <h4 className="font-medium mb-2">Business Health Scoring</h4>
                       <p className="text-sm text-muted-foreground">Automated algorithms that calculate business health scores based on payment patterns and invoice metrics.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📈 Predictive Analytics</h4>
+                      <h4 className="font-medium mb-2">Predictive Analytics</h4>
                       <p className="text-sm text-muted-foreground">AI-generated reports and forecasting tools for business growth prediction and trend analysis.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎯 Smart Insights</h4>
+                      <h4 className="font-medium mb-2">Smart Insights</h4>
                       <p className="text-sm text-muted-foreground">Automated business insights and recommendations based on invoice patterns and client behavior.</p>
                     </div>
                   </div>
@@ -297,19 +299,19 @@ export default function BillosityPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📊 Interactive Dashboards</h4>
+                      <h4 className="font-medium mb-2">Interactive Dashboards</h4>
                       <p className="text-sm text-muted-foreground">Real-time dashboards with interactive charts using Recharts for comprehensive business metrics visualization.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">💰 Revenue Tracking</h4>
+                      <h4 className="font-medium mb-2">Revenue Tracking</h4>
                       <p className="text-sm text-muted-foreground">Detailed revenue analytics with monthly comparisons, growth percentages, and performance indicators.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎯 Goal Management</h4>
+                      <h4 className="font-medium mb-2">Goal Management</h4>
                       <p className="text-sm text-muted-foreground">Sales goal setting and tracking with progress visualization and achievement notifications.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📋 Custom Reports</h4>
+                      <h4 className="font-medium mb-2">Custom Reports</h4>
                       <p className="text-sm text-muted-foreground">Generate detailed PDF reports with business analytics, client summaries, and financial insights.</p>
                     </div>
                   </div>
@@ -393,23 +395,23 @@ export default function BillosityPage() {
                   <h3 className="font-semibold">SaaS Platform</h3>
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Premium Invoice Management</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Business Analytics Dashboard</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-purple-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>AI Document Processing</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Growth Tracking Tools</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Client Relationship Management</span>
                     </div>
                   </div>
@@ -451,44 +453,108 @@ export default function BillosityPage() {
                   <h3 className="text-lg font-semibold mb-4">AI & OCR Implementation</h3>
                   <div className="space-y-3 text-sm">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">Tesseract.js OCR</div>
+                      <div className="font-medium text-foreground">Tesseract.js OCR</div>
                       <div className="text-muted-foreground">Client-side optical character recognition</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">Document Processing</div>
+                      <div className="font-medium text-foreground">Document Processing</div>
                       <div className="text-muted-foreground">Automated data extraction from receipts and invoices</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">Business Intelligence</div>
+                      <div className="font-medium text-foreground">Business Intelligence</div>
                       <div className="text-muted-foreground">AI-powered analytics and health scoring</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Component Architecture */}
+              {/* Project Structure */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                <h3 className="text-lg font-semibold mb-4">📁 Component Architecture</h3>
+                <h3 className="text-lg font-semibold mb-4">Project Structure</h3>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Dashboard Components:</div>
-                    <div className="space-y-1 text-muted-foreground">
-                      <div>📊 StatsCards - Business metrics</div>
-                      <div>📈 GrowthInsights - Analytics charts</div>
-                      <div>👤 UserProfile - Account management</div>
-                      <div>🏢 BusinessForm - Company setup</div>
-                      <div>❤️ BusinessStatus - Health scoring</div>
-                    </div>
+                  <div>
+                    <div className="text-primary font-bold mb-3 text-sm">Frontend Structure:</div>
+                    <AnimatedFileTree
+                      data={[
+                        {
+                          name: "src",
+                          type: "folder",
+                          children: [
+                            {
+                              name: "components",
+                              type: "folder",
+                              children: [
+                                { name: "Dashboard", type: "folder", children: [
+                                  { name: "StatsCards.tsx", type: "file" },
+                                  { name: "GrowthInsights.tsx", type: "file" },
+                                  { name: "BusinessStatus.tsx", type: "file" }
+                                ]},
+                                { name: "Invoice", type: "folder", children: [
+                                  { name: "InvoiceTemplate.tsx", type: "file" },
+                                  { name: "ClientSelector.tsx", type: "file" },
+                                  { name: "ProductSelector.tsx", type: "file" }
+                                ]},
+                                { name: "AIDocumentExtractor.tsx", type: "file", icon: "- OCR" }
+                              ]
+                            },
+                            {
+                              name: "lib",
+                              type: "folder",
+                              children: [
+                                { name: "supabase.ts", type: "file", icon: "- Database" },
+                                { name: "tesseract.ts", type: "file", icon: "- OCR engine" },
+                                { name: "pdf-generator.ts", type: "file", icon: "- jsPDF" }
+                              ]
+                            },
+                            {
+                              name: "hooks",
+                              type: "folder",
+                              children: [
+                                { name: "useInvoice.ts", type: "file" },
+                                { name: "useBusinessHealth.ts", type: "file" },
+                                { name: "useAnalytics.ts", type: "file" }
+                              ]
+                            }
+                          ]
+                        }
+                      ]}
+                    />
                   </div>
-                  <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Invoice System:</div>
-                    <div className="space-y-1 text-muted-foreground">
-                      <div>📄 InvoiceTemplate - PDF generation</div>
-                      <div>👥 ClientSelector - Customer picker</div>
-                      <div>📦 ProductSelector - Item selection</div>
-                      <div>💳 PaymentTermsManager - Terms</div>
-                      <div>🤖 AIDocumentExtractor - OCR</div>
-                    </div>
+                  <div>
+                    <div className="text-primary font-bold mb-3 text-sm">Key Features:</div>
+                    <AnimatedFileTree
+                      data={[
+                        {
+                          name: "Invoice Management",
+                          type: "folder",
+                          children: [
+                            { name: "PDF Generation", type: "file", icon: "- jsPDF" },
+                            { name: "Client Management", type: "file", icon: "- CRM" },
+                            { name: "Product Catalog", type: "file", icon: "- Inventory" },
+                            { name: "Coupon System", type: "file", icon: "- Discounts" }
+                          ]
+                        },
+                        {
+                          name: "AI & Analytics",
+                          type: "folder",
+                          children: [
+                            { name: "OCR Extraction", type: "file", icon: "- Tesseract.js" },
+                            { name: "Business Health", type: "file", icon: "- Auto scoring" },
+                            { name: "Growth Charts", type: "file", icon: "- Recharts" },
+                            { name: "Forecasting", type: "file", icon: "- Predictions" }
+                          ]
+                        },
+                        {
+                          name: "Database",
+                          type: "folder",
+                          children: [
+                            { name: "Supabase", type: "file", icon: "- PostgreSQL" },
+                            { name: "Real-time", type: "file", icon: "- Live data" },
+                            { name: "Authentication", type: "file", icon: "- Secure" }
+                          ]
+                        }
+                      ]}
+                    />
                   </div>
                 </div>
               </div>
@@ -540,6 +606,28 @@ export default function BillosityPage() {
           )}
         </div>
       </section>
+
+      {/* Rating Section */}
+      <section className="py-16 px-4 border-t border-border/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <div className="text-center space-y-2">
+              <h2 className="text-2xl font-bold">Rate This Project</h2>
+              <p className="text-muted-foreground">
+                How would you rate this project? Your feedback helps improve future projects.
+              </p>
+            </div>
+
+            <ProjectRating projectId="billosity" />
+
+            <div className="flex justify-between text-xs font-medium text-muted-foreground">
+              <span>Poor ??</span>
+              <span>Excellent ??</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Image Modal */}
       <ImageModal

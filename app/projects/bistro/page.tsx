@@ -7,6 +7,8 @@ import { ExternalLink, Github, ArrowLeft, Calendar, User, Tag, ChefHat, Users, C
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ImageModal } from "@/components/image-modal"
+import { AnimatedFileTree } from "@/components/animated-file-tree"
+import { ProjectRating } from "@/components/project-rating"
 
 const projectData = {
   title: "Bistro",
@@ -185,19 +187,19 @@ export default function BistroPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎭 Framer Motion Integration</h4>
+                      <h4 className="font-medium mb-2">Framer Motion Integration</h4>
                       <p className="text-sm text-muted-foreground">Complex animations with staggered children, smooth page transitions, and optimized performance using Framer Motion's advanced features.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">✨ Interactive UI Elements</h4>
+                      <h4 className="font-medium mb-2">Interactive UI Elements</h4>
                       <p className="text-sm text-muted-foreground">Hover effects, floating particles, gradient backgrounds, and smooth scrolling animations that enhance user engagement.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📱 Responsive Animations</h4>
+                      <h4 className="font-medium mb-2">Responsive Animations</h4>
                       <p className="text-sm text-muted-foreground">Mobile-optimized animations that maintain performance across all devices with reduced motion support.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎨 Custom Design System</h4>
+                      <h4 className="font-medium mb-2">Custom Design System</h4>
                       <p className="text-sm text-muted-foreground">Consistent gradient themes, typography system, and reusable component architecture.</p>
                     </div>
                   </div>
@@ -211,19 +213,19 @@ export default function BistroPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📊 Profit Optimization Services</h4>
+                      <h4 className="font-medium mb-2">Profit Optimization Services</h4>
                       <p className="text-sm text-muted-foreground">Comprehensive consulting services including menu engineering, operations optimization, and profit analysis strategies.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎯 Client Success Stories</h4>
+                      <h4 className="font-medium mb-2">Client Success Stories</h4>
                       <p className="text-sm text-muted-foreground">Real testimonials with measurable results, showcasing 487+ restaurants transformed with average 42% profit increases.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📈 Statistical Presentations</h4>
+                      <h4 className="font-medium mb-2">Statistical Presentations</h4>
                       <p className="text-sm text-muted-foreground">Data-driven content presentation with impressive statistics and proven track record displays.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">💼 Professional Service Pages</h4>
+                      <h4 className="font-medium mb-2">Professional Service Pages</h4>
                       <p className="text-sm text-muted-foreground">Detailed service descriptions, pricing plans, about pages, and comprehensive contact forms.</p>
                     </div>
                   </div>
@@ -237,19 +239,19 @@ export default function BistroPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🧭 React Router Integration</h4>
+                      <h4 className="font-medium mb-2">React Router Integration</h4>
                       <p className="text-sm text-muted-foreground">Multi-page application with smooth navigation, scroll restoration, and proper routing architecture.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔄 Scroll Management</h4>
+                      <h4 className="font-medium mb-2">Scroll Management</h4>
                       <p className="text-sm text-muted-foreground">Custom ScrollToTop component and smooth scrolling effects for enhanced navigation experience.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📋 Form Integration</h4>
+                      <h4 className="font-medium mb-2">Form Integration</h4>
                       <p className="text-sm text-muted-foreground">Professional contact forms with validation and user-friendly interface design.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎪 Layout System</h4>
+                      <h4 className="font-medium mb-2">Layout System</h4>
                       <p className="text-sm text-muted-foreground">Consistent layout components with navigation, footer, and floating particle effects.</p>
                     </div>
                   </div>
@@ -333,19 +335,19 @@ export default function BistroPage() {
                   <h3 className="font-semibold">Business Focus</h3>
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Restaurant Consulting</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Profit Optimization</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Business Strategy</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-purple-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Marketing Solutions</span>
                     </div>
                   </div>
@@ -391,19 +393,19 @@ export default function BistroPage() {
                   <h3 className="text-lg font-semibold mb-4">Component Structure</h3>
                   <div className="space-y-3 text-sm">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">Layout</div>
+                      <div className="font-medium text-foreground">Layout</div>
                       <div className="text-muted-foreground">Main layout with navigation and footer</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">Pages</div>
+                      <div className="font-medium text-foreground">Pages</div>
                       <div className="text-muted-foreground">Home, About, Pricing, Contact, Blog</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">Components</div>
+                      <div className="font-medium text-foreground">Components</div>
                       <div className="text-muted-foreground">Reusable cards, buttons, forms</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-orange-400">Animations</div>
+                      <div className="font-medium text-foreground">Animations</div>
                       <div className="text-muted-foreground">Framer Motion effects and transitions</div>
                     </div>
                   </div>
@@ -412,7 +414,7 @@ export default function BistroPage() {
 
               {/* Animation Implementation */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                <h3 className="text-lg font-semibold mb-4">🎭 Animation Implementation</h3>
+                <h3 className="text-lg font-semibold mb-4">Animation Implementation</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div>
@@ -426,21 +428,21 @@ export default function BistroPage() {
                     </div>
                     <div>
                       <h4 className="font-medium mb-2">Animation Features</h4>
-                      <div className="space-y-2 text-sm">
+                      <div className="space-y-2 text-sm text-muted-foreground">
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Staggered children animations</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Viewport-triggered animations</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Page transition effects</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-orange-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Floating particle system</span>
                         </div>
                       </div>
@@ -450,14 +452,17 @@ export default function BistroPage() {
                     <div>
                       <h4 className="font-medium mb-2">Performance Optimization</h4>
                       <div className="space-y-2 text-sm">
-                        <div className="p-2 rounded bg-green-900/20 border border-green-500/20">
-                          <strong>GPU Acceleration:</strong> Transform3d properties
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">GPU Acceleration</div>
+                          <div className="text-muted-foreground">Transform3d properties</div>
                         </div>
-                        <div className="p-2 rounded bg-blue-900/20 border border-blue-500/20">
-                          <strong>Reduced Motion:</strong> Accessibility support
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">Reduced Motion</div>
+                          <div className="text-muted-foreground">Accessibility support</div>
                         </div>
-                        <div className="p-2 rounded bg-purple-900/20 border border-purple-500/20">
-                          <strong>Lazy Loading:</strong> Viewport-based triggers
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">Lazy Loading</div>
+                          <div className="text-muted-foreground">Viewport-based triggers</div>
                         </div>
                       </div>
                     </div>
@@ -468,36 +473,36 @@ export default function BistroPage() {
               {/* Responsive Design & Performance */}
               <div className="grid lg:grid-cols-2 gap-6">
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">📱 Responsive Design</h3>
+                  <h3 className="text-lg font-semibold mb-4">Responsive Design</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">Tailwind CSS</div>
+                      <div className="font-medium text-foreground">Tailwind CSS</div>
                       <div className="text-sm text-muted-foreground">Mobile-first responsive utility classes</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">Grid Layouts</div>
+                      <div className="font-medium text-foreground">Grid Layouts</div>
                       <div className="text-sm text-muted-foreground">Flexible grid systems for all screen sizes</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">Typography</div>
+                      <div className="font-medium text-foreground">Typography</div>
                       <div className="text-sm text-muted-foreground">Responsive font sizes and spacing</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">⚡ Performance Features</h3>
+                  <h3 className="text-lg font-semibold mb-4">Performance Features</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-red-400">Vite Optimization</div>
+                      <div className="font-medium text-foreground">Vite Optimization</div>
                       <div className="text-sm text-muted-foreground">Fast builds and hot module replacement</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-orange-400">Code Splitting</div>
+                      <div className="font-medium text-foreground">Code Splitting</div>
                       <div className="text-sm text-muted-foreground">Route-based code splitting with React Router</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-cyan-400">Asset Optimization</div>
+                      <div className="font-medium text-foreground">Asset Optimization</div>
                       <div className="text-sm text-muted-foreground">Optimized images and SVG icons</div>
                     </div>
                   </div>
@@ -506,29 +511,81 @@ export default function BistroPage() {
 
               {/* Project Structure */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                <h3 className="text-lg font-semibold mb-4">📁 Project Structure</h3>
+                <h3 className="text-lg font-semibold mb-4">Project Structure</h3>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Directory Structure:</div>
-                    <div className="space-y-1 text-muted-foreground">
-                      <div>📂 src/</div>
-                      <div className="pl-4">📂 components/ - Reusable components</div>
-                      <div className="pl-4">📂 pages/ - Route components</div>
-                      <div className="pl-4">📄 App.tsx - Main app component</div>
-                      <div className="pl-4">📄 main.tsx - Entry point</div>
-                      <div className="pl-4">📄 App.css - Global styles</div>
-                    </div>
+                  <div>
+                    <div className="text-primary font-bold mb-3 text-sm">Directory Structure:</div>
+                    <AnimatedFileTree
+                      data={[
+                        {
+                          name: "src",
+                          type: "folder",
+                          children: [
+                            {
+                              name: "components",
+                              type: "folder",
+                              children: [
+                                { name: "Navigation.tsx", type: "file" },
+                                { name: "FloatingParticles.tsx", type: "file" },
+                                { name: "Card.tsx", type: "file" },
+                                { name: "Button.tsx", type: "file" },
+                                { name: "CouponCard.tsx", type: "file" },
+                                { name: "Footer.tsx", type: "file" }
+                              ]
+                            },
+                            {
+                              name: "pages",
+                              type: "folder",
+                              children: [
+                                { name: "Home.tsx", type: "file", icon: "- Landing page" },
+                                { name: "About.tsx", type: "file", icon: "- About page" },
+                                { name: "Pricing.tsx", type: "file", icon: "- Pricing page" },
+                                { name: "Contact.tsx", type: "file", icon: "- Contact page" },
+                                { name: "Blog.tsx", type: "file", icon: "- Blog page" }
+                              ]
+                            },
+                            { name: "App.tsx", type: "file", icon: "- Main app" },
+                            { name: "main.tsx", type: "file", icon: "- Entry point" },
+                            { name: "App.css", type: "file", icon: "- Global styles" }
+                          ]
+                        }
+                      ]}
+                    />
                   </div>
-                  <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Key Components:</div>
-                    <div className="space-y-1 text-muted-foreground">
-                      <div>🧭 Navigation - Menu system</div>
-                      <div>🎨 FloatingParticles - Background effects</div>
-                      <div>📋 Card - Reusable card component</div>
-                      <div>🔘 Button - Custom button variants</div>
-                      <div>🎫 CouponCard - Special offer component</div>
-                      <div>📄 Footer - Site footer</div>
-                    </div>
+                  <div>
+                    <div className="text-primary font-bold mb-3 text-sm">Key Components:</div>
+                    <AnimatedFileTree
+                      data={[
+                        {
+                          name: "Layout Components",
+                          type: "folder",
+                          children: [
+                            { name: "Navigation", type: "file", icon: "- Menu system" },
+                            { name: "Footer", type: "file", icon: "- Site footer" },
+                            { name: "FloatingParticles", type: "file", icon: "- Background effects" }
+                          ]
+                        },
+                        {
+                          name: "UI Components",
+                          type: "folder",
+                          children: [
+                            { name: "Card", type: "file", icon: "- Reusable card" },
+                            { name: "Button", type: "file", icon: "- Custom button" },
+                            { name: "CouponCard", type: "file", icon: "- Special offers" }
+                          ]
+                        },
+                        {
+                          name: "Page Components",
+                          type: "folder",
+                          children: [
+                            { name: "Hero", type: "file", icon: "- Landing section" },
+                            { name: "Services", type: "file", icon: "- Service cards" },
+                            { name: "Testimonials", type: "file", icon: "- Client reviews" },
+                            { name: "Stats", type: "file", icon: "- Statistics display" }
+                          ]
+                        }
+                      ]}
+                    />
                   </div>
                 </div>
               </div>
@@ -580,6 +637,28 @@ export default function BistroPage() {
           )}
         </div>
       </section>
+
+      {/* Rating Section */}
+      <section className="py-16 px-4 border-t border-border/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <div className="text-center space-y-2">
+              <h2 className="text-2xl font-bold">Rate This Project</h2>
+              <p className="text-muted-foreground">
+                How would you rate this project? Your feedback helps improve future projects.
+              </p>
+            </div>
+
+            <ProjectRating projectId="bistro" />
+
+            <div className="flex justify-between text-xs font-medium text-muted-foreground">
+              <span>Poor ??</span>
+              <span>Excellent ??</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Image Modal */}
       <ImageModal

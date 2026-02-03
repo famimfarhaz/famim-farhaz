@@ -7,6 +7,8 @@ import { ExternalLink, Github, ArrowLeft, Calendar, User, Lightbulb, BarChart3, 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ImageModal } from "@/components/image-modal"
+import { AnimatedFileTree } from "@/components/animated-file-tree"
+import { ProjectRating } from "@/components/project-rating"
 
 const projectData = {
   title: "IndieMVP",
@@ -195,19 +197,19 @@ export default function IndieMVPPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔍 Pain Point Discovery System</h4>
+                      <h4 className="font-medium mb-2">Pain Point Discovery System</h4>
                       <p className="text-sm text-muted-foreground">Comprehensive tools for identifying and analyzing real market problems through systematic research and community insights.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📊 Market Research Tools</h4>
+                      <h4 className="font-medium mb-2">Market Research Tools</h4>
                       <p className="text-sm text-muted-foreground">Advanced research methodologies and frameworks for understanding market needs and customer pain points.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎯 Problem Validation</h4>
+                      <h4 className="font-medium mb-2">Problem Validation</h4>
                       <p className="text-sm text-muted-foreground">Systematic validation processes to ensure identified problems represent genuine market opportunities.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📈 Trend Analysis</h4>
+                      <h4 className="font-medium mb-2">Trend Analysis</h4>
                       <p className="text-sm text-muted-foreground">Market trend analysis and emerging opportunity identification for forward-thinking product development.</p>
                     </div>
                   </div>
@@ -221,19 +223,19 @@ export default function IndieMVPPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">💡 Idea Evaluation System</h4>
+                      <h4 className="font-medium mb-2">Idea Evaluation System</h4>
                       <p className="text-sm text-muted-foreground">Comprehensive scoring system for evaluating product ideas based on market potential, feasibility, and competitive landscape.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔄 Problem-to-Product Pipeline</h4>
+                      <h4 className="font-medium mb-2">Problem-to-Product Pipeline</h4>
                       <p className="text-sm text-muted-foreground">Structured methodology for transforming identified problems into viable product concepts and development roadmaps.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📋 MVP Planning Tools</h4>
+                      <h4 className="font-medium mb-2">MVP Planning Tools</h4>
                       <p className="text-sm text-muted-foreground">Comprehensive planning tools for defining minimum viable products with clear success metrics and validation criteria.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">💰 Investor Connection Platform</h4>
+                      <h4 className="font-medium mb-2">Investor Connection Platform</h4>
                       <p className="text-sm text-muted-foreground">Platform for connecting with potential investors and presenting validated business opportunities.</p>
                     </div>
                   </div>
@@ -247,19 +249,19 @@ export default function IndieMVPPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🏠 Comprehensive Dashboard</h4>
+                      <h4 className="font-medium mb-2">Comprehensive Dashboard</h4>
                       <p className="text-sm text-muted-foreground">Multi-page dashboard interface with specialized tools for different aspects of product development and market analysis.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📊 Data Visualization</h4>
+                      <h4 className="font-medium mb-2">Data Visualization</h4>
                       <p className="text-sm text-muted-foreground">Interactive charts and graphs using Recharts for visualizing market data, trends, and analysis results.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔐 User Authentication</h4>
+                      <h4 className="font-medium mb-2">User Authentication</h4>
                       <p className="text-sm text-muted-foreground">Secure authentication system with Google OAuth integration and user profile management.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">💾 Save & Bookmark System</h4>
+                      <h4 className="font-medium mb-2">Save & Bookmark System</h4>
                       <p className="text-sm text-muted-foreground">Comprehensive system for saving research, bookmarking opportunities, and organizing project workflows.</p>
                     </div>
                   </div>
@@ -273,19 +275,19 @@ export default function IndieMVPPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🌟 Community Platform</h4>
+                      <h4 className="font-medium mb-2">Community Platform</h4>
                       <p className="text-sm text-muted-foreground">Connect with other entrepreneurs, share insights, and collaborate on problem discovery and solution development.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📚 Documentation Hub</h4>
+                      <h4 className="font-medium mb-2">Documentation Hub</h4>
                       <p className="text-sm text-muted-foreground">Comprehensive documentation and guides for using the platform and implementing best practices in product development.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🆘 Help Center</h4>
+                      <h4 className="font-medium mb-2">Help Center</h4>
                       <p className="text-sm text-muted-foreground">Extensive help system with tutorials, FAQs, and support resources for platform users.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📄 Report Generation</h4>
+                      <h4 className="font-medium mb-2">Report Generation</h4>
                       <p className="text-sm text-muted-foreground">PDF report generation capabilities for sharing analysis results and business proposals with stakeholders.</p>
                     </div>
                   </div>
@@ -369,27 +371,27 @@ export default function IndieMVPPage() {
                   <h3 className="font-semibold">Platform Sections</h3>
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Dashboard & Analytics</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Pain Points Discovery</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-purple-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Idea Evaluation Tools</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Problem-to-Product Pipeline</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Investor Connection Hub</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-cyan-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Community & Resources</span>
                     </div>
                   </div>
@@ -435,19 +437,19 @@ export default function IndieMVPPage() {
                   <h3 className="text-lg font-semibold mb-4">Dashboard Architecture</h3>
                   <div className="space-y-3 text-sm">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">Multi-page Dashboard</div>
+                      <div className="font-medium text-foreground">Multi-page Dashboard</div>
                       <div className="text-muted-foreground">Comprehensive dashboard with specialized tool sections</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">Protected Routes</div>
+                      <div className="font-medium text-foreground">Protected Routes</div>
                       <div className="text-muted-foreground">Authentication-based route protection and user management</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">Context Management</div>
+                      <div className="font-medium text-foreground">Context Management</div>
                       <div className="text-muted-foreground">React Context for global state and authentication</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-orange-400">Component Library</div>
+                      <div className="font-medium text-foreground">Component Library</div>
                       <div className="text-muted-foreground">Reusable components for consistent UI/UX</div>
                     </div>
                   </div>
@@ -456,7 +458,7 @@ export default function IndieMVPPage() {
 
               {/* Data Visualization & Features */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                <h3 className="text-lg font-semibold mb-4">📊 Data Visualization & Analytics</h3>
+                <h3 className="text-lg font-semibold mb-4">Data Visualization & Analytics</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div>
@@ -471,21 +473,21 @@ export default function IndieMVPPage() {
                     </div>
                     <div>
                       <h4 className="font-medium mb-2">Chart Types</h4>
-                      <div className="space-y-2 text-sm">
+                      <div className="space-y-2 text-sm text-muted-foreground">
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Radar charts for idea evaluation</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Bar charts for market analysis</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Line charts for trend tracking</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-orange-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Pie charts for market segmentation</span>
                         </div>
                       </div>
@@ -495,14 +497,17 @@ export default function IndieMVPPage() {
                     <div>
                       <h4 className="font-medium mb-2">Authentication System</h4>
                       <div className="space-y-2 text-sm">
-                        <div className="p-2 rounded bg-green-900/20 border border-green-500/20">
-                          <strong>Google OAuth:</strong> Seamless social login
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">Google OAuth</div>
+                          <div className="text-muted-foreground">Seamless social login</div>
                         </div>
-                        <div className="p-2 rounded bg-blue-900/20 border border-blue-500/20">
-                          <strong>Supabase Auth:</strong> Secure session management
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">Supabase Auth</div>
+                          <div className="text-muted-foreground">Secure session management</div>
                         </div>
-                        <div className="p-2 rounded bg-purple-900/20 border border-purple-500/20">
-                          <strong>Route Protection:</strong> Authenticated access control
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">Route Protection</div>
+                          <div className="text-muted-foreground">Authenticated access control</div>
                         </div>
                       </div>
                     </div>
@@ -513,36 +518,36 @@ export default function IndieMVPPage() {
               {/* Business Logic & Features */}
               <div className="grid lg:grid-cols-2 gap-6">
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">🛠️ Business Logic</h3>
+                  <h3 className="text-lg font-semibold mb-4">Business Logic</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">Problem Analysis Engine</div>
+                      <div className="font-medium text-foreground">Problem Analysis Engine</div>
                       <div className="text-sm text-muted-foreground">Systematic approach to identifying and validating market problems</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">Idea Scoring System</div>
+                      <div className="font-medium text-foreground">Idea Scoring System</div>
                       <div className="text-sm text-muted-foreground">Multi-criteria evaluation framework for product ideas</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">Pipeline Management</div>
+                      <div className="font-medium text-foreground">Pipeline Management</div>
                       <div className="text-sm text-muted-foreground">Structured workflow from problem to product development</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">🔧 Additional Features</h3>
+                  <h3 className="text-lg font-semibold mb-4">Additional Features</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-red-400">PDF Generation</div>
+                      <div className="font-medium text-foreground">PDF Generation</div>
                       <div className="text-sm text-muted-foreground">jsPDF integration for business reports and analysis</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-orange-400">Email Integration</div>
+                      <div className="font-medium text-foreground">Email Integration</div>
                       <div className="text-sm text-muted-foreground">Nodemailer for communication and notifications</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-cyan-400">Screen Capture</div>
+                      <div className="font-medium text-foreground">Screen Capture</div>
                       <div className="text-sm text-muted-foreground">html2canvas for generating visual reports</div>
                     </div>
                   </div>
@@ -551,31 +556,47 @@ export default function IndieMVPPage() {
 
               {/* Component Structure */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                <h3 className="text-lg font-semibold mb-4">📁 Application Structure</h3>
+                <h3 className="text-lg font-semibold mb-4">Project Structure</h3>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Core Pages:</div>
-                    <div className="space-y-1 text-muted-foreground">
-                      <div>📂 pages/</div>
-                      <div className="pl-4">🏠 LandingPage - Marketing site</div>
-                      <div className="pl-4">📊 PainPointsPage - Problem discovery</div>
-                      <div className="pl-4">💡 IdeaEvaluatorPage - Idea scoring</div>
-                      <div className="pl-4">🔄 ProblemToProductPage - Pipeline</div>
-                      <div className="pl-4">💰 InvestorsPage - Investor hub</div>
-                      <div className="pl-4">👥 CommunityPage - Social features</div>
-                    </div>
+                  <div>
+                    <div className="text-primary font-bold mb-3 text-sm">Core Pages:</div>
+                    <AnimatedFileTree
+                      data={[
+                        {
+                          name: "pages",
+                          type: "folder",
+                          children: [
+                            { name: "LandingPage.tsx", type: "file", icon: "- Marketing site" },
+                            { name: "PainPointsPage.tsx", type: "file", icon: "- Problem discovery" },
+                            { name: "IdeaEvaluatorPage.tsx", type: "file", icon: "- Idea scoring" },
+                            { name: "ProblemToProductPage.tsx", type: "file", icon: "- Pipeline" },
+                            { name: "InvestorsPage.tsx", type: "file", icon: "- Investor hub" },
+                            { name: "CommunityPage.tsx", type: "file", icon: "- Social features" }
+                          ]
+                        }
+                      ]}
+                    />
                   </div>
-                  <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Component Architecture:</div>
-                    <div className="space-y-1 text-muted-foreground">
-                      <div>📂 components/</div>
-                      <div className="pl-4">🔐 auth/ - Authentication system</div>
-                      <div className="pl-4">🏠 landing/ - Landing page sections</div>
-                      <div className="pl-4">📊 Dashboard - Main app interface</div>
-                      <div className="pl-4">📈 RadarChart - Data visualization</div>
-                      <div className="pl-4">📝 NoteEditor - Content management</div>
-                      <div className="pl-4">🔧 Header, Footer, Logo</div>
-                    </div>
+                  <div>
+                    <div className="text-primary font-bold mb-3 text-sm">Component Architecture:</div>
+                    <AnimatedFileTree
+                      data={[
+                        {
+                          name: "components",
+                          type: "folder",
+                          children: [
+                            { name: "auth/", type: "folder", icon: "- Authentication system" },
+                            { name: "landing/", type: "folder", icon: "- Landing page sections" },
+                            { name: "Dashboard.tsx", type: "file", icon: "- Main app interface" },
+                            { name: "RadarChart.tsx", type: "file", icon: "- Data visualization" },
+                            { name: "NoteEditor.tsx", type: "file", icon: "- Content management" },
+                            { name: "Header.tsx", type: "file" },
+                            { name: "Footer.tsx", type: "file" },
+                            { name: "Logo.tsx", type: "file" }
+                          ]
+                        }
+                      ]}
+                    />
                   </div>
                 </div>
               </div>
@@ -628,6 +649,28 @@ export default function IndieMVPPage() {
         </div>
       </section>
 
+      {/* Rating Section */}
+      <section className="py-16 px-4 border-t border-border/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <div className="text-center space-y-2">
+              <h2 className="text-2xl font-bold">Rate This Project</h2>
+              <p className="text-muted-foreground">
+                How would you rate this project? Your feedback helps improve future projects.
+              </p>
+            </div>
+
+            <ProjectRating projectId="indiemvp" />
+
+            <div className="flex justify-between text-xs font-medium text-muted-foreground">
+              <span>Poor ??</span>
+              <span>Excellent ??</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* Image Modal */}
       <ImageModal
         isOpen={isModalOpen}
@@ -639,3 +682,4 @@ export default function IndieMVPPage() {
     </div>
   )
 }
+

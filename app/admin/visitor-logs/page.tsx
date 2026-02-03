@@ -92,22 +92,22 @@ export default function VisitorLogsPage() {
   const getBotBadge = (isBot: boolean) => {
     return isBot ? (
       <span className="px-2 py-1 text-xs bg-red-100 text-red-800 rounded-full">
-        🤖 Bot
+        Bot
       </span>
     ) : (
       <span className="px-2 py-1 text-xs bg-green-100 text-green-800 rounded-full">
-        👤 Human
+        Human
       </span>
     )
   }
 
   const getDeviceIcon = (deviceType: string) => {
     switch (deviceType) {
-      case 'mobile': return '📱'
-      case 'tablet': return '📟'
-      case 'desktop': return '🖥️'
-      case 'bot': return '🤖'
-      default: return '❓'
+      case 'mobile': return 'mobile'
+      case 'tablet': return 'tablet'
+      case 'desktop': return 'desktop'
+      case 'bot': return 'bot'
+      default: return 'unknown'
     }
   }
 

@@ -113,32 +113,45 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --mask-image-radial: radial-gradient(ellipse 80% 50% at 50% 0%, #000 70%, transparent 110%);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
-  
+
   /* Hide scrollbar globally while keeping scroll functionality */
-  html, body {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+  html,
+  body {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
   }
-  
-  html::-webkit-scrollbar, body::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
   }
-  
+
   /* Ensure all interactive elements show pointer cursor */
-  a, button, [role="button"] {
+  a,
+  button,
+  [role="button"] {
     @apply cursor-pointer;
   }
-  
-  a:disabled, button:disabled, [role="button"]:disabled {
+
+  a:disabled,
+  button:disabled,
+  [role="button"]:disabled {
     @apply cursor-not-allowed;
   }
 
@@ -218,11 +231,13 @@
   }
 
   @keyframes corner-light {
+
     0%,
     100% {
       opacity: 0;
       transform: translate(-20px, -20px);
     }
+
     50% {
       opacity: 1;
       transform: translate(0, 0);
@@ -230,15 +245,18 @@
   }
 
   @keyframes corner-line-horizontal {
+
     0%,
     100% {
       opacity: 0;
       width: 0;
     }
+
     25% {
       opacity: 1;
       width: 150px;
     }
+
     50%,
     75% {
       opacity: 1;
@@ -248,11 +266,13 @@
 
   /* Adding keyframes for hero corner animation */
   @keyframes hero-corner-glow {
+
     0%,
     100% {
       opacity: 0;
       transform: translate(-30px, -30px) scale(0.8);
     }
+
     50% {
       opacity: 0.8;
       transform: translate(0, 0) scale(1);
@@ -260,15 +280,18 @@
   }
 
   @keyframes hero-corner-line {
+
     0%,
     100% {
       opacity: 0;
       width: 0;
     }
+
     30% {
       opacity: 1;
       width: 120px;
     }
+
     70% {
       opacity: 1;
       width: 120px;
@@ -277,10 +300,12 @@
 
   /* Adding gradient animation for hero text */
   @keyframes gradient {
+
     0%,
     100% {
       background-position: 0% 50%;
     }
+
     50% {
       background-position: 100% 50%;
     }
@@ -290,13 +315,13 @@
     background-size: 200% 200%;
     animation: gradient 3s ease infinite;
   }
-  
+
   /* VIP Hire Me Button Animations - AnimeSphere Style */
   .hire-me-wrapper {
     position: relative;
     display: inline-block;
   }
-  
+
   /* VIP floating icon particles with enhanced glow */
   .vip-particle {
     position: absolute;
@@ -306,91 +331,154 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .vip-particle-1 {
     animation: vip-minimal-float-1 5s ease-in-out infinite;
     filter: drop-shadow(0 0 6px currentColor) brightness(1.4);
   }
-  
+
   .vip-particle-2 {
     animation: vip-minimal-float-2 4.5s ease-in-out infinite 0.8s;
     filter: drop-shadow(0 0 7px currentColor) brightness(1.3);
   }
-  
+
   .vip-particle-3 {
     animation: vip-minimal-float-3 4.8s ease-in-out infinite 1.6s;
     filter: drop-shadow(0 0 8px currentColor) brightness(1.5);
   }
-  
+
   .vip-particle-4 {
     animation: vip-minimal-float-4 4.2s ease-in-out infinite 2.4s;
     filter: drop-shadow(0 0 5px currentColor) brightness(1.2);
   }
-  
+
   .vip-particle-5 {
     animation: vip-minimal-float-5 3.8s ease-in-out infinite 3.2s;
     filter: drop-shadow(0 0 6px currentColor) brightness(1.6);
   }
-  
+
   .vip-particle-6 {
     animation: vip-minimal-float-6 4.3s ease-in-out infinite 4s;
     filter: drop-shadow(0 0 7px currentColor) brightness(1.3);
   }
-  
+
   /* Enhanced VIP floating animations */
   @keyframes vip-minimal-float-1 {
-    0%, 100% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.7; }
-    50% { transform: translateY(-12px) scale(1.15) rotate(180deg); opacity: 1; }
+
+    0%,
+    100% {
+      transform: translateY(0) scale(1) rotate(0deg);
+      opacity: 0.7;
+    }
+
+    50% {
+      transform: translateY(-12px) scale(1.15) rotate(180deg);
+      opacity: 1;
+    }
   }
-  
+
   @keyframes vip-minimal-float-2 {
-    0%, 100% { transform: translateX(0) scale(1) rotate(0deg); opacity: 0.6; }
-    50% { transform: translateX(8px) scale(1.1) rotate(-90deg); opacity: 0.9; }
+
+    0%,
+    100% {
+      transform: translateX(0) scale(1) rotate(0deg);
+      opacity: 0.6;
+    }
+
+    50% {
+      transform: translateX(8px) scale(1.1) rotate(-90deg);
+      opacity: 0.9;
+    }
   }
-  
+
   @keyframes vip-minimal-float-3 {
-    0%, 100% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.5; }
-    50% { transform: translateY(10px) scale(1.2) rotate(270deg); opacity: 0.8; }
+
+    0%,
+    100% {
+      transform: translateY(0) scale(1) rotate(0deg);
+      opacity: 0.5;
+    }
+
+    50% {
+      transform: translateY(10px) scale(1.2) rotate(270deg);
+      opacity: 0.8;
+    }
   }
-  
+
   @keyframes vip-minimal-float-4 {
-    0%, 100% { transform: translateX(0) scale(1) rotate(0deg); opacity: 0.7; }
-    50% { transform: translateX(-6px) scale(1.08) rotate(45deg); opacity: 1; }
+
+    0%,
+    100% {
+      transform: translateX(0) scale(1) rotate(0deg);
+      opacity: 0.7;
+    }
+
+    50% {
+      transform: translateX(-6px) scale(1.08) rotate(45deg);
+      opacity: 1;
+    }
   }
-  
+
   @keyframes vip-minimal-float-5 {
-    0%, 100% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.6; }
-    50% { transform: translateY(-8px) scale(1.25) rotate(-135deg); opacity: 0.9; }
+
+    0%,
+    100% {
+      transform: translateY(0) scale(1) rotate(0deg);
+      opacity: 0.6;
+    }
+
+    50% {
+      transform: translateY(-8px) scale(1.25) rotate(-135deg);
+      opacity: 0.9;
+    }
   }
-  
+
   @keyframes vip-minimal-float-6 {
-    0%, 100% { transform: translateX(0) scale(1) rotate(0deg); opacity: 0.4; }
-    50% { transform: translateX(10px) scale(1.12) rotate(90deg); opacity: 0.7; }
+
+    0%,
+    100% {
+      transform: translateX(0) scale(1) rotate(0deg);
+      opacity: 0.4;
+    }
+
+    50% {
+      transform: translateX(10px) scale(1.12) rotate(90deg);
+      opacity: 0.7;
+    }
   }
 
   /* Hero Animation Keyframes */
   @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0px) rotate(0deg);
     }
+
     50% {
       transform: translateY(-20px) rotate(5deg);
     }
   }
 
   @keyframes float-delayed {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0px) rotate(0deg);
     }
+
     50% {
       transform: translateY(-15px) rotate(-3deg);
     }
   }
 
   @keyframes gradient-shift {
-    0%, 100% {
+
+    0%,
+    100% {
       background-position: 0% 50%;
     }
+
     50% {
       background-position: 100% 50%;
     }
@@ -400,24 +488,31 @@
     0% {
       transform: translate(0, 0);
     }
+
     100% {
       transform: translate(24px, 24px);
     }
   }
 
   @keyframes gradient-x {
-    0%, 100% {
+
+    0%,
+    100% {
       background-position: 0% 50%;
     }
+
     50% {
       background-position: 100% 50%;
     }
   }
 
   @keyframes bounce-slow {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-5px);
     }
@@ -452,10 +547,13 @@
 
   /* Corner sweep animations for VIP borders */
   @keyframes corner-sweep-horizontal {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateX(0);
       opacity: 0.8;
     }
+
     50% {
       transform: translateX(14px);
       opacity: 1;
@@ -463,10 +561,13 @@
   }
 
   @keyframes corner-sweep-vertical {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0);
       opacity: 0.8;
     }
+
     50% {
       transform: translateY(14px);
       opacity: 1;
@@ -474,10 +575,13 @@
   }
 
   @keyframes corner-sweep-horizontal-reverse {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateX(0);
       opacity: 0.8;
     }
+
     50% {
       transform: translateX(-14px);
       opacity: 1;
@@ -485,10 +589,13 @@
   }
 
   @keyframes corner-sweep-vertical-reverse {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0);
       opacity: 0.8;
     }
+
     50% {
       transform: translateY(-14px);
       opacity: 1;
@@ -501,6 +608,7 @@
       opacity: 0;
       transform: translateY(60px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -512,6 +620,7 @@
       opacity: 0;
       transform: translateY(-60px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -523,6 +632,7 @@
       opacity: 0;
       transform: translateX(-60px);
     }
+
     to {
       opacity: 1;
       transform: translateX(0);
@@ -534,6 +644,7 @@
       opacity: 0;
       transform: translateX(60px);
     }
+
     to {
       opacity: 1;
       transform: translateX(0);
@@ -545,6 +656,7 @@
       opacity: 0;
       transform: scale(0.95);
     }
+
     to {
       opacity: 1;
       transform: scale(1);
@@ -583,16 +695,21 @@
     from {
       width: 0;
     }
+
     to {
       width: 100%;
     }
   }
 
   @keyframes blink {
-    0%, 50% {
+
+    0%,
+    50% {
       opacity: 1;
     }
-    51%, 100% {
+
+    51%,
+    100% {
       opacity: 0;
     }
   }
@@ -625,11 +742,59 @@
 
   /* Hide scrollbar while keeping scroll functionality */
   .scrollbar-hide {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
   }
-  
+
   .scrollbar-hide::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
+    display: none;
+    /* Safari and Chrome */
+  }
+
+  /* Hero fade-in and fade-up animations */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+
+    to {
+      height: 0;
+    }
   }
 }

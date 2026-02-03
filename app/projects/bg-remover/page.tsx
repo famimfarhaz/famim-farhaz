@@ -7,6 +7,8 @@ import { ExternalLink, Github, ArrowLeft, Calendar, User, Scissors, Tag, Smartph
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ImageModal } from "@/components/image-modal"
+import { AnimatedFileTree } from "@/components/animated-file-tree"
+import { ProjectRating } from "@/components/project-rating"
 
 const projectData = {
   title: "BG Remover",
@@ -180,19 +182,19 @@ export default function BgRemoverPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🤖 Remove.bg API Integration</h4>
+                      <h4 className="font-medium mb-2">Remove.bg API Integration</h4>
                       <p className="text-sm text-muted-foreground">Professional-quality background removal using advanced AI algorithms for precise edge detection and seamless cutouts.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">⚡ Real-time Processing</h4>
+                      <h4 className="font-medium mb-2">Real-time Processing</h4>
                       <p className="text-sm text-muted-foreground">Instant background removal with live processing feedback and smooth loading animations.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🎯 Drag & Drop Interface</h4>
+                      <h4 className="font-medium mb-2">Drag & Drop Interface</h4>
                       <p className="text-sm text-muted-foreground">Intuitive file upload with drag & drop support, hover effects, and visual feedback.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">💾 Instant Download</h4>
+                      <h4 className="font-medium mb-2">Instant Download</h4>
                       <p className="text-sm text-muted-foreground">One-click download functionality with automatic file naming and format preservation.</p>
                     </div>
                   </div>
@@ -206,19 +208,19 @@ export default function BgRemoverPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📱 Responsive Design</h4>
+                      <h4 className="font-medium mb-2">Responsive Design</h4>
                       <p className="text-sm text-muted-foreground">Fully responsive interface that works perfectly on desktop, tablet, and mobile devices.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🕒 Processing History</h4>
+                      <h4 className="font-medium mb-2">Processing History</h4>
                       <p className="text-sm text-muted-foreground">Keep track of previously processed images with easy re-download functionality.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">✨ Modern Animations</h4>
+                      <h4 className="font-medium mb-2">Modern Animations</h4>
                       <p className="text-sm text-muted-foreground">Smooth CSS animations and loading states for enhanced user experience.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔄 Auto File Naming</h4>
+                      <h4 className="font-medium mb-2">Auto File Naming</h4>
                       <p className="text-sm text-muted-foreground">Intelligent file naming system that appends "BG-REMOVED" to processed images.</p>
                     </div>
                   </div>
@@ -232,15 +234,15 @@ export default function BgRemoverPage() {
                   </h3>
                   <div className="space-y-4">
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">📱 Capacitor Integration</h4>
+                      <h4 className="font-medium mb-2">Capacitor Integration</h4>
                       <p className="text-sm text-muted-foreground">Cross-platform mobile app development with Capacitor for native Android functionality.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🤖 Android Build</h4>
+                      <h4 className="font-medium mb-2">Android Build</h4>
                       <p className="text-sm text-muted-foreground">Complete Android project setup with Gradle build system and native mobile features.</p>
                     </div>
                     <div className="p-4 rounded-lg bg-card/50 border border-border/50">
-                      <h4 className="font-medium mb-2">🔧 Native Features</h4>
+                      <h4 className="font-medium mb-2">Native Features</h4>
                       <p className="text-sm text-muted-foreground">Access to device camera, photo library, and file system for enhanced mobile experience.</p>
                     </div>
                   </div>
@@ -324,19 +326,19 @@ export default function BgRemoverPage() {
                   <h3 className="font-semibold">API Integration</h3>
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Remove.bg API v1.0</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>FormData Upload</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-purple-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Blob Response Handling</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-primary"></div>
                       <span>Error Management</span>
                     </div>
                   </div>
@@ -382,19 +384,19 @@ export default function BgRemoverPage() {
                   <h3 className="text-lg font-semibold mb-4">Component Structure</h3>
                   <div className="space-y-3 text-sm">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">App.tsx</div>
+                      <div className="font-medium text-foreground">App.tsx</div>
                       <div className="text-muted-foreground">Main application component with state management</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">ImageUpload</div>
+                      <div className="font-medium text-foreground">ImageUpload</div>
                       <div className="text-muted-foreground">Drag & drop file upload component</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">ImagePreview</div>
+                      <div className="font-medium text-foreground">ImagePreview</div>
                       <div className="text-muted-foreground">Before/after image comparison view</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-orange-400">History</div>
+                      <div className="font-medium text-foreground">History</div>
                       <div className="text-muted-foreground">Processing history management</div>
                     </div>
                   </div>
@@ -403,7 +405,7 @@ export default function BgRemoverPage() {
 
               {/* API Integration Details */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                <h3 className="text-lg font-semibold mb-4">🔌 API Integration Implementation</h3>
+                <h3 className="text-lg font-semibold mb-4">API Integration Implementation</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div>
@@ -418,21 +420,21 @@ export default function BgRemoverPage() {
                     </div>
                     <div>
                       <h4 className="font-medium mb-2">Image Processing Pipeline</h4>
-                      <div className="space-y-2 text-sm">
+                      <div className="space-y-2 text-sm text-muted-foreground">
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>File validation & upload</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>API request with FormData</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>Blob response processing</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
                           <span>URL creation & display</span>
                         </div>
                       </div>
@@ -442,14 +444,17 @@ export default function BgRemoverPage() {
                     <div>
                       <h4 className="font-medium mb-2">Error Handling</h4>
                       <div className="space-y-2 text-sm">
-                        <div className="p-2 rounded bg-red-900/20 border border-red-500/20">
-                          <strong>API Errors:</strong> Network & rate limiting
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">API Errors</div>
+                          <div className="text-muted-foreground">Network & rate limiting</div>
                         </div>
-                        <div className="p-2 rounded bg-orange-900/20 border border-orange-500/20">
-                          <strong>File Errors:</strong> Invalid format & size
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">File Errors</div>
+                          <div className="text-muted-foreground">Invalid format & size</div>
                         </div>
-                        <div className="p-2 rounded bg-blue-900/20 border border-blue-500/20">
-                          <strong>Processing:</strong> Loading states & feedback
+                        <div className="p-3 rounded-lg bg-background/50 border border-border/50">
+                          <div className="font-medium mb-1">Processing</div>
+                          <div className="text-muted-foreground">Loading states & feedback</div>
                         </div>
                       </div>
                     </div>
@@ -460,36 +465,36 @@ export default function BgRemoverPage() {
               {/* Mobile Development & Performance */}
               <div className="grid lg:grid-cols-2 gap-6">
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">📱 Mobile Development</h3>
+                  <h3 className="text-lg font-semibold mb-4">Mobile Development</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-green-400">Capacitor Integration</div>
+                      <div className="font-medium text-foreground">Capacitor Integration</div>
                       <div className="text-sm text-muted-foreground">Cross-platform mobile app with native capabilities</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-blue-400">Android Build</div>
+                      <div className="font-medium text-foreground">Android Build</div>
                       <div className="text-sm text-muted-foreground">Complete Android project with Gradle configuration</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-purple-400">Responsive UI</div>
+                      <div className="font-medium text-foreground">Responsive UI</div>
                       <div className="text-sm text-muted-foreground">Tailwind breakpoints for all screen sizes</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4">⚡ Performance Optimizations</h3>
+                  <h3 className="text-lg font-semibold mb-4">Performance Optimizations</h3>
                   <div className="space-y-3">
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-red-400">Image Handling</div>
+                      <div className="font-medium text-foreground">Image Handling</div>
                       <div className="text-sm text-muted-foreground">Efficient blob processing and URL management</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-orange-400">State Management</div>
+                      <div className="font-medium text-foreground">State Management</div>
                       <div className="text-sm text-muted-foreground">React hooks for optimal re-rendering</div>
                     </div>
                     <div className="p-3 rounded-lg bg-background/50">
-                      <div className="font-medium text-cyan-400">Vite Optimization</div>
+                      <div className="font-medium text-foreground">Vite Optimization</div>
                       <div className="text-sm text-muted-foreground">Fast builds and hot module replacement</div>
                     </div>
                   </div>
@@ -498,30 +503,82 @@ export default function BgRemoverPage() {
 
               {/* Code Architecture */}
               <div className="p-6 rounded-2xl bg-card/50 border border-border/50">
-                <h3 className="text-lg font-semibold mb-4">📁 Project Structure</h3>
+                <h3 className="text-lg font-semibold mb-4">Project Structure</h3>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Frontend Structure:</div>
-                    <div className="space-y-1 text-muted-foreground">
-                      <div>📂 src/</div>
-                      <div className="pl-4">📂 components/ - React components</div>
-                      <div className="pl-4">📂 hooks/ - Custom React hooks</div>
-                      <div className="pl-4">📂 utils/ - API utilities</div>
-                      <div className="pl-4">📄 App.tsx - Main component</div>
-                      <div className="pl-4">📄 main.tsx - Entry point</div>
-                      <div className="pl-4">📄 index.css - Global styles</div>
-                    </div>
+                  <div>
+                    <div className="text-primary font-bold mb-3 text-sm">Frontend Structure:</div>
+                    <AnimatedFileTree
+                      data={[
+                        {
+                          name: "src",
+                          type: "folder",
+                          children: [
+                            {
+                              name: "components",
+                              type: "folder",
+                              children: [
+                                { name: "ImageUpload.tsx", type: "file", icon: "- Drag & drop" },
+                                { name: "ImagePreview.tsx", type: "file", icon: "- Before/after" },
+                                { name: "History.tsx", type: "file", icon: "- Processing history" }
+                              ]
+                            },
+                            {
+                              name: "hooks",
+                              type: "folder",
+                              children: [
+                                { name: "useImageProcessor.ts", type: "file" },
+                                { name: "useLocalStorage.ts", type: "file" }
+                              ]
+                            },
+                            {
+                              name: "utils",
+                              type: "folder",
+                              children: [
+                                { name: "api.ts", type: "file", icon: "- Remove.bg API" },
+                                { name: "fileUtils.ts", type: "file", icon: "- File handling" }
+                              ]
+                            },
+                            { name: "App.tsx", type: "file", icon: "- Main component" },
+                            { name: "main.tsx", type: "file", icon: "- Entry point" },
+                            { name: "index.css", type: "file", icon: "- Global styles" }
+                          ]
+                        }
+                      ]}
+                    />
                   </div>
-                  <div className="font-mono text-sm">
-                    <div className="text-primary font-bold mb-2">Key Dependencies:</div>
-                    <div className="space-y-1 text-muted-foreground">
-                      <div>⚛️ React 18 - UI framework</div>
-                      <div>📱 Capacitor - Mobile deployment</div>
-                      <div>🎨 Tailwind CSS - Utility-first CSS</div>
-                      <div>🔍 Lucide React - Icon library</div>
-                      <div>⚡ Vite - Build tool</div>
-                      <div>🤖 Remove.bg API - AI processing</div>
-                    </div>
+                  <div>
+                    <div className="text-primary font-bold mb-3 text-sm">Key Features:</div>
+                    <AnimatedFileTree
+                      data={[
+                        {
+                          name: "Image Processing",
+                          type: "folder",
+                          children: [
+                            { name: "Remove.bg API", type: "file", icon: "- AI removal" },
+                            { name: "FormData Upload", type: "file", icon: "- File handling" },
+                            { name: "Blob Response", type: "file", icon: "- Download" }
+                          ]
+                        },
+                        {
+                          name: "Mobile Support",
+                          type: "folder",
+                          children: [
+                            { name: "Capacitor", type: "file", icon: "- Cross-platform" },
+                            { name: "Android Build", type: "file", icon: "- Native app" },
+                            { name: "Responsive UI", type: "file", icon: "- All devices" }
+                          ]
+                        },
+                        {
+                          name: "User Experience",
+                          type: "folder",
+                          children: [
+                            { name: "Drag & Drop", type: "file", icon: "- Intuitive upload" },
+                            { name: "Real-time Preview", type: "file", icon: "- Live feedback" },
+                            { name: "History", type: "file", icon: "- Track processed" }
+                          ]
+                        }
+                      ]}
+                    />
                   </div>
                 </div>
               </div>
@@ -573,6 +630,28 @@ export default function BgRemoverPage() {
           )}
         </div>
       </section>
+
+      {/* Rating Section */}
+      <section className="py-16 px-4 border-t border-border/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <div className="text-center space-y-2">
+              <h2 className="text-2xl font-bold">Rate This Project</h2>
+              <p className="text-muted-foreground">
+                How would you rate this project? Your feedback helps improve future projects.
+              </p>
+            </div>
+
+            <ProjectRating projectId="bg-remover" />
+
+            <div className="flex justify-between text-xs font-medium text-muted-foreground">
+              <span>Poor ??</span>
+              <span>Excellent ??</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Image Modal */}
       <ImageModal

@@ -89,6 +89,15 @@ export async function POST(request: NextRequest) {
         is_bot: completeVisitorData.is_bot
       })
     } else {
+      // If database is not configured, return 200 but with tracking disabled
+      if (result.message === 'Database not configured') {
+        return NextResponse.json({ 
+          success: false, 
+          message: 'Visitor tracking is currently disabled',
+          tracked: false
+        }, { status: 200 })
+      }
+      
       console.error('Failed to track visitor:', result.message)
       return NextResponse.json({ 
         success: false, 

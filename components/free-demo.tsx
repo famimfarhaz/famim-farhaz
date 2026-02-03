@@ -8,7 +8,7 @@ import { useEffect, useRef, useCallback } from "react"
 export function FreeDemo() {
   const sectionRef = useRef<HTMLElement>(null)
   const router = useRouter()
-  
+
   const handleHireMeClick = useCallback(() => {
     // Add a small delay to ensure animations complete
     setTimeout(() => {
@@ -87,21 +87,21 @@ export function FreeDemo() {
             <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-yellow-400 via-amber-500 to-transparent animate-pulse"></div>
             <div className="absolute top-0 left-0 w-0.5 h-full bg-gradient-to-b from-yellow-400 via-amber-500 to-transparent animate-pulse"></div>
             {/* Moving border animation */}
-            <div className="absolute top-0 left-0 w-6 h-0.5 bg-gradient-to-r from-yellow-400 to-transparent opacity-80" style={{animation: 'corner-sweep-horizontal 3s ease-in-out infinite'}}></div>
-            <div className="absolute top-0 left-0 w-0.5 h-6 bg-gradient-to-b from-yellow-400 to-transparent opacity-80" style={{animation: 'corner-sweep-vertical 3s ease-in-out infinite 0.5s'}}></div>
+            <div className="absolute top-0 left-0 w-6 h-0.5 bg-gradient-to-r from-yellow-400 to-transparent opacity-80" style={{ animation: 'corner-sweep-horizontal 3s ease-in-out infinite' }}></div>
+            <div className="absolute top-0 left-0 w-0.5 h-6 bg-gradient-to-b from-yellow-400 to-transparent opacity-80" style={{ animation: 'corner-sweep-vertical 3s ease-in-out infinite 0.5s' }}></div>
             {/* Glow effect from top-left corner */}
-            <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-radial from-yellow-400/8 via-amber-500/4 via-transparent to-transparent" style={{background: 'radial-gradient(circle at top left, rgba(251, 191, 36, 0.08) 0%, rgba(245, 158, 11, 0.04) 30%, transparent 60%)'}}></div>
+            <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-radial from-yellow-400/8 via-amber-500/4 via-transparent to-transparent" style={{ background: 'radial-gradient(circle at top left, rgba(251, 191, 36, 0.08) 0%, rgba(245, 158, 11, 0.04) 30%, transparent 60%)' }}></div>
           </div>
-          
+
           {/* VIP corner accent - bottom-right */}
           <div className="absolute bottom-0 right-0 w-20 h-20 rounded-br-xl overflow-hidden">
             <div className="absolute bottom-0 right-0 w-full h-0.5 bg-gradient-to-l from-yellow-400 via-amber-500 to-transparent animate-pulse"></div>
             <div className="absolute bottom-0 right-0 w-0.5 h-full bg-gradient-to-t from-yellow-400 via-amber-500 to-transparent animate-pulse"></div>
             {/* Moving border animation */}
-            <div className="absolute bottom-0 right-0 w-6 h-0.5 bg-gradient-to-l from-yellow-400 to-transparent opacity-80" style={{animation: 'corner-sweep-horizontal-reverse 3s ease-in-out infinite'}}></div>
-            <div className="absolute bottom-0 right-0 w-0.5 h-6 bg-gradient-to-t from-yellow-400 to-transparent opacity-80" style={{animation: 'corner-sweep-vertical-reverse 3s ease-in-out infinite 0.5s'}}></div>
+            <div className="absolute bottom-0 right-0 w-6 h-0.5 bg-gradient-to-l from-yellow-400 to-transparent opacity-80" style={{ animation: 'corner-sweep-horizontal-reverse 3s ease-in-out infinite' }}></div>
+            <div className="absolute bottom-0 right-0 w-0.5 h-6 bg-gradient-to-t from-yellow-400 to-transparent opacity-80" style={{ animation: 'corner-sweep-vertical-reverse 3s ease-in-out infinite 0.5s' }}></div>
             {/* Glow effect from bottom-right corner */}
-            <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-radial from-yellow-400/8 via-amber-500/4 via-transparent to-transparent" style={{background: 'radial-gradient(circle at bottom right, rgba(251, 191, 36, 0.08) 0%, rgba(245, 158, 11, 0.04) 30%, transparent 60%)'}}></div>
+            <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-radial from-yellow-400/8 via-amber-500/4 via-transparent to-transparent" style={{ background: 'radial-gradient(circle at bottom right, rgba(251, 191, 36, 0.08) 0%, rgba(245, 158, 11, 0.04) 30%, transparent 60%)' }}></div>
           </div>
           <div className="mb-8">
             <h3 className="text-xl font-bold mb-6 text-center">How It Works</h3>
@@ -161,9 +161,9 @@ export function FreeDemo() {
           </div>
 
           <div className="text-center pt-4 border-t border-border scroll-animate">
-            <Button 
+            <Button
               onClick={handleHireMeClick}
-              size="lg" 
+              size="lg"
               className="group relative bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 hover:from-yellow-500 hover:via-amber-600 hover:to-yellow-700 text-black font-semibold transition-all duration-300 border-0 cursor-pointer overflow-hidden"
             >
               {/* Shiny effect overlay */}
