@@ -10,23 +10,23 @@ interface ProjectRatingProps {
 // Generate a browser-specific fingerprint
 function getUserFingerprint(): string {
   if (typeof window === 'undefined') return ''
-  
+
   let fingerprint = localStorage.getItem('user_fingerprint')
-  
+
   if (!fingerprint) {
     // Create a consistent fingerprint based on browser characteristics
     // This will be different for each browser but consistent within the same browser
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
     let canvasFingerprint = ''
-    
+
     if (ctx) {
       ctx.textBaseline = 'top'
       ctx.font = '14px Arial'
       ctx.fillText('Browser fingerprint', 2, 2)
       canvasFingerprint = canvas.toDataURL()
     }
-    
+
     // Combine multiple browser characteristics for unique fingerprint
     const components = [
       navigator.userAgent,
@@ -38,13 +38,13 @@ function getUserFingerprint(): string {
       navigator.platform,
       canvasFingerprint.substring(0, 50), // First 50 chars of canvas fingerprint
     ].join('|')
-    
+
     // Generate hash-like fingerprint
     fingerprint = btoa(components).substring(0, 64)
-    
+
     localStorage.setItem('user_fingerprint', fingerprint)
   }
-  
+
   return fingerprint
 }
 
@@ -76,7 +76,7 @@ export function ProjectRating({ projectId }: ProjectRatingProps) {
         const response = await fetch(
           `/api/ratings?projectId=${projectId}&userFingerprint=${userFingerprint}`
         )
-        
+
         if (response.ok) {
           const data = await response.json()
           if (data.rating) {
@@ -107,10 +107,10 @@ export function ProjectRating({ projectId }: ProjectRatingProps) {
 
     try {
       const userFingerprint = getUserFingerprint()
-      
+
       // Save to local storage immediately
       localStorage.setItem(`rating_${projectId}`, value)
-      
+
       // Save to backend
       const response = await fetch('/api/ratings', {
         method: 'POST',
@@ -130,10 +130,10 @@ export function ProjectRating({ projectId }: ProjectRatingProps) {
 
       const data = await response.json()
       setIsSaved(true)
-      
+
       // Refresh rating count
       await fetchRatingCount()
-      
+
       // Show success message briefly
       setTimeout(() => setIsSaved(false), 3000)
     } catch (error) {
@@ -154,7 +154,7 @@ export function ProjectRating({ projectId }: ProjectRatingProps) {
           </p>
         )}
       </div>
-      
+
       <RatingScaleGroup value={selectedRating || undefined} onValueChange={handleRatingChange}>
         {Array.from({ length: 10 }).map((_, i) => (
           <RatingScaleItem
@@ -171,7 +171,7 @@ export function ProjectRating({ projectId }: ProjectRatingProps) {
           ✓ Rating saved successfully!
         </p>
       )}
-      
+
       {isLoading && (
         <p className="text-center text-sm text-muted-foreground animate-pulse">
           Saving your rating...

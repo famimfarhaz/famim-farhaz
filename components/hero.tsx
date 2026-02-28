@@ -22,20 +22,20 @@ export function Hero() {
   const nameRef = useRef<HTMLSpanElement>(null)
   const particlesRef = useRef<HTMLDivElement>(null)
   const [isNavigating, setIsNavigating] = useState(false)
-  
+
   // Prefetch routes for faster navigation
   useEffect(() => {
     router.prefetch('/projects')
     router.prefetch('/contact')
   }, [router])
-  
+
   const handleProjectsClick = useCallback(() => {
     if (isNavigating) return
     setIsNavigating(true)
     router.push('/projects')
     setTimeout(() => setIsNavigating(false), 1000)
   }, [router, isNavigating])
-  
+
   const handleContactClick = useCallback(() => {
     if (isNavigating) return
     setIsNavigating(true)
@@ -47,10 +47,10 @@ export function Hero() {
   useEffect(() => {
     const name = "Famim Farhaz"
     let index = 0
-    
+
     // Start typing after entrance animation completes (800ms delay + 200ms * 2 for stagger)
     const startDelay = 1400
-    
+
     const startTimer = setTimeout(() => {
       const typeInterval = setInterval(() => {
         if (index <= name.length) {
@@ -127,10 +127,10 @@ export function Hero() {
       {/* Animated Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/20 via-background to-background animate-gradient-shift" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] animate-grid-flow" />
-      
+
       {/* Floating Particles */}
       <div ref={particlesRef} className="absolute inset-0 pointer-events-none" />
-      
+
       {/* Animated Gradient Orbs */}
       <div className="absolute top-20 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float parallax-element" />
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float-delayed parallax-element" />
@@ -152,7 +152,7 @@ export function Hero() {
             >
               Hello I'm{' '}
               <span className="text-accent relative inline-block">
-                <span 
+                <span
                   ref={nameRef}
                   className="bg-gradient-to-r from-accent to-accent/70 bg-clip-text text-transparent animate-gradient-x"
                 >

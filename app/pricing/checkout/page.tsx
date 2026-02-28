@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button"
 
 function CheckoutContent() {
     const searchParams = useSearchParams()
+    const [discountRate, setDiscountRate] = React.useState(0)
     const pkgKey = searchParams.get("pkg")
     const pkg = packages.find((p) => p.key === pkgKey)
 
@@ -40,10 +41,6 @@ function CheckoutContent() {
 
             <div className="container mx-auto max-w-6xl relative">
                 <div className="mb-12 text-center md:text-left">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-4">
-                        <Lock className="w-3 h-3" />
-                        Secure Checkout
-                    </div>
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Complete your order</h1>
                     <p className="text-muted-foreground text-lg">
                         You're ordering the <span className="text-foreground font-semibold">{pkg.name}</span>.
@@ -54,13 +51,18 @@ function CheckoutContent() {
                 <div className="grid lg:grid-cols-5 gap-8 items-start">
                     {/* Form Section */}
                     <div className="lg:col-span-3 space-y-6 order-2 lg:order-1">
-                        <div className="backdrop-blur-xl bg-card/30 border border-border/50 rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden group">
+                        <div className="backdrop-blur-xl bg-zinc-900/30 border border-white/5 rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden group">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl -z-10 group-hover:bg-primary/10 transition-colors" />
                             <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
                                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm">1</span>
                                 Contact Information
                             </h2>
-                            <CheckoutForm packageName={pkg.name} price={pkg.price} packageDetails={pkg.included} />
+                            <CheckoutForm
+                                packageName={pkg.name}
+                                price={pkg.price}
+                                packageDetails={pkg.included}
+                                onDiscountChange={setDiscountRate}
+                            />
                         </div>
 
                         {/* Trust Badges */}
@@ -83,8 +85,8 @@ function CheckoutContent() {
                     {/* Summary Sidebar */}
                     <div className="lg:col-span-2 order-1 lg:order-2">
                         <div className="sticky top-28">
-                            <Card className="border-border/50 shadow-2xl bg-card/40 backdrop-blur-xl rounded-2xl overflow-hidden">
-                                <CardHeader className="bg-muted/30 border-b border-border/50 pb-6">
+                            <Card className="border-white/5 shadow-2xl bg-zinc-900/30 backdrop-blur-xl rounded-2xl overflow-hidden">
+                                <CardHeader className="bg-zinc-950/20 border-b border-white/5 pb-6">
                                     <CardTitle className="text-xl">Review & Order</CardTitle>
                                     <CardDescription>Confirm your package selection</CardDescription>
                                 </CardHeader>
@@ -96,7 +98,7 @@ function CheckoutContent() {
                                                 <p className="text-sm text-muted-foreground mt-1">{pkg.subtitle}</p>
                                             </div>
                                             <div className="text-2xl font-bold text-primary tabular-nums">
-                                                ${pkg.price.toLocaleString()}
+                                                ${(pkg.price * (1 - discountRate)).toLocaleString()}
                                             </div>
                                         </div>
 
@@ -113,20 +115,27 @@ function CheckoutContent() {
                                         </div>
                                     </div>
 
-                                    <div className="pt-8 border-t border-border flex justify-between items-center">
+                                    <div className="pt-8 border-t border-white/5 flex justify-between items-center">
                                         <div className="font-bold text-lg">Total Amount</div>
-                                        <div className="text-3xl font-black text-primary tabular-nums">
-                                            ${pkg.price.toLocaleString()}
+                                        <div className="flex flex-col items-end">
+                                            <div className="text-3xl font-black text-primary tabular-nums">
+                                                ${(pkg.price * (1 - discountRate)).toLocaleString()}
+                                            </div>
+                                            {discountRate > 0 && (
+                                                <div className="text-sm text-muted-foreground line-through font-bold">
+                                                    ${pkg.price.toLocaleString()}
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
 
-                                    <div className="bg-primary/10 rounded-xl p-4 flex gap-4 items-start">
-                                        <div className="p-2 bg-primary/20 rounded-lg text-primary">
+                                    <div className="bg-zinc-950/30 rounded-xl p-4 flex gap-4 items-start border border-white/5">
+                                        <div className="p-2 bg-white/5 rounded-lg text-primary">
                                             <ShieldCheck className="w-5 h-5" />
                                         </div>
                                         <div>
-                                            <p className="text-xs font-bold text-primary uppercase tracking-tighter mb-1">Guaranteed Delivery</p>
-                                            <p className="text-xs text-primary/70 leading-relaxed">
+                                            <p className="text-xs font-bold text-white uppercase tracking-tighter mb-1">Guaranteed Delivery</p>
+                                            <p className="text-xs text-zinc-400 leading-relaxed">
                                                 Every project comes with professional support and source code access.
                                             </p>
                                         </div>

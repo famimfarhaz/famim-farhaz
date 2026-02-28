@@ -21,21 +21,19 @@ function TreeNode({ node, level = 0 }: { node: FileNode; level?: number }) {
   return (
     <div className="select-none">
       <div
-        className={`flex items-center gap-2 py-1.5 px-2 rounded-md hover:bg-background/80 transition-all duration-200 cursor-pointer group ${
-          level > 0 ? "ml-4" : ""
-        }`}
+        className={`flex items-center gap-2 py-1.5 px-2 rounded-md hover:bg-background/80 transition-all duration-200 cursor-pointer group ${level > 0 ? "ml-4" : ""
+          }`}
         onClick={() => hasChildren && setIsOpen(!isOpen)}
         style={{ paddingLeft: `${level * 16 + 8}px` }}
       >
         {hasChildren && (
           <ChevronRight
-            className={`w-3.5 h-3.5 text-muted-foreground transition-transform duration-300 ${
-              isOpen ? "rotate-90" : ""
-            }`}
+            className={`w-3.5 h-3.5 text-muted-foreground transition-transform duration-300 ${isOpen ? "rotate-90" : ""
+              }`}
           />
         )}
         {!hasChildren && <div className="w-3.5" />}
-        
+
         {node.type === "folder" ? (
           isOpen ? (
             <FolderOpen className="w-4 h-4 text-yellow-500" />
@@ -45,13 +43,12 @@ function TreeNode({ node, level = 0 }: { node: FileNode; level?: number }) {
         ) : (
           <File className="w-4 h-4 text-blue-400" />
         )}
-        
+
         <span
-          className={`text-sm font-mono ${
-            node.type === "folder"
+          className={`text-sm font-mono ${node.type === "folder"
               ? "text-foreground font-medium"
               : "text-muted-foreground"
-          } group-hover:text-primary transition-colors duration-200`}
+            } group-hover:text-primary transition-colors duration-200`}
         >
           {node.name}
           {node.icon && (
@@ -64,9 +61,8 @@ function TreeNode({ node, level = 0 }: { node: FileNode; level?: number }) {
 
       {hasChildren && (
         <div
-          className={`overflow-hidden transition-all duration-300 ease-in-out ${
-            isOpen ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
+            }`}
         >
           {node.children?.map((child, index) => (
             <TreeNode key={`${child.name}-${index}`} node={child} level={level + 1} />

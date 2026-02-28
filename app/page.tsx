@@ -6,7 +6,7 @@ import { FreeDemo } from "@/components/free-demo"
 import { Services } from "@/components/services"
 import { MyProjects } from "@/components/my-projects"
 import { Quote } from "@/components/quote"
-import { Testimonials } from "@/components/testimonials"
+
 import { TechStack } from "@/components/tech-stack"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
@@ -26,7 +26,7 @@ export default function Home() {
           <MyProjects />
           <Services />
           <FreeDemo />
-          <Testimonials />
+
           <Quote />
           <TechStack />
           <FaqsSection />

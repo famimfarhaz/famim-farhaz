@@ -7,11 +7,11 @@ export const packages = [
         badge: "Best for solopreneurs",
         included: [
             "Basic website development",
-            "RAG model integration (Basic)",
             "Project management software",
             "Dashboard & analysis tool",
+            "SEO optimization basics",
         ],
-        notIncluded: ["Custom SaaS features", "Advanced RAG"],
+        notIncluded: ["Custom SaaS features", "Payment integration"],
     },
     {
         key: "business",
@@ -23,8 +23,8 @@ export const packages = [
         included: [
             "Advanced website development",
             "SaaS development (simple features)",
-            "Mid-range RAG model",
             "Dashboard & analysis tool",
+            "Priority support",
         ],
         notIncluded: ["E-commerce functionality", "Dedicated admin panel"],
     },
@@ -36,8 +36,8 @@ export const packages = [
         included: [
             "E-commerce website development",
             "Cart, Payment, Product Mgmt",
-            "RAG model for e-commerce",
             "Admin Panel & CRM",
+            "Inventory management",
         ],
         notIncluded: ["Custom SaaS unrelated to e-com"],
     },
@@ -49,10 +49,10 @@ export const packages = [
         included: [
             "Advanced website development",
             "Custom SaaS development",
-            "Advanced RAG model (Monthly)",
             "Project management software",
+            "Dedicated support (Monthly)",
         ],
-        notIncluded: ["Dedicated manager", "24/7 priority support"],
+        notIncluded: ["Dedicated manager", "In-person consulting"],
     },
 ]
 
@@ -70,9 +70,4 @@ export const servicePrices = [
 
     // Add-ons & Support
     { name: "Ongoing Maintenance & Support", price: 300, category: "SaaS Solutions", description: "Updates, backups and security handled for you", comingSoon: false },
-
-    // AI/RAG Solutions
-    { name: "RAG Models (Chatbot & Document Search)", price: 800, category: "AI/RAG Solutions", description: "AI assistant trained on your documents and data", comingSoon: false },
-    { name: "AI Content Assistant", price: 600, category: "AI/RAG Solutions", description: "Generate marketing copy, emails and reports with AI", comingSoon: false },
-    { name: "Email Reply Automation", price: 500, category: "AI/RAG Solutions", description: "Auto-draft responses to customer emails intelligently", comingSoon: false },
 ]

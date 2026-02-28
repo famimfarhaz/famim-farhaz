@@ -11,11 +11,11 @@ export function Footer() {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <Image 
-                src="/portfolio-logo.png" 
-                alt="Portfolio Logo" 
-                width={32} 
-                height={32} 
+              <Image
+                src="/portfolio-logo.png"
+                alt="Portfolio Logo"
+                width={32}
+                height={32}
                 className="h-8 w-8"
               />
               <span className="text-lg font-bold text-foreground">Famim Farhaz</span>

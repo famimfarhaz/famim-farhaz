@@ -12,7 +12,7 @@ export function FaqsSection() {
             <div className="space-y-2">
                 <h2 className="text-3xl font-bold md:text-4xl">Frequently Asked Questions</h2>
                 <p className="text-muted-foreground max-w-2xl">
-                    Here are some common questions I get from clients about my services, process, and how we can work together.
+                    Common questions about my services, workflow, and how I can help bring your ideas to life.
                 </p>
             </div>
             <Accordion

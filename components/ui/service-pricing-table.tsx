@@ -9,7 +9,6 @@ import { Badge } from "@/components/ui/badge"
 const categoryIcons: Record<string, React.ReactNode> = {
     "Website Development": <Code2 className="w-5 h-5 text-blue-500" />,
     "SaaS Solutions": <Zap className="w-5 h-5 text-yellow-500" />,
-    "AI/RAG Solutions": <Brain className="w-5 h-5 text-purple-500" />,
 }
 
 export function ServicePricingTable() {

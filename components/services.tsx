@@ -52,22 +52,24 @@ export function Services() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service, index) => (
-            <Card
+            <div
               key={index}
-              className="relative p-4 sm:p-6 md:p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:border-accent/50 hover:bg-card/80 transition-all duration-500 group overflow-hidden hover:shadow-lg hover:shadow-accent/5 hover:-translate-y-1 scroll-animate"
+              className="relative p-8 rounded-2xl border border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.05] transition-colors duration-300 group scroll-animate"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-              <div className="relative z-10">
-                <div className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4 sm:mb-5 md:mb-6 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300 border border-accent/20">
-                  <service.icon className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-accent" />
+              <div className="space-y-6">
+                <div className="inline-flex items-center justify-center">
+                  <service.icon className="h-6 w-6 text-zinc-100 group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-foreground group-hover:text-accent transition-colors duration-300">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-xs sm:text-sm">{service.description}</p>
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold text-white tracking-tight">
+                    {service.title}
+                  </h3>
+                  <p className="text-zinc-500 leading-relaxed text-sm group-hover:text-zinc-400 transition-colors duration-300">
+                    {service.description}
+                  </p>
+                </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

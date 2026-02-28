@@ -32,7 +32,8 @@ export async function POST(request: Request) {
                     total_price: totalPrice,
                     order_type: orderType || 'fixed',
                     status: orderType === 'negotiation' ? 'negotiating' : 'pending',
-                    contact_info: { phone, couponCode }
+                    phone: phone,
+                    coupon_code: couponCode
                 }
             ])
 

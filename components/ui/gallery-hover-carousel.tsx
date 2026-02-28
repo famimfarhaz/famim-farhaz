@@ -36,22 +36,6 @@ export default function GalleryHoverCarousel({
             videoUrl: "/videos/gigi-website.webm",
         },
         {
-            id: "item-2",
-            title: "Bistro",
-            summary: "Modern minimalist portfolio and service platform for digital creators and modern brands.",
-            url: "https://bistro-portfolio.netlify.app/",
-            image: "",
-            videoUrl: "/videos/monoko-website.webm",
-        },
-        {
-            id: "item-3",
-            title: "IndieMVP",
-            summary: "Feature-rich SaaS landing page with interactive elements and high-converting design patterns.",
-            url: "https://indiemvp.netlify.app/",
-            image: "",
-            videoUrl: "/videos/skitbit-website.webm",
-        },
-        {
             id: "item-4",
             title: "Predictive Analytics",
             summary:
