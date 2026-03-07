@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import { Analytics } from '@vercel/analytics/next'
 import { VisitorTracker } from '@/components/visitor-tracker'
 import { ExpandableChatDemo } from '@/components/expandable-chat-demo'
 import ClickSparkProvider from '@/components/click-spark-provider'
@@ -32,7 +31,6 @@ export default function RootLayout({
           <VisitorTracker />
           {children}
           <ExpandableChatDemo />
-          <Analytics />
           <Toaster />
         </ClickSparkProvider>
       </body>
