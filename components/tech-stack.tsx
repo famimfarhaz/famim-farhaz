@@ -127,16 +127,16 @@ export function TechStack() {
             <div className="text-sm text-muted-foreground">Core Technologies</div>
           </div>
           <div className="text-center">
+            <div className="text-3xl font-bold text-primary mb-1">24h</div>
+            <div className="text-sm text-muted-foreground">Response Time</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-primary mb-1">30-Day</div>
+            <div className="text-sm text-muted-foreground">Post-Deploy Warranty</div>
+          </div>
+          <div className="text-center">
             <div className="text-3xl font-bold text-primary mb-1">100%</div>
-            <div className="text-sm text-muted-foreground">Type Safety</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-1">Fast</div>
-            <div className="text-sm text-muted-foreground">Build Times</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-1">Modern</div>
-            <div className="text-sm text-muted-foreground">Best Practices</div>
+            <div className="text-sm text-muted-foreground">Source Code Access</div>
           </div>
         </div>
       </div>

@@ -56,28 +56,30 @@ export function PricingSection({
                     <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl tracking-tight">{title}</h1>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto">{subtitle}</p>
                 </div>
-                <div className="mx-auto flex w-fit rounded-full bg-muted/50 p-1 backdrop-blur-sm border border-border/50">
-                    {frequencies.map((freq) => (
-                        <Tab
-                            key={freq}
-                            text={freq}
-                            selected={selectedFrequency === freq}
-                            setSelected={setSelectedFrequency}
-                            discount={freq === "yearly"}
-                        />
-                    ))}
-                </div>
+                {frequencies.length > 1 && (
+                    <div className="mx-auto flex w-fit rounded-full bg-muted/50 p-1 backdrop-blur-sm border border-border/50">
+                        {frequencies.map((freq) => (
+                            <Tab
+                                key={freq}
+                                text={freq}
+                                selected={selectedFrequency === freq}
+                                setSelected={setSelectedFrequency}
+                                discount={freq === "yearly"}
+                            />
+                        ))}
+                    </div>
+                )}
             </motion.div>
 
             <motion.div
-                className="grid w-full max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                className="grid w-full max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-stretch"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
             >
                 {tiers.map((tier) => (
-                    <motion.div key={tier.name} variants={itemVariants}>
+                    <motion.div key={tier.name} variants={itemVariants} className="h-full">
                         <PricingCard
                             tier={tier}
                             paymentFrequency={selectedFrequency}

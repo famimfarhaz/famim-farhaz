@@ -13,19 +13,18 @@ import { FaqsSection } from "@/components/ui/faqs-1"
 
 
 const maintenanceFeatures = [
-    "Bug fixes & patches",
-    "Performance optimization",
-    "Security updates & backups",
-    "Feature updates",
-    "Priority support",
-    "Monthly health reports",
+    { text: "Bug fixes (minor)", included: true },
+    { text: "Security updates", included: true },
+    { text: "Content updates (text/image, max 3/month)", included: true },
+    { text: "Performance check", included: true },
+    { text: "New features — charged separately", included: false },
 ]
 
 const securityBadges = [
     {
         icon: <ShieldCheck className="w-5 h-5" />,
         label: "GDPR Compliant",
-        description: "We respect and protect user data",
+        description: "I respect and protect user data",
     },
     {
         icon: <Lock className="w-5 h-5" />,
@@ -85,12 +84,12 @@ export function TrustSignals() {
                                 Running Smoothly
                             </h3>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                After launch, we don't disappear. Our monthly maintenance plans
+                                After launch, I don't disappear. My monthly maintenance plans
                                 ensure your application stays fast, secure, and up-to-date.
                             </p>
                             <div className="flex items-baseline gap-2 pt-2">
                                 <span className="text-4xl font-black text-white tracking-tight">
-                                    $300
+                                    $100
                                 </span>
                                 <span className="text-muted-foreground font-medium">/month</span>
                             </div>
@@ -99,16 +98,20 @@ export function TrustSignals() {
                         <div className="space-y-3">
                             {maintenanceFeatures.map((feature) => (
                                 <motion.div
-                                    key={feature}
+                                    key={feature.text}
                                     initial={{ opacity: 0, x: 20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5 }}
                                     className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] border border-border/30 hover:border-accent/40 transition-colors duration-300"
                                 >
-                                    <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
-                                    <span className="text-sm font-medium text-gray-300">
-                                        {feature}
+                                    {feature.included ? (
+                                        <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
+                                    ) : (
+                                        <span className="w-4 h-4 shrink-0 text-red-400 text-xs font-bold flex items-center justify-center">✕</span>
+                                    )}
+                                    <span className={`text-sm font-medium ${feature.included ? 'text-gray-300' : 'text-gray-500'}`}>
+                                        {feature.text}
                                     </span>
                                 </motion.div>
                             ))}

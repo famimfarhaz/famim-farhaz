@@ -17,7 +17,7 @@ const services = [
   },
   {
     icon: Database,
-    title: "AI Chatbot's",
+    title: "AI Chatbots",
     description: "Designing and implementing AI-powered chatbots to enhance customer engagement and support.",
   },
   {
@@ -32,7 +32,7 @@ const services = [
   },
   {
     icon: Paintbrush,
-    title: "AI-AGENT's",
+    title: "AI Agents",
     description: "Creating intelligent AI agents to automate tasks and improve operational efficiency.",
   },
 ]

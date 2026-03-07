@@ -5,14 +5,9 @@ import {
     Globe,
     ShoppingCart,
     LayoutDashboard,
-    Users,
-    Building2,
     KanbanSquare,
     BarChart3,
-    Wrench,
-    Bot,
     FileText,
-    Mail,
 } from "lucide-react"
 import { servicePrices } from "@/lib/constants"
 import { cn } from "@/lib/utils"
@@ -34,14 +29,12 @@ const categoryMeta: Record<
 }
 
 const serviceIcons: Record<string, React.ReactNode> = {
-    "Full Stack Website": <Globe className="w-6 h-6" />,
-    "E-commerce Website": <ShoppingCart className="w-6 h-6" />,
-    "Admin Panel (for website / e-com)": <LayoutDashboard className="w-6 h-6" />,
-    "CRM (SaaS)": <Users className="w-6 h-6" />,
-    "ERP (SaaS)": <Building2 className="w-6 h-6" />,
-    "Project & Team Management (SaaS)": <KanbanSquare className="w-6 h-6" />,
+    "Landing Page / Portfolio": <FileText className="w-6 h-6" />,
+    "Business Website": <Globe className="w-6 h-6" />,
+    "E-Commerce Website": <ShoppingCart className="w-6 h-6" />,
+    "Admin Panel": <LayoutDashboard className="w-6 h-6" />,
     "Dashboard & Analytics": <BarChart3 className="w-6 h-6" />,
-    "Ongoing Maintenance & Support": <Wrench className="w-6 h-6" />,
+    "Project & Team Mgmt SaaS": <KanbanSquare className="w-6 h-6" />,
 }
 
 import { motion } from "framer-motion"
@@ -92,7 +85,7 @@ export function SubServicesGrid() {
                         Individual Services
                     </h2>
                     <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-                        Don't need a full package? Pick exactly what you need from our
+                        Don't need a full package? Pick exactly what you need from my
                         à-la-carte menu of premium services.
                     </p>
                 </motion.div>
@@ -191,12 +184,13 @@ export function SubServicesGrid() {
                                                             </span>
                                                         )}
 
-                                                        {/* Get Now Button - Appears on Hover */}
+                                                        {/* CTA - Appears on Hover */}
                                                         <a
-                                                            href={`/pricing/builder?service=${service.name.toLowerCase().replace(/\s+/g, '-')}`}
-                                                            className="px-4 py-2 rounded-lg bg-white text-black text-[9px] font-black uppercase tracking-[0.15em] hover:bg-zinc-200 transition-all opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 shadow-lg shadow-white/5"
+                                                            href={`/contact?service=${encodeURIComponent(service.name)}`}
+                                                            className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white text-black text-xs font-bold hover:bg-zinc-200 transition-all opacity-100 translate-x-0 lg:opacity-0 lg:translate-x-4 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 shadow-lg shadow-white/5 whitespace-nowrap"
                                                         >
-                                                            Get Now
+                                                            Get in Touch
+                                                            <span className="text-[11px]">→</span>
                                                         </a>
                                                     </div>
                                                 </div>

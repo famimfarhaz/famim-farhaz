@@ -57,7 +57,7 @@ export function FreeDemo() {
     {
       number: "03",
       title: "Love It? Hire Me",
-      description: "If satisfied, we proceed with the full project",
+      description: "If satisfied, I proceed with the full project",
     },
   ]
 
@@ -179,8 +179,7 @@ export function FreeDemo() {
 
         <div className="text-center scroll-animate">
           <p className="text-sm text-muted-foreground">
-            <span className="text-primary font-semibold">1 client</span> has already experienced this risk-free
-            approach
+            Start with zero risk. See the quality before you commit.
           </p>
         </div>
       </div>

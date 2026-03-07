@@ -106,7 +106,7 @@ export function Header() {
                   }}
                   className="bg-white text-black h-11 px-8 text-sm font-black rounded-full active:scale-95 transition-all mt-2"
                 >
-                  Contact Us
+                  Contact Me
                 </Button>
               </nav>
             </div>
@@ -166,7 +166,7 @@ export function Header() {
                   disabled={isNavigating}
                   className="bg-white text-black hover:bg-zinc-200 h-10 px-6 text-sm font-black rounded-full transition-all duration-200 disabled:opacity-70"
                 >
-                  Contact Us
+                  Contact Me
                 </Button>
               </nav>
             </div>

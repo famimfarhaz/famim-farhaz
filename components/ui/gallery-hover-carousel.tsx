@@ -12,7 +12,6 @@ import {
 import type { CarouselApi } from "@/components/ui/carousel";
 import Image from "next/image";
 import Link from "next/link";
-import { ProjectVideo } from "@/components/ui/project-video";
 
 interface GalleryHoverCarouselItem {
     id: string;
@@ -29,29 +28,43 @@ export default function GalleryHoverCarousel({
     items = [
         {
             id: "item-1",
-            title: "Anime Website",
-            summary: "A premium design agency website with cinematic animations and a high-performance video showcase.",
-            url: "https://animespheree.netlify.app/",
+            title: "GiGi — Premium Energy Brand",
+            summary: "A bold e-commerce platform for a premium energy drink brand with immersive product storytelling.",
+            url: "/projects/gigi-energy",
             image: "",
             videoUrl: "/videos/gigi-website.webm",
         },
         {
+            id: "item-2",
+            title: "LuminisDigital — Agency Website",
+            summary: "A refined, animation-driven marketing website for a boutique digital agency with GSAP-powered interactions.",
+            url: "/projects/luminis-digital",
+            image: "",
+            videoUrl: "/videos/luminisdigital.webm",
+        },
+        {
+            id: "item-3",
+            title: "SkitBit — 3D Animation Studio",
+            summary: "An immersive WebGL-enhanced portfolio for a premium 3D animation studio with cinematic storytelling.",
+            url: "/projects/skitbit-studio",
+            image: "",
+            videoUrl: "/videos/skitbit-website.webm",
+        },
+        {
             id: "item-4",
-            title: "Predictive Analytics",
-            summary:
-                "Advanced forecasting capabilities that analyze historical data to predict future trends and outcomes, helping businesses make data-driven decisions.",
-            url: "#",
-            image:
-                "https://images.unsplash.com/photo-1551288049-bbbda5366a71?q=80&w=2670&auto=format&fit=crop",
+            title: "TakaTrack — Finance Platform",
+            summary: "A full-stack personal finance platform for Bangladeshi users with expense tracking and visual analytics.",
+            url: "/projects/takatrack",
+            image: "",
+            videoUrl: "/videos/takatrack.webm",
         },
         {
             id: "item-5",
-            title: "Neural Network Architecture",
-            summary:
-                "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
-            url: "#",
-            image:
-                "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2532&auto=format&fit=crop",
+            title: "WonderKids — Learning Platform",
+            summary: "A playful e-commerce learning platform for children with GSAP animations and a custom cart system.",
+            url: "/projects/wonderkids",
+            image: "",
+            videoUrl: "/videos/wonderkids.webm",
         }
     ],
 }: {
@@ -85,7 +98,7 @@ export default function GalleryHoverCarousel({
                         <h3 className="text-xl sm:text-2xl lg:text-4xl font-bold text-foreground leading-tight tracking-tight">
                             {heading}{" "}
                             <span className="text-muted-foreground block mt-2 text-lg sm:text-xl lg:text-2xl font-normal">
-                                Explore our collection of innovative solutions and cutting-edge technologies.
+                                Explore my collection of innovative solutions and cutting-edge technologies.
                             </span>
                         </h3>
                     </div>

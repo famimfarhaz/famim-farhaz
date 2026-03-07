@@ -68,7 +68,7 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="pt-6 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground text-center sm:text-left">
-            © 2025 Famim Farhaz — Designed & Developed with passion
+© 2026 Famim Farhaz — Designed & Developed with passion
           </p>
           <div className="text-xs text-muted-foreground">
             Crafting modern web experiences with precision and passion.

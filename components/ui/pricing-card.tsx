@@ -35,7 +35,7 @@ export function PricingCard({ tier, paymentFrequency }: PricingCardProps) {
     return (
         <Card
             className={cn(
-                "relative flex flex-col gap-8 overflow-hidden p-6",
+                "relative flex flex-col gap-8 overflow-hidden p-6 h-full",
                 isHighlighted
                     ? "bg-foreground text-background"
                     : "bg-background text-foreground",
@@ -67,7 +67,7 @@ export function PricingCard({ tier, paymentFrequency }: PricingCardProps) {
                             className="text-4xl font-medium"
                         />
                         <p className="-mt-2 text-xs text-muted-foreground">
-                            Per Project ({paymentFrequency})
+                            Per Project
                         </p>
                     </>
                 ) : (
@@ -95,7 +95,7 @@ export function PricingCard({ tier, paymentFrequency }: PricingCardProps) {
 
             <Button
                 variant={isHighlighted ? "secondary" : "default"}
-                className="w-full cursor-pointer relative z-10"
+                className="w-full cursor-pointer relative z-10 mt-auto"
                 asChild={!!tier.href}
             >
                 {tier.href ? (

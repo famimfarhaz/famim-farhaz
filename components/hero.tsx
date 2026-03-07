@@ -174,7 +174,7 @@ export function Hero() {
               className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground/90 text-pretty mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-2xl"
               data-animate
             >
-              Full-stack web developer specializing in modern, scalable Website's that deliver exceptional user
+Full-stack web developer specializing in modern, scalable websites that deliver exceptional user
               experiences.
             </p>
 

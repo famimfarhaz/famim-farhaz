@@ -19,28 +19,17 @@ export interface ContactFormData {
   id?: string
   name: string
   email: string
-  company?: string
-  phone?: string
+  company?: string | null
+  phone?: string | null
   activate_free_demo: boolean
-  selected_action?: 'meeting' | 'hire' | null
-  
-  // Meeting specific fields
-  meeting_topic?: string
-  preferred_date?: string
-  preferred_time?: string
-  timezone?: string
-  custom_timezone?: string
-  meeting_platform?: string
-  meeting_notes?: string
-  
-  // Hire specific fields
-  project_type?: string
-  custom_project_type?: string
-  role?: string
-  budget?: string
-  timeline?: string
-  message?: string
-  
+  project_type?: string | null
+  role?: string | null
+  budget?: string | null
+  timeline?: string | null
+  message?: string | null
+  ip_address?: string | null
+  user_agent?: string | null
+  is_potential_bot?: boolean | null
   created_at?: string
   updated_at?: string
 }

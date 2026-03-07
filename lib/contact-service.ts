@@ -6,20 +6,7 @@ export interface FormSubmissionData {
   company?: string
   phone?: string
   activateFreeDemo: boolean
-  selectedAction?: 'meeting' | 'hire' | null
-  
-  // Meeting specific fields
-  meetingTopic?: string
-  preferredDate?: string
-  preferredTime?: string
-  timezone?: string
-  customTimezone?: string
-  meetingPlatform?: string
-  meetingNotes?: string
-  
-  // Hire specific fields
   projectType?: string
-  customProjectType?: string
   role?: string
   budget?: string
   timeline?: string
@@ -61,26 +48,11 @@ export const submitContactForm = async (formData: FormSubmissionData) => {
       company: formData.company || null,
       phone: formData.phone || null,
       activate_free_demo: formData.activateFreeDemo,
-      selected_action: formData.selectedAction || null,
-      
-      // Meeting fields
-      meeting_topic: formData.meetingTopic || null,
-      preferred_date: formData.preferredDate || null,
-      preferred_time: formData.preferredTime || null,
-      timezone: formData.timezone || null,
-      custom_timezone: formData.customTimezone || null,
-      meeting_platform: formData.meetingPlatform || null,
-      meeting_notes: formData.meetingNotes || null,
-      
-      // Hire fields
       project_type: formData.projectType || null,
-      custom_project_type: formData.customProjectType || null,
       role: formData.role || null,
       budget: formData.budget || null,
       timeline: formData.timeline || null,
       message: formData.message || null,
-      
-      // Security tracking fields
       ip_address: ipAddress,
       user_agent: userAgent,
       is_potential_bot: isPotentialBot,
