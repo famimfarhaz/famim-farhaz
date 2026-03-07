@@ -143,17 +143,9 @@ const ExpandableChatToggle: React.FC<ExpandableChatToggleProps> = ({
   >
     {isOpen ? (
       <svg className="w-12 h-12 rounded-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ outline: 'none' }}>
-        <defs>
-          <linearGradient id="close-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{stopColor: '#f59e0b', stopOpacity: 1}} />
-            <stop offset="33%" style={{stopColor: '#ef4444', stopOpacity: 1}} />
-            <stop offset="66%" style={{stopColor: '#ec4899', stopOpacity: 1}} />
-            <stop offset="100%" style={{stopColor: '#a855f7', stopOpacity: 1}} />
-          </linearGradient>
-        </defs>
-        <circle cx="50" cy="50" r="38" stroke="url(#close-gradient)" strokeWidth="8" fill="none" />
-        <line x1="35" y1="35" x2="65" y2="65" stroke="url(#close-gradient)" strokeWidth="6" strokeLinecap="round" />
-        <line x1="65" y1="35" x2="35" y2="65" stroke="url(#close-gradient)" strokeWidth="6" strokeLinecap="round" />
+        <circle cx="50" cy="50" r="46" fill="white" />
+        <line x1="35" y1="35" x2="65" y2="65" stroke="#0a0a0a" strokeWidth="7" strokeLinecap="round" />
+        <line x1="65" y1="35" x2="35" y2="65" stroke="#0a0a0a" strokeWidth="7" strokeLinecap="round" />
       </svg>
     ) : (
       icon || <MessageCircle className="h-6 w-6" />

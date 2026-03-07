@@ -179,20 +179,13 @@ export function ExpandableChatDemo() {
           onOpenChange={setIsChatOpen}
           icon={
             <svg className="w-12 h-12 rounded-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ outline: 'none' }}>
-              <defs>
-                <linearGradient id="chat-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: '#f59e0b', stopOpacity: 1 }} />
-                  <stop offset="33%" style={{ stopColor: '#ef4444', stopOpacity: 1 }} />
-                  <stop offset="66%" style={{ stopColor: '#ec4899', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#a855f7', stopOpacity: 1 }} />
-                </linearGradient>
-              </defs>
-              <circle cx="50" cy="50" r="38" stroke="url(#chat-icon-gradient)" strokeWidth="8" fill="none" />
+              <circle cx="50" cy="50" r="46" fill="white" />
+              <path d="M50 20 Q54 46 80 50 Q54 54 50 80 Q46 54 20 50 Q46 46 50 20 Z" fill="#0a0a0a" />
             </svg>
           }
         >
           <ExpandableChatHeader className="flex-col text-center justify-center">
-            <h1 className="text-xl font-semibold">Chat with AI ✨</h1>
+            <h1 className="text-xl font-semibold">Quick Questions?</h1>
             <p className="text-sm text-muted-foreground">
               Ask me anything about Famim's services
             </p>
@@ -216,17 +209,10 @@ export function ExpandableChatDemo() {
                       </svg>
                     </div>
                   ) : (
-                    <div className="h-8 w-8 shrink-0 rounded-full bg-black flex items-center justify-center">
+                    <div className="h-8 w-8 shrink-0 rounded-full flex items-center justify-center overflow-hidden">
                       <svg className="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style={{ stopColor: '#f59e0b', stopOpacity: 1 }} />
-                            <stop offset="33%" style={{ stopColor: '#ef4444', stopOpacity: 1 }} />
-                            <stop offset="66%" style={{ stopColor: '#ec4899', stopOpacity: 1 }} />
-                            <stop offset="100%" style={{ stopColor: '#a855f7', stopOpacity: 1 }} />
-                          </linearGradient>
-                        </defs>
-                        <circle cx="50" cy="50" r="35" stroke="url(#gradient)" strokeWidth="10" fill="none" />
+                        <circle cx="50" cy="50" r="50" fill="white" />
+                        <path d="M50 22 Q53 47 78 50 Q53 53 50 78 Q47 53 22 50 Q47 47 50 22 Z" fill="#0a0a0a" />
                       </svg>
                     </div>
                   )}
@@ -265,17 +251,10 @@ export function ExpandableChatDemo() {
 
               {isLoading && (
                 <ChatBubble variant="received">
-                  <div className="h-8 w-8 shrink-0 rounded-full bg-black flex items-center justify-center animate-pulse">
+                  <div className="h-8 w-8 shrink-0 rounded-full flex items-center justify-center overflow-hidden animate-pulse">
                     <svg className="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="gradient-loading" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{ stopColor: '#f59e0b', stopOpacity: 1 }} />
-                          <stop offset="33%" style={{ stopColor: '#ef4444', stopOpacity: 1 }} />
-                          <stop offset="66%" style={{ stopColor: '#ec4899', stopOpacity: 1 }} />
-                          <stop offset="100%" style={{ stopColor: '#a855f7', stopOpacity: 1 }} />
-                        </linearGradient>
-                      </defs>
-                      <circle cx="50" cy="50" r="35" stroke="url(#gradient-loading)" strokeWidth="10" fill="none" />
+                      <circle cx="50" cy="50" r="50" fill="white" />
+                      <path d="M50 22 Q53 47 78 50 Q53 53 50 78 Q47 53 22 50 Q47 47 50 22 Z" fill="#0a0a0a" />
                     </svg>
                   </div>
                   <ChatBubbleMessage isLoading />
@@ -329,18 +308,14 @@ export function ExpandableChatDemo() {
       {showTooltip && (
         <div className="fixed bottom-24 right-5 z-50 animate-in fade-in slide-in-from-bottom-2 duration-300">
           <div className="relative">
-            <div className="bg-black px-4 py-2.5 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap relative overflow-hidden" style={{ padding: '2px' }}>
-              <div className="absolute inset-0 rounded-lg" style={{
-                background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 33%, #ec4899 66%, #a855f7 100%)',
-              }}></div>
+            <div className="bg-black px-4 py-2.5 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap relative overflow-hidden" style={{ padding: '1.5px' }}>
+              <div className="absolute inset-0 rounded-lg bg-white/20"></div>
               <div className="relative bg-black px-3 py-2 rounded-[6px] text-white">
-                Chat with my AI
+                Got Questions? Ask Away.
               </div>
             </div>
             {/* Arrow pointing down */}
-            <div className="absolute -bottom-1.5 right-6 w-3 h-3 rotate-45" style={{
-              background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 33%, #ec4899 66%, #a855f7 100%)',
-            }}></div>
+            <div className="absolute -bottom-1.5 right-6 w-3 h-3 rotate-45 bg-white/20"></div>
           </div>
         </div>
       )}

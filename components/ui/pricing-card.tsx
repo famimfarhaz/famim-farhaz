@@ -49,7 +49,7 @@ export function PricingCard({ tier, paymentFrequency }: PricingCardProps) {
                 {tier.name}
                 {isPopular && (
                     <Badge variant="secondary" className="mt-1 z-10">
-                        🔥 Most Popular
+                        🔥 Best Choice
                     </Badge>
                 )}
             </h2>

@@ -1,4 +1,4 @@
-import { supabase, ContactFormData } from './supabase'
+import { ContactFormData, supabase } from './supabase'
 
 export interface FormSubmissionData {
   name: string
@@ -15,64 +15,39 @@ export interface FormSubmissionData {
 
 export const submitContactForm = async (formData: FormSubmissionData) => {
   try {
-    // Get user agent and prepare for IP tracking
+    // Get user agent
     const userAgent = typeof window !== 'undefined' ? navigator.userAgent : 'unknown'
-    
-    // Get IP address from our API (will be set server-side)
-    let ipAddress = 'unknown'
-    let isPotentialBot = false
-    
-    try {
-      const ipResponse = await fetch('/api/track-visitor', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          user_agent: userAgent,
-          page_url: window.location.href,
-          referer: document.referrer
-        })
+
+    // Send form data to server-side API endpoint
+    // The server will handle IP capture, bot detection, and database insertion
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        company: formData.company || undefined,
+        phone: formData.phone || undefined,
+        activateFreeDemo: formData.activateFreeDemo,
+        projectType: formData.projectType || undefined,
+        role: formData.role || undefined,
+        budget: formData.budget || undefined,
+        timeline: formData.timeline || undefined,
+        message: formData.message || undefined,
+        userAgent: userAgent,
       })
-      
-      if (ipResponse.ok) {
-        const ipData = await ipResponse.json()
-        isPotentialBot = ipData.is_bot || false
-      }
-    } catch (ipError) {
-      console.error('IP tracking error:', ipError)
-    }
-    
-    // Transform the form data to match database schema
-    const dbData: Omit<ContactFormData, 'id' | 'created_at' | 'updated_at'> = {
-      name: formData.name,
-      email: formData.email,
-      company: formData.company || null,
-      phone: formData.phone || null,
-      activate_free_demo: formData.activateFreeDemo,
-      project_type: formData.projectType || null,
-      role: formData.role || null,
-      budget: formData.budget || null,
-      timeline: formData.timeline || null,
-      message: formData.message || null,
-      ip_address: ipAddress,
-      user_agent: userAgent,
-      is_potential_bot: isPotentialBot,
-    }
+    })
 
-    const { data, error } = await supabase
-      .from('contact_forms')
-      .insert([dbData])
-      .select()
-      .single()
+    const responseData = await response.json()
 
-    if (error) {
-      console.error('Supabase error:', error)
-      throw new Error(`Database error: ${error.message}`)
+    if (!response.ok) {
+      throw new Error(responseData.message || 'Failed to submit form')
     }
 
     return {
       success: true,
-      data: data,
-      message: 'Form submitted successfully!'
+      data: responseData.data,
+      message: responseData.message || 'Form submitted successfully!'
     }
   } catch (error) {
     console.error('Form submission error:', error)

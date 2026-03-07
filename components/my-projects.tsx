@@ -63,8 +63,7 @@ export function MyProjects() {
             <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-zinc-500">Selected Work</span>
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.05]">
-            Projects that<br />
-            <span className="text-zinc-600">speak for themselves.</span>
+            Built to Prove a Point.
           </h2>
         </div>
 
