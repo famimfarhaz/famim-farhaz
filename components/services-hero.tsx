@@ -65,23 +65,22 @@ export function ServicesHero() {
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full border border-border/60 bg-card/50 backdrop-blur-sm text-[11px] sm:text-xs md:text-sm text-muted-foreground font-medium animate-in fade-in slide-in-from-top-4 duration-1000">
                         <span className="text-accent">✦</span>
                         <span>
-                            Ship Faster.{" "}
-                            <strong className="text-foreground">Scale Smarter.</strong>
+                            Boutique Development Studio
                         </span>
                     </div>
 
                     {/* Headline */}
                     <h1 className="text-[2.5rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold tracking-tight sm:leading-[1.12] animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-150">
-                        Build Scalable Tech
+                        Custom Websites.
                         <br className="hidden sm:block" />
                         <span className="sm:hidden"> </span>
-                        for Your Business
+                        Built From Scratch.
                     </h1>
 
                     {/* Subtitle */}
                     <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed px-2 sm:px-0 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
-                        From modern websites to SaaS platforms and AI-powered automation —
-                        get the exact digital infrastructure your business needs to grow.
+                        No templates. No shortcuts. Every project is designed and developed
+                        to your exact specifications — performance, aesthetics, and all.
                     </p>
 
                     {/* CTA Buttons */}
@@ -95,8 +94,9 @@ export function ServicesHero() {
                                     .getElementById("packages")
                                     ?.scrollIntoView({ behavior: "smooth" })
                             }
+                            asChild={false}
                         >
-                            View Pricing
+                            Book a Discovery Call
                         </Button>
                         <Button
                             variant="outline"

@@ -22,7 +22,7 @@ interface ComponentProps {
 
 export default function Component({
   name = "Famim Farhaz",
-  role = "Passionate Developer & Researcher",
+  role = "Boutique Development Studio",
   email = "famimfarhaz@gmail.com",
   avatarSrc = "https://i.postimg.cc/W3Vr6whW/photo_2025-05-23_20-32-11.jpg",
   statusText = "Available for work",

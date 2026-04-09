@@ -84,7 +84,7 @@ export function AboutHero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 >
-                    I'm a passionate developer focused on building high-performance
+                    I run a boutique development studio focused on building high-performance
                     digital experiences that matter. From concept to deployment,
                     I turn complex ideas into seamless web solutions.
                 </motion.p>

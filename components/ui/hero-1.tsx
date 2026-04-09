@@ -67,7 +67,7 @@ export function Hero({
         text-transparent opacity-0 sm:text-6xl md:text-7xl lg:text-8xl"
       >
         {(() => {
-          const roleRegex = /web developer/i
+          const roleRegex = /boutique development studio|development studio|web developer/i
           if (roleRegex.test(title)) {
             const parts = title.split(roleRegex)
             const before = (parts[0] || '')

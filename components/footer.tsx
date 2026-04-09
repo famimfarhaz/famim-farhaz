@@ -24,7 +24,7 @@ export function Footer() {
               Building the future one line of code at a time.
             </p>
             <p className="text-xs text-muted-foreground">
-              Full-Stack Web Developer
+              Boutique Development Studio
             </p>
           </div>
 
@@ -59,7 +59,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Clock className="w-4 h-4 text-green-500" />
-                <span>Available for freelance & collaboration</span>
+                <span>Available for new projects & collaboration</span>
               </div>
             </div>
           </div>

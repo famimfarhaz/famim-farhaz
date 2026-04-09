@@ -67,7 +67,7 @@ export function PricingCard({ tier, paymentFrequency }: PricingCardProps) {
                             className="text-4xl font-medium"
                         />
                         <p className="-mt-2 text-xs text-muted-foreground">
-                            Per Project
+                            Starting at
                         </p>
                     </>
                 ) : (

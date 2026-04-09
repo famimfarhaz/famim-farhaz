@@ -25,7 +25,7 @@ export function AboutContent() {
 
                             <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed font-medium">
                                 <p>
-                                    I'm Famim Farhaz, a developer who believes technology isn't just about code —
+                                    I'm Famim Farhaz, running a boutique development studio that believes technology isn't just about code —
                                     it's about creating possibilities, building trust, and driving growth.
                                     My mission is to empower startups and businesses
                                     with powerful digital solutions that are simple, scalable, and impactful.

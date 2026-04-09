@@ -114,9 +114,9 @@ export const FlipWords = ({
 
 export function RoleFlip() {
   const phrases = [
-    "WEBSITE DEVELOPER",
-    "AI DEVELOPER",
-    "SaaS DeveLOPER",
+    "DEVELOPMENT STUDIO",
+    "BOUTIQUE STUDIO",
+    "SOFTWARE STUDIO",
   ];
 
   return (

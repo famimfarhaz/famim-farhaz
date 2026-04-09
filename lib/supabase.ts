@@ -21,15 +21,8 @@ export interface ContactFormData {
   email: string
   company?: string | null
   phone?: string | null
-  activate_free_demo: boolean
-  project_type?: string | null
-  role?: string | null
-  budget?: string | null
-  timeline?: string | null
-  message?: string | null
+  message: string
   ip_address?: string | null
   user_agent?: string | null
-  is_potential_bot?: boolean | null
   created_at?: string
-  updated_at?: string
 }
