@@ -98,7 +98,7 @@ export default function GalleryHoverCarousel({
                         <h3 className="text-xl sm:text-2xl lg:text-4xl font-bold text-foreground leading-tight tracking-tight">
                             {heading}{" "}
                             <span className="text-muted-foreground block mt-2 text-lg sm:text-xl lg:text-2xl font-normal">
-                                Explore my collection of innovative solutions and cutting-edge technologies.
+                                Practice builds. Real craft. Every project designed like it's going live tomorrow.
                             </span>
                         </h3>
                     </div>

@@ -72,15 +72,14 @@ export function PricingSection({
             </motion.div>
 
             <motion.div
-                className={`grid w-full gap-6 items-stretch ${
-                    tiers.length === 1
+                className={`grid w-full gap-6 items-stretch ${tiers.length === 1
                         ? "max-w-lg mx-auto"
                         : tiers.length === 2
-                        ? "max-w-3xl sm:grid-cols-2"
-                        : tiers.length === 3
-                        ? "max-w-5xl sm:grid-cols-2 lg:grid-cols-3"
-                        : "max-w-7xl sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-                }`}
+                            ? "max-w-3xl sm:grid-cols-2"
+                            : tiers.length === 3
+                                ? "max-w-5xl sm:grid-cols-2 lg:grid-cols-3"
+                                : "max-w-7xl sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                    }`}
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"

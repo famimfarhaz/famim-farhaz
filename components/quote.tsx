@@ -39,9 +39,8 @@ export function Quote() {
           <div className="relative">
             {/* Large Opening Quote Mark */}
             <div
-              className={`absolute -top-8 -left-4 md:-left-12 transition-all duration-1000 ${
-                isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
-              }`}
+              className={`absolute -top-8 -left-4 md:-left-12 transition-all duration-1000 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
+                }`}
             >
               <span className="text-[120px] md:text-[180px] font-serif leading-none text-primary/20 select-none">
                 "
@@ -55,21 +54,19 @@ export function Quote() {
               <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-primary/30 rounded-br-2xl" />
 
               <blockquote
-                className={`relative transition-all duration-1000 delay-200 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
+                className={`relative transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
               >
                 <p className="text-3xl md:text-4xl lg:text-5xl font-serif text-balance leading-relaxed text-foreground/90 italic">
-                  I don’t just build <span className="text-primary font-semibold not-italic">Websites</span>, I build digital{" "}
-                  <span className="text-primary font-semibold not-italic">legacies.</span>
+                  We translate <span className="text-primary font-semibold not-italic">Complex Requirements</span> into elegant,{" "}
+                  <span className="text-primary font-semibold not-italic">High-Performance</span> digital products.
                 </p>
               </blockquote>
 
               {/* Attribution Style Element */}
               <div
-                className={`mt-8 flex items-center gap-4 transition-all duration-1000 delay-500 ${
-                  isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
-                }`}
+                className={`mt-8 flex items-center gap-4 transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+                  }`}
               >
                 <div className="h-px flex-1 bg-gradient-to-r from-border/50 to-transparent" />
                 <span className="text-sm font-medium text-muted-foreground tracking-wider uppercase">
@@ -80,9 +77,8 @@ export function Quote() {
 
             {/* Large Closing Quote Mark */}
             <div
-              className={`absolute -bottom-8 -right-4 md:-right-12 transition-all duration-1000 delay-300 ${
-                isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
-              }`}
+              className={`absolute -bottom-8 -right-4 md:-right-12 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
+                }`}
             >
               <span className="text-[120px] md:text-[180px] font-serif leading-none text-primary/20 select-none">
                 "

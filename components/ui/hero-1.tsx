@@ -39,32 +39,31 @@ export function Hero({
       <div
         className="absolute left-1/2 top-[calc(100%-90px)] lg:top-[calc(100%-150px)] 
         h-[500px] w-[700px] md:h-[500px] md:w-[1100px] lg:h-[750px] lg:w-[140%] 
-        -translate-x-1/2 rounded-[100%] border-[#B48CDE] bg-black 
+        -translate-x-1/2 rounded-[100%] border-white/20 bg-black 
         bg-[radial-gradient(closest-side,#000_85%,rgba(255,255,255,0.12))] 
         animate-fade-up"
       />
 
-      {/* Eyebrow */}
+      {/* Eyebrow / Pill */}
       {eyebrow && (
-        <a href="#" className="group">
+        <div className="flex justify-center mb-3 sm:mb-6 animate-fade-in">
           <span
-            className="text-sm text-gray-400 font-geist mx-auto px-5 py-2 
-            bg-gradient-to-tr from-zinc-300/5 via-gray-400/5 to-transparent  
-            border-[2px] border-white/5 
-            rounded-3xl w-fit tracking-tight uppercase flex items-center justify-center"
+            className="text-[10px] sm:text-xs text-gray-400 font-geist px-4 py-1.5 
+            border border-white/10 rounded-full tracking-widest uppercase 
+            bg-white/[0.02] backdrop-blur-sm scale-[0.85] sm:scale-100"
           >
             {eyebrow}
-            <ChevronRight className="inline w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
           </span>
-        </a>
+        </div>
       )}
 
       {/* Title */}
       <h1
-        className="animate-fade-in -translate-y-4 text-balance 
-        bg-gradient-to-br from-white from-30% to-white/40 
-        bg-clip-text py-6 text-5xl font-semibold leading-none tracking-tighter 
-        text-transparent opacity-0 sm:text-6xl md:text-7xl lg:text-8xl"
+        className="animate-fade-in text-balance 
+        bg-gradient-to-br from-white from-30% to-white/60 
+        bg-clip-text text-[2.25rem] sm:text-6xl md:text-7xl lg:text-8xl 
+        font-bold leading-[1.1] sm:leading-[1.05] tracking-[-0.02em] sm:tracking-[-0.04em] 
+        text-transparent opacity-0 mb-4 sm:mb-6"
       >
         {(() => {
           const roleRegex = /boutique development studio|development studio|web developer/i
@@ -73,12 +72,8 @@ export function Hero({
             const before = (parts[0] || '')
             const after = parts[1] || ''
 
-            // Force two lines: first is everything before the newline (usually "Hello I'm ..."),
-            // second starts with "A " then the animated RoleFlip.
             const [line1Raw, line2Raw] = before.split(/\r?\n+/)
-            // Remove trailing "A " from line1 if present
             const line1 = ((line1Raw || '').replace(/\s*and\s+a\s*$/i, '')).trim()
-            // Ensure prefix "A " exists on line 2
             let prefix = (line2Raw || '').trim()
             if (!/^and\s+a\b/i.test(prefix)) {
               prefix = ''
@@ -86,8 +81,8 @@ export function Hero({
 
             return (
               <>
-                <span className="block">{line1}</span>
-                <span className="block">
+                <span className="sm:block inline">{line1}</span>
+                <span className="sm:block inline">
                   {prefix}{' '}
                   <span className="align-middle">
                     <RoleFlip />
@@ -97,28 +92,28 @@ export function Hero({
               </>
             )
           }
-          // Fallback: if no marker, respect newlines
           return title.split(/\n+/).map((seg, i) => (
-            <span key={i} className="block">{seg}</span>
+            <span key={i} className="sm:block inline">{seg} </span>
           ))
         })()}
       </h1>
 
       {/* Subtitle */}
       <p
-        className="animate-fade-in mb-12 -translate-y-4 text-balance 
-        text-lg tracking-tight text-gray-400 
-        opacity-0 md:text-xl"
+        className="animate-fade-in mb-8 sm:mb-14 text-balance 
+        text-base sm:text-lg lg:text-xl leading-[1.5] sm:leading-relaxed 
+        tracking-tight text-zinc-400 opacity-0 
+        max-w-[90%] sm:max-w-2xl mx-auto px-4 sm:px-0"
       >
         {subtitle}
       </p>
 
       {/* CTA */}
       {ctaLabel && (
-        <div className="flex justify-center">
+        <div className="flex justify-center animate-fade-in">
           <Button
             asChild
-            className="mt-[-20px] w-fit md:w-52 z-20 font-geist tracking-tighter text-center text-lg"
+            className="w-full sm:w-[52%] md:w-52 z-20 font-geist tracking-tighter text-center text-lg py-[14px] sm:py-6 h-auto"
           >
             <a href={ctaHref}>{ctaLabel}</a>
           </Button>
@@ -127,7 +122,7 @@ export function Hero({
 
       {/* Bottom Fade */}
       <div
-        className="animate-fade-up relative mt-32 opacity-0 [perspective:2000px] 
+        className="animate-fade-up relative mt-24 sm:mt-32 opacity-0 [perspective:2000px] 
         after:absolute after:inset-0 after:z-50 
         after:[background:linear-gradient(to_top,hsl(var(--background))_10%,transparent)]"
       />

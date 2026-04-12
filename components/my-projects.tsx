@@ -93,8 +93,8 @@ export function MyProjects() {
                     </p>
                   </div>
 
-                  {/* Action Buttons */}
-                  <div className="flex flex-wrap gap-3 pt-2">
+                  {/* Action Buttons - Desktop Only */}
+                  <div className="hidden lg:flex flex-wrap gap-3 pt-2">
                     <Link href={project.articleUrl}>
                       <Button className="h-12 px-7 rounded-full bg-white text-black hover:bg-zinc-200 font-bold text-sm transition-all duration-300 active:scale-[0.97] group/btn">
                         View Project
@@ -128,6 +128,22 @@ export function MyProjects() {
                       </div>
                     </div>
                   </Link>
+
+                  {/* Action Buttons - Mobile Only */}
+                  <div className="flex lg:hidden flex-wrap gap-3 pt-6 md:pt-8">
+                    <Link href={project.articleUrl}>
+                      <Button className="h-11 px-6 rounded-full bg-white text-black hover:bg-zinc-200 font-bold text-xs transition-all duration-300 active:scale-[0.97] group/btn">
+                        View Project
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
+                    <Link href="/pricing">
+                      <Button variant="ghost" className="h-11 px-6 rounded-full text-zinc-400 hover:text-white hover:bg-white/[0.05] font-bold text-xs transition-all duration-300 border border-white/[0.06] hover:border-white/[0.12] group/btn2">
+                        Want One Like This?
+                        <Handshake className="w-4 h-4 ml-2 group-hover/btn2:scale-110 transition-transform" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

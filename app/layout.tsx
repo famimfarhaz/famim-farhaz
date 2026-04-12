@@ -7,8 +7,8 @@ import ClickSparkProvider from '@/components/click-spark-provider'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Famim Farhaz - Boutique Development Studio',
-  description: 'Portfolio and blog of Famim Farhaz, a boutique development studio specializing in modern, scalable Websites.',
+  title: 'Famim Farhaz Studio | Boutique Development Studio',
+  description: 'Famim Farhaz Studio is a boutique development shop specializing in high-performance digital products and bespoke web architecture.',
   generator: 'Next.js',
   icons: {
     icon: '/icon.png',

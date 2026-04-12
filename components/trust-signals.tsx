@@ -106,9 +106,9 @@ export function TrustSignals() {
                                     className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] border border-border/30 hover:border-accent/40 transition-colors duration-300"
                                 >
                                     {feature.included ? (
-                                        <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
+                                        <CheckCircle2 className="w-4 h-4 text-foreground shrink-0" />
                                     ) : (
-                                        <span className="w-4 h-4 shrink-0 text-red-400 text-xs font-bold flex items-center justify-center">✕</span>
+                                        <span className="w-4 h-4 shrink-0 text-muted-foreground/60 text-xs font-bold flex items-center justify-center">✕</span>
                                     )}
                                     <span className={`text-sm font-medium ${feature.included ? 'text-gray-300' : 'text-gray-500'}`}>
                                         {feature.text}

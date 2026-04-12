@@ -44,9 +44,9 @@ export function Services() {
     <section ref={sectionRef} id="services" className="py-12 sm:py-16 md:py-20 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-8 sm:mb-12 md:mb-16 scroll-animate">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-3 sm:mb-4 text-balance">What I Offer</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-3 sm:mb-4 text-balance">What We Build</h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-            Comprehensive web development services to bring your ideas to life.
+            From launch-ready landing pages to full-stack web applications — built custom, built to perform.
           </p>
         </div>
 

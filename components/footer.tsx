@@ -18,10 +18,10 @@ export function Footer() {
                 height={32}
                 className="h-8 w-8"
               />
-              <span className="text-lg font-bold text-foreground">Famim Farhaz</span>
+              <span className="text-lg font-bold text-foreground">Famim Farhaz Studio</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-              Building the future one line of code at a time.
+              Custom websites for founders, coaches, and brands who refuse to blend in.
             </p>
             <p className="text-xs text-muted-foreground">
               Boutique Development Studio
@@ -61,7 +61,7 @@ export function Footer() {
                 </a>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Clock className="w-4 h-4 text-green-500" />
+                <Clock className="w-4 h-4 text-foreground/80" />
                 <span>Available for new projects & collaboration</span>
               </div>
             </div>
@@ -71,7 +71,7 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="pt-6 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground text-center sm:text-left">
-© 2026 Famim Farhaz — Designed & Developed with passion
+            © 2026 Famim Farhaz Studio — Designed & Developed with passion
           </p>
           <div className="text-xs text-muted-foreground">
             Crafting modern web experiences with precision and passion.

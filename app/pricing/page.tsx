@@ -22,8 +22,8 @@ export default function PricingPage() {
               {
                 id: "studio",
                 name: "Custom Website",
-                price: { Standard: 500 },
-                description: "Custom websites built from scratch starting at $500.",
+                price: { Standard: 1200 },
+                description: "Custom websites built from scratch starting at $1,200.",
                 features: [
                   "Fully custom design + development",
                   "Mobile responsive + SEO basics",

@@ -25,14 +25,14 @@ export function AboutContent() {
 
                             <div className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed font-medium">
                                 <p>
-                                    I'm Famim Farhaz, running a boutique development studio that believes technology isn't just about code —
+                                    Famim Farhaz Studio is a boutique development shop that believes technology isn't just about code —
                                     it's about creating possibilities, building trust, and driving growth.
-                                    My mission is to empower startups and businesses
+                                    Our mission is to empower startups and businesses
                                     with powerful digital solutions that are simple, scalable, and impactful.
                                 </p>
                                 <p>
-                                    I focus on delivering high-performing digital products that inspire results.
-                                    I specialize in modern technologies like React, Next.js, and Node.js,
+                                    We focus on delivering high-performing digital products that inspire results.
+                                    We specialize in modern technologies like React, Next.js, and Node.js,
                                     ensuring every project is built with the highest standards of quality.
                                 </p>
                             </div>
