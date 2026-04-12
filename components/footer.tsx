@@ -41,6 +41,9 @@ export function Footer() {
               <Link href="/#about-me" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 About
               </Link>
+              <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Blog
+              </Link>
               <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Contact
               </Link>

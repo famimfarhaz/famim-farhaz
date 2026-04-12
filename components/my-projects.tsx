@@ -83,11 +83,6 @@ export function MyProjects() {
               <div className={`group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center ${index % 2 !== 0 ? 'lg:[direction:rtl]' : ''}`}>
                 {/* Text Content */}
                 <div className={`space-y-8 ${index % 2 !== 0 ? 'lg:[direction:ltr]' : ''}`}>
-                  {/* Category */}
-                  <span className="inline-block px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] bg-white/[0.04] text-zinc-400 border border-white/[0.06]">
-                    {project.category === 'real' ? 'Client Project' : 'Development Project'}
-                  </span>
-
                   {/* Title */}
                   <div className="space-y-4">
                     <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-[1.1] group-hover:text-zinc-100 transition-colors duration-500">
@@ -96,23 +91,6 @@ export function MyProjects() {
                     <p className="text-base sm:text-lg text-zinc-500 leading-relaxed max-w-lg">
                       {project.description}
                     </p>
-                  </div>
-
-                  {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.techStack.slice(0, 5).map((tech, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1.5 text-[10px] font-semibold rounded-full bg-zinc-900/80 text-zinc-400 border border-white/[0.05] uppercase tracking-wider"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.techStack.length > 5 && (
-                      <span className="px-3 py-1.5 text-[10px] font-semibold rounded-full bg-zinc-900/80 text-zinc-500 border border-white/[0.05] uppercase tracking-wider">
-                        +{project.techStack.length - 5} more
-                      </span>
-                    )}
                   </div>
 
                   {/* Action Buttons */}

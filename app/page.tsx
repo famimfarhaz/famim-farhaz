@@ -2,12 +2,11 @@ import { Header } from "@/components/header"
 import { NewHero } from "@/components/new-hero"
 import GalleryHoverCarousel from "@/components/ui/gallery-hover-carousel"
 
-import { FreeDemo } from "@/components/free-demo"
+// import { FreeDemo } from "@/components/free-demo"
 import { Services } from "@/components/services"
 import { MyProjects } from "@/components/my-projects"
 import { Quote } from "@/components/quote"
 
-import { TechStack } from "@/components/tech-stack"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import { LoadingOverlay } from "@/components/loading-overlay"
@@ -26,10 +25,9 @@ export default function Home() {
           <GalleryHoverCarousel />
           <MyProjects />
           <Services />
-          <FreeDemo />
+          {/* <FreeDemo /> */}
 
           <Quote />
-          <TechStack />
           <FaqsSection />
           <PricingSection
             title="One Service. Done Right."
